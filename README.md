@@ -15,8 +15,8 @@
 
 <h3>Referentes:</h3>
 
-<p>https://www.amorelefante.com.ar/ Consideramos que esta fue como la pagina principal, donde nos basamos en layout, el maquetado, estilos de colores y minimalismo de la misma.</p>
-<p>https://www.tennis.com.co/ </p>
-<p>https://www.decathlon.cl/ </p>
-<p>https://colorlib.com/wp/html5-and-css3-login-forms/ Esta pagina nos brindo una idea acerca de como hacer el registro y el log in.</p>
-<p>https://www.ecomarketshop.com/ De aca sacamos la idea de la estructura de las categorias junto a un carrusel.</p>
+<p>https://www.amorelefante.com.ar/ Utilizamos esta página como la principal, y nos basamos en ella para tomar como base : el layout, el maquetado, los estilos de colores y el minimalismo.</p>
+<p>https://www.tennis.com.co/ De esta página nos centramos en solo abarcar algunos detalles, y realizamos comparaciones en base a nuestras preferencias. También la usamos como referencia para la creación del carrito de compras: para su estructura y sus funcionalidades. </p>
+<p>https://www.decathlon.cl/ De éste referente, aplicamos la idea del detalle del producto, y sus características. </p>
+<p>https://colorlib.com/wp/html5-and-css3-login-forms/ De aquí aprovechamos el diseño para el armado de los 2 formularios, el de registro y el de log in. </p>
+<p>https://www.ecomarketshop.com/ Y por último tomamos como modelo el arquetipo del carrusel para armar junto a las categorias, la variedad de productos y servicios que brindará EcoPlace .</p>
