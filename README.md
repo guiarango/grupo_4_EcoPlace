@@ -15,8 +15,8 @@
 
 <h3>Referentes:</h3>
 
-<p>https://www.amorelefante.com.ar/</p>
+<p>https://www.amorelefante.com.ar/ Consideramos que esta fue como la pagina principal, donde nos basamos en layout, el maquetado, estilos de colores y minimalismo de la misma.</p>
 <p>https://www.tennis.com.co/</p>
 <p>https://www.decathlon.cl/</p>
-<p>https://colorlib.com/wp/html5-and-css3-login-forms/</p>
+<p>https://colorlib.com/wp/html5-and-css3-login-forms/ esta pagina nos brindo una idea acerca de como hacer el registro y el log in.</p>
 <p></p>
