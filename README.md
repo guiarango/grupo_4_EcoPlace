@@ -7,10 +7,16 @@
 
 <h3>Somos el grupo de “los sin cámara”:</h3>
 <p>Mariana la reina del deporte.🤸‍♀️</p>
-
 <p>Guille el parce con más estilo.🕺</p>
 <p>Williams el terror Crypto.👨‍💻</p>
 <p>Elías el obsesivo de Scrum.👨‍💼</p>
 <p>Ninguno de nosotros es tan bueno como todos nosotros juntos, por eso consideramos que nuestra fuerza como grupo se encuentra en nuestras diferencias, no en nuestras semejanzas.</p>
 
 
+<h3>Referentes:</h3>
+
+<p>https://www.amorelefante.com.ar/</p>
+<p>https://www.tennis.com.co/</p>
+<p>https://www.decathlon.cl/</p>
+<p></p>
+<p></p>
