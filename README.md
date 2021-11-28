@@ -6,10 +6,11 @@
 Este sitio apunta a todo el público que se encuentra en la búsqueda de proveedores que tengan como prioridad el cuidado del medioambiente además de calidad de sus productos.</p>
 
 <h3>Somos el grupo de “los sin cámara”:</h3>
-<p>Mariana la reina del deporte.🤸‍♀️
-Guille el parce con más estilo.🕺
-Williams el terror Crypto.👨‍💻
-Elías el obsesivo de Scrum.👨‍💼
-Ninguno de nosotros es tan bueno como todos nosotros juntos, por eso consideramos que nuestra fuerza como grupo se encuentra en nuestras diferencias, no en nuestras semejanzas.</p>
+<p>Mariana la reina del deporte.🤸‍♀️</p>
+
+<p>Guille el parce con más estilo.🕺</p>
+<p>Williams el terror Crypto.👨‍💻</p>
+<p>Elías el obsesivo de Scrum.👨‍💼</p>
+<p>Ninguno de nosotros es tan bueno como todos nosotros juntos, por eso consideramos que nuestra fuerza como grupo se encuentra en nuestras diferencias, no en nuestras semejanzas.</p>
 
 
