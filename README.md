@@ -1,6 +1,9 @@
 <h1>EcoPlace</h1>
-EcoPlace es una página que fue diseñada con el objetivo de acercar opciones ecológicas y sustentables al público. El sitio nace con la idea de reunir productos de uso cotidiano y de diseño, con la finalidad de crear e incentivar un mercado de consumo que respete y priorice el cuidado ambiental.
-Este sitio apunta a todo el público que se encuentra en la búsqueda de proveedores que tengan como prioridad el cuidado del medioambiente además de calidad de sus productos.
+
+<h2>¿Que es EcoPlace?</h2>
+
+<p>EcoPlace es una página que fue diseñada con el objetivo de acercar opciones ecológicas y sustentables al público. El sitio nace con la idea de reunir productos de uso cotidiano y de diseño, con la finalidad de crear e incentivar un mercado de consumo que respete y priorice el cuidado ambiental.
+Este sitio apunta a todo el público que se encuentra en la búsqueda de proveedores que tengan como prioridad el cuidado del medioambiente además de calidad de sus productos.</p>
 
 Somos el grupo de “los sin cámara”:
 Mariana la reina del deporte.
