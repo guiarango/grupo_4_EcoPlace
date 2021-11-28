@@ -17,6 +17,6 @@
 
 <p>https://www.amorelefante.com.ar/ Consideramos que esta fue como la pagina principal, donde nos basamos en layout, el maquetado, estilos de colores y minimalismo de la misma.</p>
 <p>https://www.tennis.com.co/ </p>
-<p>https://www.decathlon.cl/</p>
+<p>https://www.decathlon.cl/ </p>
 <p>https://colorlib.com/wp/html5-and-css3-login-forms/ Esta pagina nos brindo una idea acerca de como hacer el registro y el log in.</p>
-<p></p>
+<p>https://www.ecomarketshop.com/ De aca sacamos la idea de la estructura de las categorias junto a un carrusel.</p>
