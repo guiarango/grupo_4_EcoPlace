@@ -12,7 +12,6 @@
 <p>Elías el obsesivo de Scrum.👨‍💼</p>
 <p>Ninguno de nosotros es tan bueno como todos nosotros juntos, por eso consideramos que nuestra fuerza como grupo se encuentra en nuestras diferencias, no en nuestras semejanzas.</p>
 
-
 <h3>Referentes:</h3>
 
 <p>https://www.amorelefante.com.ar/ Utilizamos esta página como la principal, y nos basamos en ella para tomar como base : el layout, el maquetado, los estilos de colores y el minimalismo.</p>
@@ -20,3 +19,6 @@
 <p>https://www.decathlon.cl/ De éste referente, aplicamos la idea del detalle del producto, y sus características. </p>
 <p>https://colorlib.com/wp/html5-and-css3-login-forms/ De aquí aprovechamos el diseño para el armado de los 2 formularios, el de registro y el de log in. </p>
 <p>https://www.ecomarketshop.com/ Y por último tomamos como modelo el arquetipo del carrusel para armar junto a las categorias, la variedad de productos y servicios que brindará EcoPlace .</p>
+
+<h3>Link Trello</h3>
+<a>https://trello.com/b/Ng9RGWoO/proyecto-integrador-grupo-4-ecoplace</a>
