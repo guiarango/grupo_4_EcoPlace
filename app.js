@@ -12,6 +12,16 @@ app.listen(3000, () => console.log("Servidor corriendo en puerto 3000"));
 
 //Se utiliza el método GET para acceder al archivo home.html
 app.get("/", (req, res) => {
-  let newPath = path.resolve(__dirname, "views/home.html");
-  res.send(newPath);
+  let newPath = path.resolve(__dirname, "views/sign_in.html");
+  res.sendFile(newPath);
+});
+
+app.get("/sign_in", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/sign_in.html");
+  res.sendFile(newPath);
+});
+
+app.get("/sign_up", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/sign_up.html");
+  res.sendFile(newPath);
 });
