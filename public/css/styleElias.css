@@ -1,0 +1,52 @@
+body {
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar-main {
+    background-color: #EBF1E4;
+    width: 100%;
+}
+
+.search-bar {
+    width: 100%;
+    
+}
+.search-bar form input {
+    width: 80%;
+}
+
+.nav-bar-second {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.hamburger-button {
+    color: #7fa84d;
+}
+.nav-block {
+    display: flex;
+    flex-wrap: row nowrap;
+}
+.nav-bar-main nav ul {
+    list-style: none;
+    text-decoration: none;
+    color: #7fa84d;
+}
+.nav-bar-main nav ul li a{
+    
+    color: #7fa84d;
+}
+.title {
+    color:#7fa84d;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 5px;
+    margin-bottom:  5px;
+}
+.hide-login {
+    display: none;
+}
