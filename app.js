@@ -30,3 +30,9 @@ app.get("/product_detail", (req, res) => {
   let newPath = path.resolve(__dirname, "views/product_detail.html");
   res.sendFile(newPath);
 });
+
+//Se utiliza el método GET para acceder al archivo carrito.html
+app.get("/carrito", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/carrito.html");
+  res.sendFile(newPath);
+});
