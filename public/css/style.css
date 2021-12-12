@@ -16,7 +16,7 @@ html {
   font-family: Source Sans Pro;
 }
 main {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .main-form {
@@ -154,7 +154,119 @@ i {
 .sign-in-link,
 .forgotten-password {
   color: #804000;
-  /* text-decoration: none; */
+}
+
+/* -----------------------*/
+
+.product-general {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 2rem auto;
+}
+
+.product-preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.product-preview-options {
+  display: none;
+}
+
+.product-preview-photo {
+  margin: auto;
+  /* margin-right: 2rem; */
+}
+
+.product-preview-photo img {
+  width: 100%;
+  border: solid 1px #000000;
+}
+
+.product-preview-details {
+  font-size: 1.5rem;
+}
+
+.product-preview-details > * {
+  margin-bottom: 0.5rem;
+}
+
+.product-choice-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name,
+.product-brand,
+.product-price {
+  font-weight: bold;
+}
+
+.product-price {
+  display: inline-block;
+  background-color: rgba(75, 191, 90, 0.7);
+  color: #ffffff;
+  border: solid 2px rgb(75, 191, 90);
+}
+
+.main-form-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main-form-product > * {
+  margin-bottom: 0.5rem;
+}
+
+.main-form-product button {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(75, 191, 90);
+  color: #ffffff;
+  border-radius: 5%;
+  font-size: 1rem;
+  transition: all 0.1s ease;
+}
+
+.main-form-product button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+.main-form-product button:active {
+  transform: translate(0.1rem, 0.1rem);
+}
+
+.main-form-product select {
+  font-size: 1.5rem;
+}
+
+.product-general-info {
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #000000;
+}
+
+.main-form-general-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-color: rgba(128, 64, 0, 0.4);
+}
+
+.main-form-general-info button {
+  font-size: 0.8rem;
+  display: block;
+  /* width: 24%; */
+  /* margin: 1rem 0; */
+}
+
+.product-general-info p {
+  padding: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 @media (min-width: 361px) {
@@ -162,7 +274,7 @@ i {
     font-size: 10px;
   }
   main {
-    padding: 3rem;
+    padding: 2rem;
   }
   .main-form {
     background-color: #ffffff;
@@ -201,5 +313,53 @@ i {
   .sign-up-field,
   .forgotten-password-field {
     color: #000000;
+  }
+
+  .product-preview {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  .product-preview-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+  }
+
+  .preview-option {
+    width: 80%;
+    border: solid 1px #000000;
+    margin: 0.5rem 0;
+  }
+
+  .product-preview-photo {
+    margin: auto;
+    width: 45%;
+  }
+
+  .product-preview-details {
+    font-size: 1.5rem;
+    width: 30%;
+    margin: auto;
+  }
+
+  .product-general-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-form-general-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: rgba(128, 64, 0, 0.4);
+  }
+
+  .main-form-general-info button {
+    margin: 1rem;
+    width: 24%;
   }
 }

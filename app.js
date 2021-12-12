@@ -26,4 +26,7 @@ app.get("/sign_up", (req, res) => {
   res.sendFile(newPath);
 });
 
-
+app.get("/product_detail", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/product_detail.html");
+  res.sendFile(newPath);
+});
