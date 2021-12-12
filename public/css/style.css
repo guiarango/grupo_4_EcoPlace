@@ -1,8 +1,6 @@
-/* Primary color:#EBF1E4
+/*Primary color:rgb(75, 191, 90)
 Secondary color:#804000
-Terciary color:#7FA84D
-Cuaternary color:#ffffff
-#405DE6
+Ternary color:#ffffff
 
 media: 576, 768, 992, 1200
 */
@@ -17,9 +15,8 @@ html {
   font-size: 8px;
   font-family: Source Sans Pro;
 }
-
 main {
-  background-image: linear-gradient(to right bottom, #ebf1e4, #fff);
+  margin-top: 2rem;
 }
 
 .main-form {
@@ -27,42 +24,59 @@ main {
   margin: auto;
   text-align: left;
   padding: 2rem;
+  position: relative;
+  text-align: center;
 }
 
 .form-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0rem 0.7rem rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: rgb(250, 255, 233);
+  margin-bottom: 1rem;
 }
+
+.form-header img {
+  width: 3rem;
+}
+
 .form-header label {
   font-family: Shadows Into Light;
 }
 .form-header label span,
 .form-header i {
-  color: #7fa84d;
+  color: rgb(75, 191, 90);
 }
 
 .main-form form section {
-  padding: 0.5rem 3rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
 }
 
 .main-form section label {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .main-form button {
   align-self: center;
-  width: 45%;
-  height: 2.2rem;
-  background-color: rgba(128, 64, 0, 0.7);
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(75, 191, 90);
   color: #ffffff;
   border-radius: 5%;
-  border-color: #804000;
+  border-color: none;
+  transition: all 0.1s ease;
+}
+
+.main-form button:hover {
+  transform: translate(-0.1rem, -0.1rem);
+}
+
+.main-form button:active {
+  transform: translate(0.1rem, 0.1rem);
 }
 
 .main-form input {
@@ -72,7 +86,27 @@ main {
   border-right: none;
   border-top: none;
   border-bottom: solid 0.1rem #000000;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.main-form input::placeholder {
+  font-size: 1.2rem;
+}
+
+.main-form input + label {
+  transition: all 0.2s ease-in;
+  text-align: left;
+}
+
+.main-form input:placeholder-shown + label {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-form input:focus {
+  outline: none;
+  border-bottom: solid 0.2rem rgb(75, 191, 90);
 }
 
 .social-media {
@@ -85,7 +119,7 @@ i {
   margin: 0px 0.2rem;
 }
 .social-media-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .social-media-field label,
@@ -119,8 +153,8 @@ i {
 
 .sign-in-link,
 .forgotten-password {
-  color: #7fa84d;
-  text-decoration: none;
+  color: #804000;
+  /* text-decoration: none; */
 }
 
 @media (min-width: 361px) {
@@ -137,6 +171,18 @@ i {
     padding: 1rem;
     box-shadow: 0 0rem 0.7rem rgba(0, 0, 0, 0.5);
   }
+
+  .form-header {
+    text-align: center;
+    box-shadow: 0 0rem 0.7rem rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    position: relative;
+    transform: translateY(-65%);
+    background-color: rgb(250, 255, 233);
+    margin-bottom: 0rem;
+  }
 }
 
 @media (min-width: 561px) {
@@ -146,7 +192,7 @@ i {
 
   .main-form {
     background-color: #ffffff;
-    width: 40vw;
+    width: 50vw;
     margin: auto;
     padding: 1rem;
   }
@@ -155,7 +201,5 @@ i {
   .sign-up-field,
   .forgotten-password-field {
     color: #000000;
-    text-decoration: none;
-    font-size: 0.9rem;
   }
 }
