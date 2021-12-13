@@ -9,7 +9,9 @@ body {
     box-sizing: border-box;
 }
 
-
+article img {
+    width: 100%;
+}
 .nav-bar-main {
     background-color: #EBF1E4;
     width: 100%;
@@ -85,6 +87,15 @@ body {
 .carrousel-selectors {
     display: none;
 }
+
+/*Secciones de categorías*/
+
+
+
+
+
+
+
 /*Banner footer*/
 
 .banner-footer {
@@ -187,7 +198,13 @@ footer ul {
         width: 15%;
         text-align: center;
         box-shadow: 0px 0px 10px #804000;
+        transition: all, 0.5s;
      
+    }
+
+    .categories-hide li:hover {
+        background-color: #804000;
+        box-shadow: 0px 0px 10px #EBF1E4;
     }
 
     .carrousel-selectors {
@@ -203,6 +220,7 @@ footer ul {
         width: auto;
 
     }
+    
     .carrousel-button2 {
         color: #7fa84d;
         text-shadow: 0px 0px 10px #EBF1E4;
