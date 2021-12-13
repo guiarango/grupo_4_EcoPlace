@@ -29,15 +29,14 @@
         <div class="nav-bar-main">
             <nav class="nav-var-box">
                 <div class="search-bar">
-                    <form  action="../../form-result.php" method="post" target="_blank">
-                        <div>
+                    <form  action="/busqueda" method="GET" target="_blank">
+                        <div class="search-style">
                         <input type="search" name="busquedam" placeholder="Buscar en EcoPlace">
                         
                         <button> <i class="fas fa-search"></i></button>
-                        </div>  
+                        </div>      
                     </form>
-                </div>  
-                <div class="nav-bar-second">
+                </div> 
                     
                     <!--botón menú para celulares-->
                     <a href="#" class="hamburger-button">
@@ -47,9 +46,8 @@
                     <ul class="nav-block">
                             <li class="hide-login"><a href="/sign_in">Iniciar Sesión</a></li>
                             <li class="hide-login"><a href="/sign_up">Registrarse</a></li>
-                            <li><a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
+                            <li><a href="#"><i class="fas fa-shopping-basket"></i></a>
                     </ul>
-                </div>
             </nav>
         </div>
         <div class="carrousel">
@@ -71,102 +69,162 @@
 
     <main>
         <section class="category-box">
-            <article>
-                <h3>Orgánicos</h3>
-                <img src="/img/categoria-comida.jpg" alt="   ">
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Flora y jardín</h4>
-                <img src="/img/categoria-jardin.jpg" alt="">
-                <p></p>
+            <div class="category-main">
+                <article class="category-main-title">
+                    <h3>Orgánicos</h3>
+                    <img src="/img/categoria-comida.jpg" alt="comida organica">
+                </article>
+                <div class="carrousel-products">
+                    <i class="fas fa-chevron-left carrousel-product-button1"></i>
+              
+                    <article class="product-box">
+                    <img src="/img/organicoQuinoa.jpeg" alt="QUINOA">
+                        <div class="product-name-box">
+                            <p class="price">$300</p>
+                            <h3 class="product-name">Quinoa</h3>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Hogar</h4>
-                <img src="/img/Categoria-hogar.JPG" alt="">
-                <p></p>
+                        </div>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Cuidado personal</h4>
-                <img src="/img/Categoria-cosmeticos.jpg" alt="">
-                <p></p>
+                    </article>
+                    <article class="product-box">
+                        <img src="/img/organicoHummus.jpeg" alt="hummus">
+                            <div class="product-name-box">
+                                <p class="price">$400</p>
+                                <h3 class="product-name">Hummus</h3>
+    
+                            </div>
+    
+                        </article>
+                        <article class="product-box">
+                            <img src="/img/organicoBombones.jpg" alt="bombones organicos">
+                                <div class="product-name-box">
+                                    <p class="price">$350</p>
+                                    <h3 class="product-name">Bombones orgánicos</h3>
+        
+                                </div>
+        
+                            </article>
+                            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+                </div>
+            </div>
 
-            </article>
+            <div class="category-main">
+                <article class="category-main-title">
+                    <h3>Flora y Jardín</h3>
+                    <img src="/img/categoria-jardin.jpg" alt="avatar jardin">
+                </article>
+                <div class="carrousel-products">
+                    <i class="fas fa-chevron-left carrousel-product-button1"></i>
+                    <article class="product-box">
+                    <img src="/img/jardinBalcon.JPG" alt="jardin de balcon">
+                        <div class="product-name-box">
+                            <p class="price">$600</p>
+                            <h3 class="product-name">Jardín de balcón</h3>
 
-        </section>
-            <article>
-                <h3>Segunda Categoría</h3>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                        </div>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                    </article>
+                    <article class="product-box">
+                        <img src="/img/jardinKitchenGarden.JPG" alt="Jardín de cocina">
+                            <div class="product-name-box">
+                                <p class="price">$700</p>
+                                <h3 class="product-name">Jardín de cocina</h3>
+    
+                            </div>
+    
+                        </article>
+                        <article class="product-box">
+                            <img src="/img/jardinpimenton.JPG" alt="pimentones">
+                                <div class="product-name-box">
+                                    <p class="price">$100</p>
+                                    <h3 class="product-name">Pimentones orgánicos</h3>
+        
+                                </div>
+        
+                            </article>
+                            <i class="fas fa-chevron-right carrousel-product-button2"></i>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                </div>
+            </div>
+            <div class="category-main">
+                <article class="category-main-title">
+                    <h3>Cuidado personal</h3>
+                    <img src="/img/CuidadoCategoria.jpg" alt="avatar cuidado personal">
+                </article>
+                <div class="carrousel-products">
+                    <i class="fas fa-chevron-left carrousel-product-button1"></i>
+                    <article class="product-box">
+                    <img src="/img/CuidadoJabon.jpg" alt="jabon ecologico">
+                        <div class="product-name-box">
+                            <p class="price">150</p>
+                            <h3 class="product-name">Jabón no contaminante</h3>
 
-            </article>
+                        </div>
 
-        <section>
-            <article>
-                <h3>Tercera Categoría</h3>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                    </article>
+                    <article class="product-box">
+                        <img src="/img/cuidadoCepillo.JPG" alt="cepillo ecologico">
+                            <div class="product-name-box">
+                                <p class="price">$170</p>
+                                <h3 class="product-name">Cepillo ecologico</h3>
+    
+                            </div>
+    
+                        </article>
+                    <article class="product-box">
+                        <img src="/img/cuidadoSET.jpg" alt="set cuidado">
+                            <div class="product-name-box">
+                                <p class="price">$1100</p>
+                                <h3 class="product-name">SET cuidado personal</h3>
+    
+                            </div>
+    
+                        </article>
+                       
+                            <i class="fas fa-chevron-right carrousel-product-button2"></i>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                </div>
+            </div>
+            <div class="category-main">
+                <article class="category-main-title">
+                    <h3>Hogar</h3>
+                    <img src="/img/Categoria-hogar.JPG" alt="avatar hogar">
+                </article>
+                <div class="carrousel-products">
+                    <i class="fas fa-chevron-left carrousel-product-button1"></i>
+                    <article class="product-box">
+                    <img src="/img/hogarSillon.jpeg" alt="Sillón ecologico">
+                        <div class="product-name-box">
+                            <p class="price">$1500</p>
+                            <h3 class="product-name">Sillón ecológico</h3>
 
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
+                        </div>
 
-            </article>
+                    </article>
+                    <article class="product-box">
+                        <img src="/img/hogarCubiertos.jpg" alt="cubiertos eco">
+                            <div class="product-name-box">
+                                <p class="price">$110</p>
+                                <h3 class="product-name">Cubiertos eco-friendly</h3>
+    
+                            </div>
+    
+                        </article>
+                    <article class="product-box">
+                        <img src="/img/hogarLampara.jpg" alt="lampara eco">
+                            <div class="product-name-box">
+                                <p class="price">$300</p>
+                                <h3 class="product-name">Lámpara ecológica</h3>
+    
+                            </div>
+    
+                        </article>
+                       
+                            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+
+                </div>
+            </div>
             
-        </section>
-
-        <section>
-            <article>
-                <h3>Cuarta Categoría</h3>
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
-
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
-
-            </article>
-            <article>
-                <img src="" alt="">
-                <h4>Título producto</h4>
-                <p></p>
-
-            </article>
             
         </section>
         <!--Banner antes del footer con infografía-->

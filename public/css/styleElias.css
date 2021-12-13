@@ -17,10 +17,16 @@ article img {
     width: 100%;
 }
 
-.nav-bar-box {
+.nav-var-box {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+
 
 .search-bar {
     width: 100%;
@@ -30,15 +36,6 @@ article img {
     font-size: 24px;  
 }
 
-
-
-.nav-bar-second {
-    display: flex;
-    flex-wrap: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    
-}
 .hamburger-button {
     color: #7fa84d;
 }
@@ -90,8 +87,57 @@ article img {
 
 /*Secciones de categorías*/
 
+.category-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    margin: 0 auto;
+}
+.category-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.category-main-title {
+    width: 34%;
+}
+
+.carrousel-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 63%;
+    padding: 15px;
+}
+
+.product-box {
+    width: 25%;
+}
+
+.carrousel-product-button1 {
+    color: #7fa84d;
+    text-shadow: 0px 0px 10px #EBF1E4;
+    align-self: center;
+    font-size: 3em;
+    margin-right: 10px;    
 
 
+}
+
+.carrousel-product-button2 {
+    color: #7fa84d;
+    text-shadow: 0px 0px 10px #EBF1E4;
+    align-self: center;
+    font-size: 3em;
+    margin-left: 10px;
+}
 
 
 
@@ -166,9 +212,13 @@ footer ul {
         display: flex;
         flex-flow: row nowrap;
        
+        
     }
-
-
+    .search-bar {
+        width: 30%;
+        justify-content: flex-start;
+    }
+    
     .hide-login{
         display: flex;
     }
