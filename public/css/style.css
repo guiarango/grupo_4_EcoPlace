@@ -798,6 +798,10 @@ th:last-child {
     font-size: 20px;
   }
 
+  .contenedor-logo a {
+    text-decoration: none;
+  }
+
   .search-bar {
     width: 30%;
     justify-content: flex-start;
