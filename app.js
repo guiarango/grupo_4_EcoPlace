@@ -16,16 +16,19 @@ app.get("/", (req, res) => {
   res.sendFile(newPath);
 });
 
+//Se utiliza el método GET para acceder al archivo sign_in.html
 app.get("/sign_in", (req, res) => {
   let newPath = path.resolve(__dirname, "views/sign_in.html");
   res.sendFile(newPath);
 });
 
+//Se utiliza el método GET para acceder al archivo sign_up.html
 app.get("/sign_up", (req, res) => {
   let newPath = path.resolve(__dirname, "views/sign_up.html");
   res.sendFile(newPath);
 });
 
+//Se utiliza el método GET para acceder al archivo product_detail.html
 app.get("/product_detail", (req, res) => {
   let newPath = path.resolve(__dirname, "views/product_detail.html");
   res.sendFile(newPath);
@@ -34,5 +37,17 @@ app.get("/product_detail", (req, res) => {
 //Se utiliza el método GET para acceder al archivo carrito.html
 app.get("/carrito", (req, res) => {
   let newPath = path.resolve(__dirname, "views/carrito.html");
+  res.sendFile(newPath);
+});
+
+//Se utiliza el método GET para acceder al archivo product_edition.html
+app.get("/products_create", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/products_create.html");
+  res.sendFile(newPath);
+});
+
+//Se utiliza el método GET para acceder al archivo product_edition.html
+app.get("/products_edit", (req, res) => {
+  let newPath = path.resolve(__dirname, "views/products_edit.html");
   res.sendFile(newPath);
 });

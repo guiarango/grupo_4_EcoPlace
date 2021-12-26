@@ -22,3 +22,6 @@
 
 <h3>Link Trello</h3>
 <a>https://trello.com/b/Ng9RGWoO/proyecto-integrador-grupo-4-ecoplace</a>
+
+<p>Para poder ver la creación de productos, visitar http://localhost:3000/products_create</p>
+<p>Para poder ver la modificación de productos, visitar http://localhost:3000/products_edit</p>

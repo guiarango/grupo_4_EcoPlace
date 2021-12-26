@@ -4,7 +4,7 @@
   "description": "<h1>EcoPlace</h1>",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.scss public/css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "sass": "^1.45.1"
   }
 }
