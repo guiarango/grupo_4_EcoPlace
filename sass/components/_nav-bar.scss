@@ -1,0 +1,54 @@
+.nav-bar-main {
+  background-color: $color-cuaternary;
+  width: 100%;
+
+  nav ul {
+    list-style: none;
+    text-decoration: none;
+    color: $color-terciary;
+
+    li a {
+      color: $color-terciary;
+    }
+  }
+}
+
+.nav-var-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.hamburger-button-elias {
+  color: $color-terciary;
+}
+.nav-block {
+  display: flex;
+  flex-wrap: row nowrap;
+}
+
+.title {
+  color: $color-primary;
+  font-family: "Shadows Into Light", cursive;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.hide-login {
+  margin: 0 10px;
+  display: none;
+}
+
+.categories-hide {
+  display: none;
+}
