@@ -5,22 +5,22 @@ const mainController = {
     res.render("home");
   },
   carrito: (req, res) => {
-    res.render("carrito");
+    res.render("users/carrito");
   },
   product: (req, res) => {
-    res.render("product_detail");
+    res.render("products/product_detail");
   },
   signIn: (req, res) => {
-    res.render("sign_in");
+    res.render("users/sign_in");
   },
   signUp: (req, res) => {
-    res.render("sign_up");
+    res.render("users/sign_up");
   },
   createProduct: (req, res) => {
-    res.render("products_create");
+    res.render("products/products_create");
   },
   editProduct: (req, res) => {
-    res.render("products_edit");
+    res.render("products/products_edit");
   },
 };
 

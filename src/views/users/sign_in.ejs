@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+  <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
+
+  <body>
+    <header>
+
+      <%- include('../partials/navBar') %>
+
+    </header>
+
+    <main>
+      <section class="main-form">
+        <form action="#" method="POST">
+          <div class="form-header">
+            <img src="img/logo-2.png" alt="logo 2" />
+            <!-- <i class="fas fa-leaf"></i>
+            <label> Eco<span>Place</span> </label> -->
+          </div>
+
+          <section class="user-field">
+            <input
+              type="text"
+              name="sign-up-user"
+              id="user"
+              placeholder="Usuario o Email"
+              minlength="5"
+              maxlength="20"
+              required
+            />
+            <label for="user">Usuario o Email</label>
+          </section>
+
+          <section class="password-field">
+            <input
+              type="password"
+              name="sign-up-password"
+              id="password"
+              placeholder="Contraseña"
+              minlength="10"
+              maxlength="30"
+              required
+            />
+            <label for="password">Contraseña</label>
+          </section>
+
+          <section class="button-submit">
+            <button type="submit">INGRESAR</button>
+          </section>
+
+          <section class="forgotten-password-field">
+            <!-- <label> -->
+            <a class="forgotten-password" href="#">Olvidé mi contraseña</a>
+            <!-- </label> -->
+          </section>
+
+          <section class="social-media-field">
+            <label>Ingresa usando</label>
+            <div class="social-media">
+              <div class="social-media-icon">
+                <a href="#">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </div>
+              <div class="social-media-icon">
+                <a href="#">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </div>
+              <div class="social-media-icon">
+                <a href="#">
+                  <i class="fab fa-google-plus-square"></i>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="sign-in-field">
+            <span
+              >Registrate presionando
+              <a class="sign-in-link" href="/sign_up">Registrarse</a></span
+            >
+          </section>
+        </form>
+      </section>
+    </main>
+
+    <%- include('../partials/footer') %>
+    
+  </body>
+</html>
