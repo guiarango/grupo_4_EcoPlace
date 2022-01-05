@@ -23,6 +23,6 @@
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "node-sass": "^7.0.0"
+    "node-sass": "^7.0.1"
   }
 }
