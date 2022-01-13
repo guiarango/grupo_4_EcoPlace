@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('partials/head', {title: 'Todos los productos'}) %>
+  <body>
+    <%- include('partials/navBar') %>
+
+    <div class=>
+      <div class=>
+        <div class=>
+          <h2 class=>Todos los productos</h2>
+        </div>
+
+        <!-- Aca iteramos el array que llega del controlador -->
+        <% for( let i=0; i < productsList.length; i++ ) { %>
+        <div class=>
+          <section class=>
+            <a href="/products/detail/<%= productsList.id %>">
+              <figure class=>
+                <img
+                  src="/uploads/<%= productsList.image %>"
+                  alt="imagen de producto"
+                />
+              </figure>
+              <article class=>
+                <h2><%= productsList.price %></h2>
+                <span><%= productsList.discount %> % OFF</span>
+                <p><%= productsList.name %></p>
+              </article>
+            </a>
+          </section>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <%- include('partials/footer') %>
+  </body>
+</html>
