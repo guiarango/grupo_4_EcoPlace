@@ -3,11 +3,11 @@
         "name": "Soda Water - Club Soda, 355 Ml",
         "description": "praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices",
         "technical description": "donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit",
-        "other specifications": "vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-        "reviews": "nam nulla integer pede justo lacinia eget tincidunt eget tempus",
+        "other specifications": "OTHER vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
+        "reviews": "REVIEW nam nulla integer pede justo lacinia eget tincidunt eget tempus",
         "price": 2773.07,
         "category": "insumos",
-        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "image": "arandanosProducto3.jpg",
         "color": "Yellow"
     },
     {
@@ -572,30 +572,5 @@
         "price": 4389.45,
         "category": "insumos",
         "image": "PRODUCTS-xanela-paraiso.jpg",
-        "color": "Crimson"
-    },
-    {
-        "id": 49,
-        "name": "Pepper - Scotch Bonnet",
-        "description": "consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum",
-        "technical description": "ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-        "other specifications": "amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed",
-        "reviews": "interdum in ante vestibulum ante ipsum primis in faucibus orci luctus",
-        "price": 1812.19,
-        "category": "café",
-        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-        "color": "Violet"
-    },
-    {
-        "id": 50,
-        "name": "Arctic Char - Fillets",
-        "description": "mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin",
-        "technical description": "pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna",
-        "other specifications": "faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum",
-        "reviews": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla",
-        "price": 1168.36,
-        "category": "te",
-        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-        "color": "Puce"
-    }
+        "color": "Crimson"}
 ]

@@ -28,7 +28,7 @@ const products = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
       res.render("products/products_edit");
     },
     productsList: (req, res) => {
-      return res.render("products", {
+      return res.render("products/products", {
         productsList: products,
       });
     }

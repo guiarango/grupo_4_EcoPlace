@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('partials/head', {title: 'Todos los productos'}) %>
-  <body>
-    <%- include('partials/navBar') %>
+<%- include('../partials/head', {pageTitle: 'Todos los productos'}) %>
 
+<body>
+  <%- include('../partials/navBar') %>
+
+  <div class=>
     <div class=>
       <div class=>
-        <div class=>
-          <h2 class=>Todos los productos</h2>
-        </div>
-
-        <!-- Aca iteramos el array que llega del controlador -->
-        <% for( let i=0; i < productsList.length; i++ ) { %>
-        <div class=>
-          <section class=>
-            <a href="/products/detail/<%= productsList.id %>">
-              <figure class=>
-                <img
-                  src="/uploads/<%= productsList.image %>"
-                  alt="imagen de producto"
-                />
-              </figure>
-              <article class=>
-                <h2><%= productsList.price %></h2>
-                <span><%= productsList.discount %> % OFF</span>
-                <p><%= productsList.name %></p>
-              </article>
-            </a>
-          </section>
-        </div>
-        <% } %>
+        <h2 class= "page_title">Todos los productos</h2>
       </div>
+      <div class= "products-list-box">
+      <!-- Aca iteramos el array que llega del controlador -->
+      <% for( let i=0; i < productsList.length; i++ ) { %>
+      
+        <section class="products-box">
+          <a href="/products/detail/<%= productsList[i].id %>">
+            <figure class="products-image-box">
+              <img src="/uploads/<%= productsList[i].image %>" alt="imagen de producto" />
+            </figure>
+            <article class="product-data-box">
+              <h2><%= productsList[i].price %></h2>
+              <span><%= productsList[i].name %> % OFF</span>
+              <p><%= productsList[i].category%></p>
+            </article>
+          </a>
+        </section>
+      
+      <% } %>
     </div>
-    <%- include('partials/footer') %>
-  </body>
+    </div>
+  </div>
+  <%- include('../partials/footer') %>
+</body>
+
 </html>
