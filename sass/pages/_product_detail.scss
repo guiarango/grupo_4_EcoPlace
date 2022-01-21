@@ -24,7 +24,7 @@
         margin-bottom: 0.5rem;
       }
       .product-name,
-      .product-brand,
+      .product-category,
       .product-price {
         font-weight: bold;
       }
@@ -83,5 +83,40 @@
       font-size: 1.5rem;
       margin: 1rem;
     }
+  }
+}
+
+main .editButton {
+  margin: 1rem;
+  float: right;
+  padding: 0.7rem 1rem;
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: 5%;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    transform: translate(-0.1rem, -0.1rem);
+  }
+  &:active {
+    transform: translate(0.1rem, 0.1rem);
+  }
+}
+
+main .deleteButton {
+  font-size: 1rem;
+  margin: 1rem 2rem;
+  float: left;
+  padding: 0.7rem 1rem;
+  background-color: red;
+  color: $color-white;
+  border-radius: 5%;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    transform: translate(-0.1rem, -0.1rem);
+  }
+  &:active {
+    transform: translate(0.1rem, 0.1rem);
   }
 }

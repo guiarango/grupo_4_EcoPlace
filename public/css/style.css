@@ -495,7 +495,7 @@ th:last-child {
       .product-general .product-preview-details > * {
         margin-bottom: 0.5rem; }
       .product-general .product-preview-details .product-name,
-      .product-general .product-preview-details .product-brand,
+      .product-general .product-preview-details .product-category,
       .product-general .product-preview-details .product-price {
         font-weight: bold; }
       .product-general .product-preview-details .product-price {
@@ -539,6 +539,35 @@ th:last-child {
       padding: 2rem;
       font-size: 1.5rem;
       margin: 1rem; }
+
+main .editButton {
+  margin: 1rem;
+  float: right;
+  padding: 0.7rem 1rem;
+  background-color: #4bbf5a;
+  color: #ffffff;
+  border-radius: 5%;
+  text-decoration: none;
+  font-weight: bold; }
+  main .editButton:hover {
+    transform: translate(-0.1rem, -0.1rem); }
+  main .editButton:active {
+    transform: translate(0.1rem, 0.1rem); }
+
+main .deleteButton {
+  font-size: 1rem;
+  margin: 1rem 2rem;
+  float: left;
+  padding: 0.7rem 1rem;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 5%;
+  text-decoration: none;
+  font-weight: bold; }
+  main .deleteButton:hover {
+    transform: translate(-0.1rem, -0.1rem); }
+  main .deleteButton:active {
+    transform: translate(0.1rem, 0.1rem); }
 
 .productCategory-field,
 .uploadImage-field {

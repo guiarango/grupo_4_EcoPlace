@@ -1,26 +1,33 @@
 <div class="nav-bar-main">
-    <nav class="nav-bar-box">
+  <nav class="nav-bar-box">
+    <div class="search-bar">
+      <form action="/busqueda" method="GET" target="_blank">
         <div class="search-bar">
-            <form  action="/busqueda" method="GET" target="_blank">
-                <div class="search-bar">
-                <input type="search" name="busquedam" placeholder="Buscar en EcoPlace">
-                
-                <button> <i class="fas fa-search"></i></button>
-                </div>      
-            </form>
-        </div> 
-            
-            <!--botón menú para celulares-->
-            <a href="#" class="hamburger-button-elias">
-                <i class="fas fa-bars "></i>
-                </a> 
-                <!-- title -->
-            <h2 class="title contenedor-logo"><i class="fas fa-leaf"></i>EcoPlace</h2>
-                <!-- Botones escritorio -->
-            <ul class="nav-block">
-                    <li class="hide-login"><a href="/sign_in">Iniciar Sesión</a></li>
-                    <li class="hide-login"><a href="/sign_up">Registrarse</a></li>
-                    <li><a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
-            </ul>
-    </nav>
-</div> 
+          <input
+            type="search"
+            name="busquedam"
+            placeholder="Buscar en EcoPlace"
+          />
+
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </form>
+    </div>
+
+    <!--botón menú para celulares-->
+    <a href="#" class="hamburger-button-elias">
+      <i class="fas fa-bars"></i>
+    </a>
+    <!-- title -->
+    <h2 class="title contenedor-logo"><i class="fas fa-leaf"></i>EcoPlace</h2>
+    <!-- Botones escritorio -->
+    <ul class="nav-block">
+      <li class="hide-login"><a href="/products/create">Crear producto</a></li>
+      <li class="hide-login"><a href="/sign_in">Iniciar Sesión</a></li>
+      <li class="hide-login"><a href="/sign_up">Registrarse</a></li>
+      <li>
+        <a href="/carrito"><i class="fas fa-shopping-basket"></i></a>
+      </li>
+    </ul>
+  </nav>
+</div>

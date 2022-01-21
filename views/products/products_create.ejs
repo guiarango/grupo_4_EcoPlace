@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-<%- include('../partials/head', {pageTitle: "Detalle del producto"}) %>
+  <%- include('../partials/head', {pageTitle: "Detalle del producto"}) %>
 
   <body>
+    <header><%- include('../partials/navBar') %></header>
 
-    <header>
-      <%- include('../partials/navBar') %>
-    </header>
-    
     <main>
       <section class="main-form">
-        <form action="#" method="POST">
+        <form action="/products" method="POST" enctype="multipart/form-data">
           <div class="form-header">
-            <img src="img/logo-2.png" alt="logo 2" />
+            <img src="/img/logo-2.png" alt="logo 2" />
           </div>
 
           <section class="productName-field">
             <input
               type="text"
-              name="productName"
+              name="name"
               id="productName"
               placeholder="Ingresar nombre producto"
               minlength="3"
@@ -28,24 +24,11 @@
             />
             <label for="productName">Ingresar nombre producto</label>
           </section>
-          <section class="productDescription-field">
-            <input
-              type="text"
-              name="productDescription"
-              id="productDescription"
-              placeholder="Ingresar descripción producto"
-              minlength="10"
-              maxlength="50"
-              required
-            />
-            <label for="productDescription"
-              >Ingresar descripción producto</label
-            >
-          </section>
+
           <section class="productColor-field">
             <input
               type="text"
-              name="productColor"
+              name="color"
               id="productColor"
               placeholder="Ingresar color producto"
               minlength="2"
@@ -57,7 +40,7 @@
           <section class="productPrice-field">
             <input
               type="number"
-              name="productPrice"
+              name="price"
               id="productPrice"
               placeholder="Ingresar precio producto"
               required
@@ -68,7 +51,7 @@
           <section class="productCategory-field">
             <label for="productCategory"
               >Selecciona una categoría
-              <select name="productCategory" id="productCategory">
+              <select name="category" id="productCategory">
                 <option value="organicos">Orgánicos</option>
                 <option value="flora y jardin">Flora Y Jardín</option>
                 <option value="cuidado personal">Cuidado Personal</option>
@@ -82,9 +65,48 @@
             <input
               type="file"
               id="file"
-              name="file"
+              name="image"
               class="uploadImage-field"
             />
+          </section>
+
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="description"
+              id="productDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productDescription"
+              >Ingresar descripción producto</label
+            >
+          </section>
+
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="technical_description"
+              id="productTechnicalDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productTechnicalDescription"
+              >Ingresar descripción técnica del producto</label
+            >
+          </section>
+
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="other_specifications"
+              id="productOthersDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productOthersDescription"
+              >Ingresar otras descripciones del producto</label
+            >
           </section>
 
           <section class="section-buttons">
@@ -95,7 +117,6 @@
       </section>
     </main>
 
-  <%- include('../partials/footer') %>
-
+    <%- include('../partials/footer') %>
   </body>
 </html>

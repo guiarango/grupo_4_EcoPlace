@@ -1,94 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
 
   <body>
-    <header>
-
-      <%- include('../partials/navBar') %>
-
-    </header>
+    <header><%- include('../partials/navBar') %></header>
 
     <main>
       <section class="main-form">
-        <form action="#" method="POST">
+        <form
+          action="/products/<%=productData.id%>?_method=PUT>"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <div class="form-header">
-            <img src="img/logo-2.png" alt="logo 2" />
+            <img src="/img/logo-2.png" alt="logo 2" />
           </div>
-
-          <section class="productId-field">
-            <input
-              type="number"
-              name="productId"
-              id="productId"
-              placeholder="Ingresar ID"
-              required
-            />
-
-            <label for="productId">Ingresar ID producto</label>
-            <section class="section-buttons">
-              <button type="submit">CONSULTAR</button>
-            </section>
-          </section>
 
           <section class="productName-field">
             <input
               type="text"
-              name="productName"
+              name="name"
               id="productName"
-              placeholder="Ingresar nombre producto -Deshabilitado"
+              placeholder="Ingresar nombre producto"
               minlength="3"
               maxlength="30"
+              value="<%=productData.name%>"
               required
-              disabled
             />
             <label for="productName">Ingresar nombre producto</label>
           </section>
-          <section class="productDescription-field">
-            <input
-              type="text"
-              name="productDescription"
-              id="productDescription"
-              placeholder="Ingresar descripción producto -Deshabilitado"
-              minlength="10"
-              maxlength="50"
-              required
-              disabled
-            />
-            <label for="productDescription"
-              >Ingresar descripción producto</label
-            >
-          </section>
+
           <section class="productColor-field">
             <input
               type="text"
-              name="productColor"
+              name="color"
               id="productColor"
-              placeholder="Ingresar color producto -Deshabilitado"
+              placeholder="Ingresar color producto"
               minlength="2"
               maxlength="15"
+              value="<%=productData.color%>"
               required
-              disabled
             />
             <label for="productColor">Ingresar color producto</label>
           </section>
           <section class="productPrice-field">
             <input
-              type="number"
-              name="productPrice"
+              type="text"
+              name="price"
               id="productPrice"
-              placeholder="Ingresar precio producto -Deshabilitado"
-              required
-              disabled
+              placeholder="Ingresar precio producto"
+              value="<%=productData.price%>"
             />
             <label for="productPrice">Ingresar precio producto</label>
           </section>
 
           <section class="productCategory-field">
             <label for="productCategory"
-              >Selecciona una categoría -Deshabilitado
-              <select name="productCategory" id="productCategory" disabled>
+              >Selecciona una categoría
+              <select name="category" id="productCategory">
                 <option value="organicos">Orgánicos</option>
                 <option value="flora y jardin">Flora Y Jardín</option>
                 <option value="cuidado personal">Cuidado Personal</option>
@@ -98,25 +67,61 @@
           </section>
 
           <section class="uploadImage-field">
-            <label for="file">Cargar imagen -Deshabilitado</label>
+            <label for="file">Cargar imagen</label>
             <input
               type="file"
               id="file"
-              name="file"
+              name="image"
               class="uploadImage-field"
-              disabled
             />
           </section>
 
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="description"
+              id="productDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productDescription"
+              >Ingresar descripción producto</label
+            >
+          </section>
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="technical_description"
+              id="productTechnicalDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productTechnicalDescription"
+              >Ingresar descripción técnica del producto</label
+            >
+          </section>
+
+          <section class="productDescription-field">
+            <textarea
+              type="text"
+              name="other_specifications"
+              id="productOthersDescription"
+              placeholder="Ingresar descripción producto"
+              required
+            ></textarea>
+            <label for="productOthersDescription"
+              >Ingresar otras descripciones del producto</label
+            >
+          </section>
+
           <section class="section-buttons">
-            <button type="submit" disabled>ACTUALIZAR - DESHABILI</button>
-            <button type="reset" disabled>LIMPIAR - DESHABILI</button>
+            <button type="submit">ACTUALIZAR</button>
+            <button type="reset">LIMPIAR</button>
           </section>
         </form>
       </section>
     </main>
 
     <%- include('../partials/footer') %>
-  
   </body>
 </html>

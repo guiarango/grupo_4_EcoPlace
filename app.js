@@ -2,7 +2,13 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 const homeRoute = require("./routes/main");
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+app.use(methodOverride("_method"));
 
 // Se deja abierta al público la carpeta public
 const publicPath = path.resolve(__dirname, "public");

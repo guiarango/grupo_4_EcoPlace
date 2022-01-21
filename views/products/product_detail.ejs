@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include('../partials/head', {pageTitle: 'Detalle del producto'}) %>
+  <%- include('../partials/head', {pageTitle: 'Detalle del producto'}) %>
 
   <body>
-    <header>
-      <%- include('../partials/navBar') %>
-    </header>
+    <header><%- include('../partials/navBar') %></header>
 
     <main>
+      <form action="/products/<%=productData.id%>/edit" method="GET">
+        <button class="editButton" type="submit">EDITAR</button>
+      </form>
+      <form action="/products/<%=productData.id%>?_method=DELETE" method="POST">
+        <button class="deleteButton" type="submit">ELIMINAR</button>
+      </form>
       <section class="product-general">
         <section class="product-preview">
           <div class="product-preview-options">
             <img
-              src="/img/Categoria-hogar.JPG"
+              src="/uploads/<%=productData.image%>"
               alt="photoPreview1"
               class="preview-option"
             />
             <img
-              src="/img/Categoria-hogar.JPG"
+              src="/uploads/<%=productData.image%>"
               alt="photoPreview2"
               class="preview-option"
             />
             <img
-              src="/img/Categoria-hogar.JPG"
+              src="/uploads/<%=productData.image%>"
               alt="photoPreview3"
               class="preview-option"
             />
           </div>
           <div class="product-preview-photo">
-            <img src="/img/Categoria-hogar.JPG" alt="photoPreviewPhoto" />
+            <img
+              src="/uploads/<%=productData.image%>"
+              alt="photoPreviewPhoto"
+            />
           </div>
           <div class="product-preview-details">
-            <p class="product-brand">Marca</p>
-            <p class="product-name">Nombre producto</p>
-            <p class="product-price">$ Precio</p>
+            <p class="product-category"><%=productData.category%></p>
+            <p class="product-name"><%=productData.name%></p>
+            <p class="product-price">$ <%=productData.price%></p>
 
             <form action="#" class="main-form-product">
-              <label for="color-choice">Selecciona un color:</label>
-              <div class="product-choice-color">
-                <input
-                  type="checkbox"
-                  name="color"
-                  id="color-choice"
-                  value="Color1"
-                />
-                <input
-                  type="checkbox"
-                  name="color"
-                  id="color-choice"
-                  value="Color2"
-                />
-              </div>
-
-              <label for="choice-others">Selecciona una opción:</label>
+              <label for="choice-others">Selecciona un color:</label>
               <select
                 name="product-choice-others"
                 id="choice-others"
                 class="product-choice-others"
               >
-                <option value="option1">Opción 1</option>
-                <option value="option2">Opción 2</option>
-                <option value="option3">Opción 3</option>
+                <% if(typeof(productData.color)==="string"){%>
+
+                <option value="<%=productData.color%>">
+                  <%=productData.color%>
+                </option>
+
+                <%}else{%> <%for(let element of productData.color){%>
+                <option value="<%=element%>"><%=element%></option>
+                <%}%> // <%}%>
               </select>
 
               <button type="button" class="add-Cart">AGREGAR AL CARRITO</button>
@@ -78,17 +74,11 @@
             <button type="button" class="reviews">RESEÑAS</button>
           </form>
 
-          <p class="product-general-info-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            harum quod maxime molestias laboriosam ab accusantium aut dolor sint
-            placeat reiciendis ducimus, eligendi eum corrupti numquam officia
-            itaque! Mollitia, asperiores!
-          </p>
+          <p class="product-general-info-text"><%=productData.description%></p>
         </section>
       </section>
     </main>
 
-  <%- include('../partials/footer') %>
-
+    <%- include('../partials/footer') %>
   </body>
 </html>
