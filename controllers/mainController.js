@@ -20,6 +20,21 @@ const mainController = {
   displayCreateProduct: (req, res) => {
     res.render("products/products_create");
   },
+
+
+createProduct: (req, res) => {
+ let newProduct = req.body;
+ newProduct.image = req.file.filename;
+  newProduct.color = newProduct.color.replace(/ /g,"").split(",")
+  newProduct.id = products[products.length -1].id + 1
+  products.push(newProduct);
+  fs.writeFileSync(productFilePath, JSON.stringify(products, null, " "));
+
+
+  res.send(newProduct)
+
+}
+  ,
   displayEditProduct: (req, res) => {
     const productData = products.find(function (product) {
       return product.id == req.params.id;
