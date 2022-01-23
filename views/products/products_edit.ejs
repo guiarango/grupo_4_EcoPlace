@@ -8,7 +8,7 @@
     <main>
       <section class="main-form">
         <form
-          action="/products/<%=productData.id%>?_method=PUT>"
+          action="/products/<%=productData.id%>?_method=PUT"
           method="POST"
           enctype="multipart/form-data"
         >
@@ -23,9 +23,7 @@
               id="productName"
               placeholder="Ingresar nombre producto"
               minlength="3"
-              maxlength="30"
               value="<%=productData.name%>"
-              required
             />
             <label for="productName">Ingresar nombre producto</label>
           </section>
@@ -36,10 +34,7 @@
               name="color"
               id="productColor"
               placeholder="Ingresar color producto"
-              minlength="2"
-              maxlength="15"
               value="<%=productData.color%>"
-              required
             />
             <label for="productColor">Ingresar color producto</label>
           </section>
@@ -58,10 +53,10 @@
             <label for="productCategory"
               >Selecciona una categoría
               <select name="category" id="productCategory">
-                <option value="organicos">Orgánicos</option>
-                <option value="flora y jardin">Flora Y Jardín</option>
-                <option value="cuidado personal">Cuidado Personal</option>
-                <option value="hogar">Hogar</option>
+                <option value="organicos" <%=productData.category=="organicos"?"selected":""%>>Orgánicos</option>
+                <option value="flora y jardin" <%=productData.category=="flora y jardin"?"selected":""%>>Flora Y Jardín</option>
+                <option value="cuidado personal" <%=productData.category=="cuidado personal"?"selected":""%>>Cuidado Personal</option>
+                <option value="hogar" <%=productData.category=="hogar"?"selected":""%>>Hogar</option>
               </select></label
             >
           </section>
@@ -82,8 +77,7 @@
               name="description"
               id="productDescription"
               placeholder="Ingresar descripción producto"
-              required
-            ></textarea>
+            ><%=productData.description%></textarea>
             <label for="productDescription"
               >Ingresar descripción producto</label
             >
@@ -93,9 +87,8 @@
               type="text"
               name="technical_description"
               id="productTechnicalDescription"
-              placeholder="Ingresar descripción producto"
-              required
-            ></textarea>
+              placeholder="Ingresar descripción técnica del producto"
+            ><%=productData.technical_description%></textarea>
             <label for="productTechnicalDescription"
               >Ingresar descripción técnica del producto</label
             >
@@ -106,9 +99,8 @@
               type="text"
               name="other_specifications"
               id="productOthersDescription"
-              placeholder="Ingresar descripción producto"
-              required
-            ></textarea>
+              placeholder="Ingresar otras descripciones del producto"
+            ><%=productData.other_specifications%></textarea>
             <label for="productOthersDescription"
               >Ingresar otras descripciones del producto</label
             >
