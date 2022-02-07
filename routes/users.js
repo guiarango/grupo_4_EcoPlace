@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const mainController = require("../controllers/mainController");
+const usersController = require("../controllers/usersController");
 const path = require("path");
 const multer = require("multer");
 
@@ -20,6 +20,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.get("/", mainController.home);
+router.get("/sign_in", usersController.signIn);
+router.get("/sign_up", usersController.signUp);
+router.get("/carrito", usersController.carrito);
 
 module.exports = router;

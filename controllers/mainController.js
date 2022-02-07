@@ -9,85 +9,85 @@ const mainController = {
     res.render("home");
   },
 
-  displayProductDetail: (req, res) => {
-    const productData = products.find(function (product) {
-      return product.id == req.params.id;
-    });
+  // displayProductDetail: (req, res) => {
+  //   const productData = products.find(function (product) {
+  //     return product.id == req.params.id;
+  //   });
 
-    return res.render("products/product_detail", { productData });
-  },
+  //   return res.render("products/product_detail", { productData });
+  // },
 
-  displayCreateProduct: (req, res) => {
-    res.render("products/products_create");
-  },
+  // displayCreateProduct: (req, res) => {
+  //   res.render("products/products_create");
+  // },
 
-  createProduct: (req, res) => {
-    let newProduct = req.body;
-    newProduct.image = req.file.filename;
-    newProduct.color = newProduct.color.replace(/ /g, "").split(",");
-    newProduct.id = products[products.length - 1].id + 1;
-    products.push(newProduct);
-    fs.writeFileSync(productFilePath, JSON.stringify(products, null, " "));
+  // createProduct: (req, res) => {
+  //   let newProduct = req.body;
+  //   newProduct.image = req.file.filename;
+  //   newProduct.color = newProduct.color.replace(/ /g, "").split(",");
+  //   newProduct.id = products[products.length - 1].id + 1;
+  //   products.push(newProduct);
+  //   fs.writeFileSync(productFilePath, JSON.stringify(products, null, " "));
 
-    res.redirect("/products/" + newProduct.id);
-  },
+  //   res.redirect("/products/" + newProduct.id);
+  // },
 
-  displayEditProduct: (req, res) => {
-    const productData = products.find(function (product) {
-      return product.id == req.params.id;
-    });
+  // displayEditProduct: (req, res) => {
+  //   const productData = products.find(function (product) {
+  //     return product.id == req.params.id;
+  //   });
 
-    return res.render("products/products_edit", { productData });
-  },
+  //   return res.render("products/products_edit", { productData });
+  // },
 
-  updateProductDetail: (req, res) => {
-    const id = Number(req.params.id);
-    const productsArrayEdited = products.map((oneProduct) => {
-      if (oneProduct.id === id) {
-        return {
-          id: id,
-          ...req.body,
-          image: req.file ? req.file.filename : oneProduct.image,
-        };
-      }
-      return oneProduct;
-    });
+  // updateProductDetail: (req, res) => {
+  //   const id = Number(req.params.id);
+  //   const productsArrayEdited = products.map((oneProduct) => {
+  //     if (oneProduct.id === id) {
+  //       return {
+  //         id: id,
+  //         ...req.body,
+  //         image: req.file ? req.file.filename : oneProduct.image,
+  //       };
+  //     }
+  //     return oneProduct;
+  //   });
 
-    fs.writeFileSync(
-      productFilePath,
-      JSON.stringify(productsArrayEdited, null, " ")
-    );
+  //   fs.writeFileSync(
+  //     productFilePath,
+  //     JSON.stringify(productsArrayEdited, null, " ")
+  //   );
 
-    return res.redirect("/products");
-  },
+  //   return res.redirect("/products");
+  // },
 
-  displayProductsList: (req, res) => {
-    return res.render("products/products", {
-      productsList: products,
-    });
-  },
+  // displayProductsList: (req, res) => {
+  //   return res.render("products/products", {
+  //     productsList: products,
+  //   });
+  // },
 
-  deleteProduct: (req, res) => {
-    const dataFiltered = products.filter(function (product) {
-      return product.id != req.params.id;
-    });
+  // deleteProduct: (req, res) => {
+  //   const dataFiltered = products.filter(function (product) {
+  //     return product.id != req.params.id;
+  //   });
 
-    fs.writeFileSync(productFilePath, JSON.stringify(dataFiltered, null, " "));
+  //   fs.writeFileSync(productFilePath, JSON.stringify(dataFiltered, null, " "));
 
-    return res.redirect("/");
-  },
+  //   return res.redirect("/");
+  // },
 
-  signIn: (req, res) => {
-    res.render("users/sign_in");
-  },
+  // signIn: (req, res) => {
+  //   res.render("users/sign_in");
+  // },
 
-  signUp: (req, res) => {
-    res.render("users/sign_up");
-  },
+  // signUp: (req, res) => {
+  //   res.render("users/sign_up");
+  // },
 
-  carrito: (req, res) => {
-    res.render("users/carrito");
-  },
+  // carrito: (req, res) => {
+  //   res.render("users/carrito");
+  // },
 };
 
 module.exports = mainController;
