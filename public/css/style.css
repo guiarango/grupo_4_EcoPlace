@@ -75,6 +75,8 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%; }
+  .nav-bar-box a {
+    text-decoration: none; }
 
 .search-bar {
   width: 100%;

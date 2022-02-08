@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
+  <%- include('../partials/head', {pageTitle: 'Registro'}) %>
 
   <body>
     <header>
@@ -12,7 +12,7 @@
     
     <main>
       <section class="main-form">
-        <form action="#" method="POST">
+        <form action="/users" method="POST">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
           </div>
@@ -20,7 +20,7 @@
           <section class="user-field">
             <input
               type="text"
-              name="sign-up-user"
+              name="Username"
               id="user"
               placeholder="Ingresar usuario"
               minlength="5"
@@ -32,7 +32,7 @@
           <section class="email-field">
             <input
               type="email"
-              name="sign-up-email"
+              name="email"
               id="email"
               placeholder="Ingresar email"
               required
@@ -42,7 +42,7 @@
           <section class="password-field">
             <input
               type="password"
-              name="sign-up-password"
+              name="password"
               id="password"
               placeholder="Ingresar contraseña"
               minlength="10"

@@ -19,7 +19,7 @@ const productsController = {
 
   createProduct: (req, res) => {
     let newProduct = req.body;
-    newProduct.image = req.file.filename;
+    // newProduct.image = req.file.filename;
     newProduct.color = newProduct.color.replace(/ /g, "").split(",");
     newProduct.id = products[products.length - 1].id + 1;
     products.push(newProduct);

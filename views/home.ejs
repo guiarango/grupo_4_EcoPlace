@@ -12,22 +12,21 @@
         <div class="category-main">
           <article class="category-main-title">
             <h3>Orgánicos</h3>
-            <img src="/img/categoria-comida.jpg" alt="comida organica" />
+            <a href="/products"><img src="/img/categoria-comida.jpg" alt="comida organica" /></a>
           </article>
           <div class="carrousel-products">
             <i class="fas fa-chevron-left carrousel-product-button1"></i>
-
+            <%for( let i=0; i < 3; i++ ) { %>
             <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/organicoQuinoa.jpeg" alt="QUINOA"
-              /></a>
+             
+              <a href="/products/<%= productsList[i].id %>"><img src="/uploads/<%= productsList[i].image %>" alt="Imagen producto"/></a>
               <div class="product-name-box">
-                <p class="price">$300</p>
-                <h3 class="product-name">Quinoa</h3>
+                <p class="price"><%= productsList[i].price %></p>
+                <h3 class="product-name"><%= productsList[i].name %></h3>
               </div>
             </article>
-
-            <article class="product-box">
+            <% } %>
+            <!-- <article class="product-box">
               <a href="/products/1"
                 ><img src="/img/organicoHummus.jpeg" alt="hummus"
               /></a>
@@ -44,7 +43,7 @@
                 <p class="price">$350</p>
                 <h3 class="product-name">Bombones orgánicos</h3>
               </div>
-            </article>
+            </article> -->
             <i class="fas fa-chevron-right carrousel-product-button2"></i>
           </div>
         </div>
@@ -52,7 +51,7 @@
         <div class="category-main">
           <article class="category-main-title">
             <h3>Flora y Jardín</h3>
-            <img src="/img/categoria-jardin.jpg" alt="avatar jardin" />
+            <a href="/products"><img src="/img/categoria-jardin.jpg" alt="avatar jardin" /></a>
           </article>
           <div class="carrousel-products">
             <i class="fas fa-chevron-left carrousel-product-button1"></i>
@@ -89,10 +88,7 @@
         <div class="category-main">
           <article class="category-main-title">
             <h3>Cuidado personal</h3>
-            <img
-              src="/img/CuidadoCategoria.jpg"
-              alt="avatar cuidado personal"
-            />
+            <a href="/products"><img src="/img/CuidadoCategoria.jpg" alt="avatar cuidado personal"/></a>
           </article>
           <div class="carrousel-products">
             <i class="fas fa-chevron-left carrousel-product-button1"></i>
@@ -130,7 +126,7 @@
         <div class="category-main">
           <article class="category-main-title">
             <h3>Hogar</h3>
-            <img src="/img/Categoria-hogar.JPG" alt="avatar hogar" />
+            <a href="/products"><img src="/img/Categoria-hogar.JPG" alt="avatar hogar" /></a>
           </article>
           <div class="carrousel-products">
             <i class="fas fa-chevron-left carrousel-product-button1"></i>
