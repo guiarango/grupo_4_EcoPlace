@@ -9,23 +9,27 @@ const storage = multer.diskStorage({
     cb(null, path.join(__dirname, "../public/uploads/users"));
   },
   filename: function (req, file, cb) {
-    cb(
-      null,
-      `${file.fieldname}_userImg_${Date.now()}${path.extname(
-        file.originalname
-      )}`
-    );
-  },
-});
+    const newFilename = 'avatar-' + Date.now() + path.extname(file.originalname);
+    cb(null, newFilename)}
+    });
 
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
 router.get("/users", usersController.users);
+
 router.get("/sign_in", usersController.signIn);
+
 router.get("/sign_up", usersController.signUp);
+
+router.post("/users", upload.single("avatarImg"), usersController.store);
+
 router.get("/carrito", usersController.carrito);
+
 // router.delete("/users/:id", usersController.deleteUser);
-router.post("/users", usersController.createUser);
-// router.post("/users", upload.single("image"), usersController.createUser);
+
+router.post("/users", usersController.store);
+
 // router.put("/users/:id",  upload.single("image"),  usersController.updateUserDetail);
+
+
 module.exports = router;

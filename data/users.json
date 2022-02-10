@@ -196,5 +196,36 @@
   "confirm-sign-up-password": "aaaaaaaaaa",
   "image": "default",
   "id": 25
+ },
+ {
+  "Username": "Williams Bournissent",
+  "email": "williams.bournissent@gmail.com",
+  "password": "let group = req.body;         ",
+  "confirm-sign-up-password": "let group = req.body;         ",
+  "id": 26
+ },
+ {
+  "Username": "Williams Bournissent",
+  "email": "williams.bournissent@gmail.com",
+  "password": "let group = req.body;         ",
+  "confirm-sign-up-password": "let group = req.body;         ",
+  "image": "avatar1644473494866.jpg",
+  "id": 27
+ },
+ {
+  "Username": "Williams Bournissent",
+  "email": "williams.bournissent@gmail.com",
+  "password": "let userToCreate = {          ",
+  "confirm-sign-up-password": "let userToCreate = {          ",
+  "image": "avatar1644478240855.jpeg",
+  "id": 28
+ },
+ {
+  "Username": "asdsdsdgsdfgdfg",
+  "email": "jona.ale@gmail.com",
+  "password": "let userToCreate = {          ",
+  "confirm-sign-up-password": "let userToCreate = {          ",
+  "image": "avatar-1644478407726.jpg",
+  "id": 29
  }
 ]

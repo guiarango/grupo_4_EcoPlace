@@ -12,7 +12,7 @@
     
     <main>
       <section class="main-form">
-        <form action="/users" method="POST">
+        <form action="/users" method="POST" enctype="multipart/form-data">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
           </div>
@@ -63,6 +63,15 @@
               required
             />
             <label for="password">Confirmar contraseña</label>
+          </section>
+
+          <section class="avatarImage">
+            <input
+              type="file"
+              name="avatarImg"
+              id="avatarImg"
+              multiple
+            />
           </section>
 
           <section class="button-submit">
