@@ -27,7 +27,7 @@ router.get("/carrito", usersController.carrito);
 
 // router.delete("/users/:id", usersController.deleteUser);
 
-router.post("/users", usersController.store);
+router.post("/users", usersController.createUser);
 
 // router.put("/users/:id",  upload.single("image"),  usersController.updateUserDetail);
 
