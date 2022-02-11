@@ -21,13 +21,13 @@ router.get("/sign_in", usersController.signIn);
 
 router.get("/sign_up", usersController.signUp);
 
-router.post("/users", upload.single("avatarImg"), usersController.store);
+router.post("/users", upload.single("avatarImg"), usersController.createUser);
 
 router.get("/carrito", usersController.carrito);
 
 // router.delete("/users/:id", usersController.deleteUser);
 
-router.post("/users", usersController.createUser);
+// router.post("/users", usersController.createUser);
 
 // router.put("/users/:id",  upload.single("image"),  usersController.updateUserDetail);
 

@@ -160,41 +160,10 @@
   "profile picture": "http://dummyimage.com/221x100.png/5fa2dd/ffffff"
  },
  {
-  "Username": "prueba",
-  "sign-up-email": "prueba@ecoplace.cl",
-  "password": "$2a$10$WusWmidnEPkH99nXJtlhZu3l10yCFIT/M9WNmE6wYSg5aGJ60ELAO",
-  "confirm-sign-up-password": "pruebaprueba",
+  "Username": "guilleElPRo",
+  "email": "asdasd@asdas.cl",
+  "password": "$2a$10$mDQgvq3aijr1b9VTAqiJJu4jM0NZ3GRHHOO6C4AqBAmrYXcEh1NkK",
+  "image": "avatar-1644542853321.jpg",
   "id": 21
- },
- {
-  "Username": "prueba",
-  "sign-up-email": "prueba@ecoplace.cl",
-  "password": "$2a$10$NSpituKS7EmPawZsaAUC8.cKl9CV4gS7YxcllG3SPPJTcGRAtlVWu",
-  "confirm-sign-up-password": "aaaaaaaaaa",
-  "id": 22
- },
- {
-  "Username": "prueba",
-  "sign-up-email": "prueba@ecoplace.cl",
-  "password": "$2a$10$OXqQheW1qjGssn698n5P1eqTH8oQV4lKv2S8x047VkNSeyvdZoKOG",
-  "confirm-sign-up-password": "aaaaaaaaaa",
-  "image": "default",
-  "id": 23
- },
- {
-  "Username": "prueba",
-  "sign-up-email": "prueba@ecoplace.cl",
-  "password": "$2a$10$00WO7chgJCCKnAp0QgmwYeOY81Hn.86DDLJiQIevDEVqJR6ypfdqK",
-  "confirm-sign-up-password": "aaaaaaaaaa",
-  "image": "default",
-  "id": 24
- },
- {
-  "Username": "prueba",
-  "sign-up-email": "prueba@ecoplace.cl",
-  "password": "$2a$10$sVkyHmBlyFEaOIvNoPN6ZuMYidAv/FOTe08DE60yRnIrOtLpV8T1K",
-  "confirm-sign-up-password": "aaaaaaaaaa",
-  "image": "default",
-  "id": 25
  }
 ]
