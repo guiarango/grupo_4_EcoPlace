@@ -1,16 +1,17 @@
+//Se importan librerúas
 const path = require("path");
 const fs = require("fs");
-
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
-const usersFilePath = path.resolve(__dirname, "../data/users.json");
-const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+//Se require el modelo de usuarios
+const User = require("../models/User");
 
 const usersController = {
-  users: (req, res) => {
-    res.render("users/users", { users });
-  },
+  // users: (req, res) => {
+  //   res.render("users/users", { users });
+  // },
+
   signIn: (req, res) => {
     res.render("users/sign_in");
   },
@@ -23,10 +24,11 @@ const usersController = {
     res.render("users/carrito");
   },
 
-  // POST routes
+  // Creacion del usuario por la ruta POST
   createUser: (req, res) => {
     const resultValidation = validationResult(req);
 
+    //Valida si pasan errores de validacion en la creacion del usuario
     if (resultValidation.errors.length > 0) {
       res.render("users/sign_up", {
         errors: resultValidation.mapped(),
@@ -34,22 +36,37 @@ const usersController = {
       });
     } else {
       let newUser = req.body;
+
+      //Valida que el email no esté en uso
+      let userInDB = User.findByField("email", String(req.body.email));
+
+      if (userInDB) {
+        return res.render("users/sign_up", {
+          errors: {
+            email: { msg: "*Este email ya está en uso" },
+          },
+          oldData: req.body,
+        });
+      }
+
+      //Valida que la password coincida con la confirmación de password
       if (newUser.password == newUser.confirmSignUpPassword) {
         delete newUser.confirmSignUpPassword;
         newUser.image = req.file.filename;
-
-        newUser.id = users[users.length - 1].id + 1;
         newUser.password = bcrypt.hashSync(req.body.password, 10);
+        User.createUser(newUser);
 
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
         res.redirect("/");
       } else {
-        res.send("las contraseñas no coinciden");
+        res.render("users/sign_up", {
+          errors: {
+            password: { msg: "*Las contraseñas no coinciden" },
+            confirmSignUpPassword: { msg: "*Las contraseñas no coinciden" },
+          },
+          oldData: req.body,
+        });
       }
     }
-
-    let newUser = req.body;
   },
 };
 

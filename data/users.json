@@ -167,24 +167,10 @@
     "id": 21
   },
   {
-    "Username": "GuillermoPrueba",
-    "email": "guiarango@hotmail.com",
-    "password": "$2a$10$fU95g07KnJTrNkx5LQGKGuuQxrVCxCghk66/X5pkJ2LWrxdmHz5mq",
-    "image": "avatar-1644726596671.PNG",
+    "Username": "Guillermo",
+    "email": "asdasd@asdas.cl",
+    "password": "$2a$10$GCjR8fT7LY2xeT5mdujm6uFePYa6ZsCd/0jC8Gd2Rx7u4PbhseYsu",
+    "image": "avatar-1644770229202.PNG",
     "id": 22
-  },
-  {
-    "Username": "GuillermoPrueba",
-    "email": "guiarango@hotmail.com",
-    "password": "$2a$10$75qsT5lXJ.rIXB0TIMzhq.WUgPG/lVGm1MwiPSeCOeqiiK/pCJmq2",
-    "image": "avatar-1644726626384.PNG",
-    "id": 23
-  },
-  {
-    "Username": "GuillermoPrueba2",
-    "email": "guiarango@hotmail.com",
-    "password": "$2a$10$UfPmVLjVhykHB8heXyOsGuQIrbAZpEeJzEyb7p5voy3PAbuasgY0y",
-    "image": "avatar-1644727739182.PNG",
-    "id": 24
   }
 ]

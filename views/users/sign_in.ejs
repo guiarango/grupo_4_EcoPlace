@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
- 
   <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
 
   <body>
-    <header>
-
-      <%- include('../partials/navBar') %>
-
-    </header>
+    <header><%- include('../partials/navBar') %></header>
 
     <main>
       <section class="main-form">
@@ -43,6 +38,15 @@
               required
             />
             <label for="password">Contraseña</label>
+          </section>
+          <section class="section-rememberUser">
+            <label
+              ><input
+                name="remeberUser"
+                type="checkbox"
+                value="remember"
+              />Recordar mi usuario</label
+            >
           </section>
 
           <section class="button-submit">
@@ -87,6 +91,5 @@
     </main>
 
     <%- include('../partials/footer') %>
-    
   </body>
 </html>

@@ -76,6 +76,10 @@
   .section-buttons {
     display: block !important;
   }
+  .section-rememberUser {
+    display: flexbox;
+    flex-direction: row;
+  }
 
   .section-buttons > * {
     width: 20%;
