@@ -18,3 +18,12 @@
     color: $color-secondary;
   }
 }
+
+.section-rememberUser {
+  flex-direction: row !important;
+  justify-items: center;
+  input {
+    width: auto;
+    margin: auto 0;
+  }
+}

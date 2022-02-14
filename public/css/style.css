@@ -654,6 +654,9 @@ main .deleteButton {
     .main-form .social-media .fa-google-plus-square {
       color: #dd4b39; }
 
+.text-error {
+  color: red; }
+
 .sign-in-field {
   display: flex;
   flex-direction: row;
@@ -669,6 +672,13 @@ main .deleteButton {
   .sign-in-field .sign-in-link,
   .sign-in-field .forgotten-password {
     color: #804000; }
+
+.section-rememberUser {
+  flex-direction: row !important;
+  justify-items: center; }
+  .section-rememberUser input {
+    width: auto;
+    margin: auto 0; }
 
 .sign-up-field {
   color: #000000;

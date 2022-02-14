@@ -7,7 +7,7 @@
 
     <main>
       <section class="main-form">
-        <form action="#" method="POST">
+        <form action="/sign_in" method="POST">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
             <!-- <i class="fas fa-leaf"></i>
@@ -17,37 +17,32 @@
           <section class="user-field">
             <input
               type="text"
-              name="sign-up-user"
+              name="email"
               id="user"
-              placeholder="Usuario o Email"
-              minlength="5"
-              maxlength="20"
-              required
+              placeholder="Ingresa el Email"
+              value="<%= locals.oldData?locals.oldData.email:null %>"
             />
-            <label for="user">Usuario o Email</label>
+            <label for="user">Ingresa el Email</label>
           </section>
 
           <section class="password-field">
             <input
               type="password"
-              name="sign-up-password"
+              name="password"
               id="password"
-              placeholder="Contraseña"
-              minlength="10"
-              maxlength="30"
-              required
+              placeholder="Ingresa la Contraseña"
             />
-            <label for="password">Contraseña</label>
+            <label for="password">Ingresa la Contraseña</label>
           </section>
           <section class="section-rememberUser">
-            <label
-              ><input
-                name="remeberUser"
-                type="checkbox"
-                value="remember"
-              />Recordar mi usuario</label
-            >
+            <input name="remeberUser" type="checkbox" value="remember" />
+            <label>Recordar mi usuario</label>
           </section>
+
+          <div class="text-error">
+            <% if (locals.errors && errors.email) { %> <%= errors.email.msg%> <%
+            } %>
+          </div>
 
           <section class="button-submit">
             <button type="submit">INGRESAR</button>

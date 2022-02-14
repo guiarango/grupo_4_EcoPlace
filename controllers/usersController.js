@@ -54,7 +54,7 @@ const usersController = {
         delete newUser.confirmSignUpPassword;
         newUser.image = req.file.filename;
         newUser.password = bcrypt.hashSync(req.body.password, 10);
-        User.createUser(newUser);
+        let userCreated = User.createUser(newUser);
 
         res.redirect("/");
       } else {
@@ -65,6 +65,38 @@ const usersController = {
           },
           oldData: req.body,
         });
+      }
+    }
+  },
+
+  loginProcess: (req, res) => {
+    const resultValidation = validationResult(req);
+
+    //Valida si pasan errores de validacion en la creacion del usuario
+    if (resultValidation.errors.length > 0) {
+      res.render("users/sign_in", {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    } else {
+      let userToLogin = User.findByField("email", req.body.email);
+      if (userToLogin) {
+        let isOKPassword = bcrypt.compareSync(
+          req.body.password,
+          userToLogin.password
+        );
+        if (isOKPassword) {
+          res.redirect("/");
+        } else {
+          res.render("users/sign_in", {
+            errors: {
+              email: {
+                msg: "*Favor validar las credenciales",
+              },
+            },
+            oldData: req.body,
+          });
+        }
       }
     }
   },
