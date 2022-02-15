@@ -10,102 +10,223 @@
 
     </header>
 
-    <main class="big-container">
-      <div class="small-container cart-page">
-        <h1 class="title-cart">CARRITO</h1>
+    <main class="container">
 
-        <table>
-          <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Subtotal</th>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                <img src="/img/categoria-comida.jpg" />
-                <div class="detail-box">
-                  <p>Comida</p>
-                  <small>Precio: $5000</small><br />
-                  <button type="button">Borrar</button>
-                </div>
-              </div>
-            </td>
-            <td><input type="number" value="1" /></td>
-            <td>$5000</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                <img src="/img/categoria-jardin.jpg" />
-                <div class="detail-box">
-                  <p>Comida</p>
-                  <small>Precio: $1000</small><br />
-                  <button type="button">Borrar</button>
-                </div>
-              </div>
-            </td>
-            <td><input type="number" value="1" /></td>
-            <td>$5000</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                <img src="/img/categoria-hogar.jpg" />
-                <div class="detail-box">
-                  <p>Comida</p>
-                  <small>Precio: $21000</small><br />
-                  <button type="button">Borrar</button>
-                </div>
-              </div>
-            </td>
-            <td><input type="number" value="1" name="cantidad" /></td>
-            <td>$5000</td>
-          </tr>
-        </table>
+      <h1 class="heading">
+        <ion-icon name="cart-outline"></ion-icon> Carrito de compras
+      </h1>
+  
+      <div class="item-flex">
 
-        <div class="bordertop-shipping1">
-          <h2 class="title-shipping">ENVIO</h2>
-
-          <div class="shipping1">
-            <form action="/" method="get">
-              <label>Ingrese su pais</label><br />
-              <select name="pais" class="country">
-                <option value="Pais">Pais...</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Chile">Chile</option>
-                <option value="Colombia">Colombia</option></select
-              ><br /><br />
-              <label>Ingrese su direccion</label><br />
-              <input
-                type="text"
-                name="direccion"
-                placeholder="Ej: Av. San Martin 2340"
-              />
+        <section class="checkout">
+  
+          <h2 class="section-heading">Detalles de pago</h2>
+  
+          <div class="payment-form">
+  
+            <div class="payment-method">
+  
+              <button class="method selected">
+                <ion-icon name="card"></ion-icon>
+  
+                <span>Credit Card</span>
+  
+                <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+              </button>
+  
+              <button class="method">
+                <ion-icon name="logo-paypal"></ion-icon>
+  
+                <span>PayPal</span>
+  
+                <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <form action="#">
+  
+              <div class="cardholder-name">
+                <label for="cardholder-name" class="label-default">Nombre de la tarjeta</label>
+                <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+              </div>
+  
+              <div class="card-number">
+                <label for="card-number" class="label-default">Numero de la tarjeta</label>
+                <input type="number" name="card-number" id="card-number" class="input-default">
+              </div>
+  
+              <div class="input-flex">
+  
+                <div class="expire-date">
+                  <label for="expire-date" class="label-default">Fecha de vencimiento</label>
+  
+                  <div class="input-flex">
+  
+                    <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31"
+                      class="input-default">
+                    /
+                    <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12"
+                      class="input-default">
+  
+                  </div>
+                </div>
+  
+                <div class="cvv">
+                  <label for="cvv" class="label-default">CVV</label>
+                  <input type="number" name="cvv" id="cvv" class="input-default">
+                </div>
+  
+              </div>
+  
             </form>
+  
           </div>
-        </div>
-
-        <div class="total-price">
-          <table>
-            <tr>
-              <td>Subtotal</td>
-              <td>$2000</td>
-            </tr>
-
-            <tr>
-              <td>Impuestos</td>
-              <td>$500</td>
-            </tr>
-
-            <tr>
-              <td>Total</td>
-              <td>$2500</td>
-            </tr>
-          </table>
-        </div>
+  
+          <button class="btn btn-primary">
+            <b>Pay</b> $ <span id="payAmount">151.40</span>
+          </button>
+  
+        </section>
+  
+        <section class="cart">
+  
+          <div class="cart-item-box">
+  
+            <h2 class="section-heading">Resumen de compras</h2>
+  
+            <div class="product-card">
+  
+              <div class="card">
+  
+                <div class="img-box">
+                  <img src="..\uploads\products\arandanosProducto3.jpg" alt="Arandanos" width="80px" class="product-img">
+                </div>
+  
+                <div class="detail">
+  
+                  <h4 class="product-name">Arandanos</h4>
+  
+                  <div class="wrapper">
+  
+                    <div class="product-qty">
+                      <button id="decrement">
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+  
+                      <span id="quantity">1</span>
+  
+                      <button id="increment">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </button>
+                    </div>
+  
+                    <div class="price">
+                      $ <span id="price">120.50</span>
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+                <button class="product-close-btn">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+  
+              </div>
+  
+            </div>
+  
+            <div class="product-card">
+  
+              <div class="card">
+  
+                <div class="img-box">
+                  <img src="..\uploads\products\image_img_1642816571864.JPG" alt="Cepillo" width="80px" class="product-img">
+                </div>
+  
+                <div class="detail">
+  
+                  <h4 class="product-name">Cepillo de dientes</h4>
+  
+                  <div class="wrapper">
+  
+                    <div class="product-qty">
+                      <button id="decrement">
+                        <ion-icon name="remove-outline"></ion-icon>
+                      </button>
+  
+                      <span id="quantity">1</span>
+  
+                      <button id="increment">
+                        <ion-icon name="add-outline"></ion-icon>
+                      </button>
+                    </div>
+  
+                    <div class="price">
+                      $ <span id="price">30.80</span>
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+                <button class="product-close-btn">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+          <div class="wrapper">
+  
+            <div class="discount-token">
+  
+              <label for="discount-token" class="label-default">Gift card/Discount code</label>
+  
+              <div class="wrapper-flex">
+  
+                <input type="text" name="discount-token" id="discount-token" class="input-default">
+  
+                <button class="btn btn-outline">Apply</button>
+  
+              </div>
+  
+            </div>
+  
+            <div class="amount">
+  
+              <div class="subtotal">
+                <span>Subtotal</span> <span>$ <span id="subtotal">151.30</span></span>
+              </div>
+  
+              <div class="tax">
+                <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
+              </div>
+  
+              <div class="shipping">
+                <span>Shipping</span> <span>$ <span id="shipping">0.00</span></span>
+              </div>
+  
+              <div class="total">
+                <span>Total</span> <span>$ <span id="total">151.40</span></span>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </section>
+  
       </div>
+  
     </main>
+ 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <%- include('../partials/footer') %>
     
