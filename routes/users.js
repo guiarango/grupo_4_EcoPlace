@@ -19,7 +19,7 @@ router.post(
 
 router.post("/sign_in", validateUserLogin, usersController.loginProcess);
 
-router.get("/carrito", usersController.carrito);
+router.get("/shopping_cart", usersController.cart);
 
 //router.get("/users", usersController.users);
 // router.delete("/users/:id", usersController.deleteUser);

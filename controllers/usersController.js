@@ -20,8 +20,8 @@ const usersController = {
     res.render("users/sign_up");
   },
 
-  carrito: (req, res) => {
-    res.render("users/carrito");
+  cart: (req, res) => {
+    res.render("users/shopping_cart");
   },
 
   // Creacion del usuario por la ruta POST
