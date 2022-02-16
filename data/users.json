@@ -179,5 +179,12 @@
   "email": "guiarango@hotmail.com",
   "password": "$2a$10$aBNK5whtjoVSxSQe1jyPNunaFfUJzz//p/DTz3EbZxtwutgJUvkN6",
   "image": "avatar-1644806905377.PNG"
+ },
+ {
+  "id": 24,
+  "Username": "Mauro Pestarino",
+  "email": "Pestarino35@gmail.com",
+  "password": "$2a$10$sjF2pQsWG4eFEZVN1/ZHyu2Fg//NYvrUW/2lf7Yh6n5tnL5sNLIJC",
+  "image": "avatar-1645039441689.jpg"
  }
 ]

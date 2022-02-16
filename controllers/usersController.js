@@ -6,6 +6,7 @@ const { validationResult } = require("express-validator");
 
 //Se require el modelo de usuarios
 const User = require("../models/User");
+const { cookie } = require("express/lib/response");
 
 const usersController = {
   signIn: (req, res) => {
@@ -90,6 +91,7 @@ const usersController = {
         if (isOKPassword) {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
+         
           if (req.body.rememberUser) {
             res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
           }

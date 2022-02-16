@@ -19,9 +19,11 @@ app.use(
   })
 );
 
-app.use(userLoggedMiddleware);
 app.use(cookies());
-app.use(express.urlencoded({ extended: false }));
+app.use(userLoggedMiddleware);
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(express.json());
 
 app.use(methodOverride("_method"));
