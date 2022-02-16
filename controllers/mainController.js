@@ -6,8 +6,10 @@ const products = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const mainController = {
   home: (req, res) => {
+    console.log(req.cookies.userEmail);
     res.render("home", {
       productsList: products,
+      user: req.session.userLogged,
     });
   },
 

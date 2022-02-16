@@ -8,16 +8,18 @@ const { validationResult } = require("express-validator");
 const User = require("../models/User");
 
 const usersController = {
-  // users: (req, res) => {
-  //   res.render("users/users", { users });
-  // },
-
   signIn: (req, res) => {
     res.render("users/sign_in");
   },
 
   signUp: (req, res) => {
     res.render("users/sign_up");
+  },
+
+  logOut: (req, res) => {
+    res.clearCookie("userEmail");
+    req.session.destroy();
+    return res.redirect("/");
   },
 
   cart: (req, res) => {
@@ -86,6 +88,12 @@ const usersController = {
           userToLogin.password
         );
         if (isOKPassword) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if (req.body.rememberUser) {
+            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
+          }
+
           res.redirect("/");
         } else {
           res.render("users/sign_in", {

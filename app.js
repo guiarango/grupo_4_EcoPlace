@@ -3,10 +3,24 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
-const homeRoute = require("./routes/main");
-const usersRoute = require('./routes/users')
-const productsRoute = require('./routes/products')
+const session = require("express-session");
+const cookies = require("cookie-parser");
 
+const homeRoute = require("./routes/main");
+const usersRoute = require("./routes/users");
+const productsRoute = require("./routes/products");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
+app.use(
+  session({
+    secret: "Palabra secreta",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(userLoggedMiddleware);
+app.use(cookies());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
