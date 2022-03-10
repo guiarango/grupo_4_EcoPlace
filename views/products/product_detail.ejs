@@ -16,31 +16,31 @@
         <section class="product-preview">
           <div class="product-preview-options">
             <img
-              src="/uploads/products/<%=productData.image%>"
+              src="/uploads/products/<%=productData.product_image%>"
               alt="photoPreview1"
               class="preview-option"
             />
             <img
-              src="/uploads/products/<%=productData.image%>"
+              src="/uploads/products/<%=productData.product_image%>"
               alt="photoPreview2"
               class="preview-option"
             />
             <img
-              src="/uploads/products/<%=productData.image%>"
+              src="/uploads/products/<%=productData.product_image%>"
               alt="photoPreview3"
               class="preview-option"
             />
           </div>
           <div class="product-preview-photo">
             <img
-              src="/uploads/products/<%=productData.image%>"
+              src="/uploads/products/<%=productData.product_image%>"
               alt="photoPreviewPhoto"
             />
           </div>
           <div class="product-preview-details">
-            <p class="product-category"><%=productData.category%></p>
-            <p class="product-name"><%=productData.name%></p>
-            <p class="product-price">$ <%=productData.price%></p>
+            <p class="product-category"><%=productData.category_name%></p>
+            <p class="product-name"><%=productData.product_name%></p>
+            <p class="product-price">$ <%=productData.product_price%></p>
 
             <form action="#" class="main-form-product">
               <label for="choice-others">Selecciona un color:</label>
@@ -49,15 +49,9 @@
                 id="choice-others"
                 class="product-choice-others"
               >
-                <% if(typeof(productData.color)==="string"){%>
-
-                <option value="<%=productData.color%>">
-                  <%=productData.color%>
+                <option value="<%=productData.product_color%>">
+                  <%=productData.product_color%>
                 </option>
-
-                <%}else{%> <%for(let element of productData.color){%>
-                <option value="<%=element%>"><%=element%></option>
-                <%}%> // <%}%>
               </select>
 
               <button type="button" class="add-Cart">AGREGAR AL CARRITO</button>
@@ -74,7 +68,9 @@
             <button type="button" class="reviews">RESEÑAS</button>
           </form>
 
-          <p class="product-general-info-text"><%=productData.description%></p>
+          <p class="product-general-info-text">
+            <%=productData.product_description%>
+          </p>
         </section>
       </section>
     </main>

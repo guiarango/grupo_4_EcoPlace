@@ -1,15 +1,16 @@
 const path = require("path");
 const fs = require("fs");
 
-const Product = require("../models/Product");
+const { Product } = require("../database/models");
+// const Product = require("../models/Product");
 
 // const productFilePath = path.resolve(__dirname, "../data/DB-products.json");
 // const products = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const productsController = {
   //Se despliega el detalle del producto
-  displayProductDetail: (req, res) => {
-    const productData = Product.findByPk(req.params.id);
+  displayProductDetail: async (req, res) => {
+    const productData = await Product.findByPk(req.params.id);
     return res.render("products/product_detail", { productData });
   },
 
@@ -19,13 +20,12 @@ const productsController = {
   },
 
   //Se crea el producto
-  createProduct: (req, res) => {
+  createProduct: async (req, res) => {
     let newProduct = req.body;
-    newProduct.image = req.file.filename;
-    newProduct.color = newProduct.color.replace(/ /g, "").split(",");
-    newProduct = Product.createProduct(newProduct);
+    newProduct.product_image = req.file.filename;
+    newProduct = await Product.create(newProduct);
 
-    res.redirect("/products/" + newProduct.id);
+    res.redirect("/products");
   },
 
   //Se despliega la edición del producto
@@ -58,8 +58,8 @@ const productsController = {
   },
 
   //Se despliega la lista completa de productos
-  displayProductsList: (req, res) => {
-    products = Product.findAll();
+  displayProductsList: async (req, res) => {
+    products = await Product.findAll();
     return res.render("products/products", {
       productsList: products,
     });

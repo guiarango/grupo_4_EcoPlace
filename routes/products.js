@@ -28,12 +28,12 @@ router.delete("/products/:id", productsController.deleteProduct);
 router.get("/products/:id/edit", productsController.displayEditProduct);
 router.post(
   "/products",
-  uploadProductImage.single("image"),
+  uploadProductImage.single("product_image"),
   productsController.createProduct
 );
 router.put(
   "/products/:id",
-  uploadProductImage.single("image"),
+  uploadProductImage.single("product_image"),
   productsController.updateProductDetail
 );
 

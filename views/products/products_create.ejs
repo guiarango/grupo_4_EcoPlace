@@ -15,7 +15,7 @@
           <section class="productName-field">
             <input
               type="text"
-              name="name"
+              name="product_name"
               id="productName"
               placeholder="Ingresar nombre producto"
               minlength="3"
@@ -26,7 +26,7 @@
           <section class="productColor-field">
             <input
               type="text"
-              name="color"
+              name="product_color"
               id="productColor"
               placeholder="Ingresar color producto"
             />
@@ -35,7 +35,7 @@
           <section class="productPrice-field">
             <input
               type="text"
-              name="price"
+              name="product_price"
               id="productPrice"
               placeholder="Ingresar precio producto"
               required
@@ -46,11 +46,11 @@
           <section class="productCategory-field">
             <label for="productCategory"
               >Selecciona una categoría
-              <select name="category" id="productCategory">
-                <option value="organicos">Orgánicos</option>
-                <option value="flora y jardin">Flora Y Jardín</option>
-                <option value="cuidado personal">Cuidado Personal</option>
-                <option value="hogar">Hogar</option>
+              <select name="category_id" id="productCategory">
+                <option value="2">Orgánicos</option>
+                <option value="1">Flora Y Jardín</option>
+                <option value="3">Cuidado Personal</option>
+                <option value="4">Hogar</option>
               </select></label
             >
           </section>
@@ -60,7 +60,7 @@
             <input
               type="file"
               id="file"
-              name="image"
+              name="product_image"
               class="uploadImage-field"
             />
           </section>
@@ -68,7 +68,7 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="description"
+              name="product_description"
               id="productDescription"
               placeholder="Ingresar descripción producto"
             ></textarea>
@@ -80,7 +80,7 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="technical_description"
+              name="product_technical_description"
               id="productTechnicalDescription"
               placeholder="Ingresar descripción producto"
             ></textarea>
@@ -92,7 +92,7 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="other_specifications"
+              name="product_other_description"
               id="productOthersDescription"
               placeholder="Ingresar descripción producto"
             ></textarea>
