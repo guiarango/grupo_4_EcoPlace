@@ -186,5 +186,12 @@
   "email": "Pestarino35@gmail.com",
   "password": "$2a$10$sjF2pQsWG4eFEZVN1/ZHyu2Fg//NYvrUW/2lf7Yh6n5tnL5sNLIJC",
   "image": "avatar-1645039441689.jpg"
+ },
+ {
+  "id": 25,
+  "Username": "Williams Bournissent",
+  "email": "williams.bournissent@gmail.com",
+  "password": "$2a$10$nakysBaqFG5XXVJ1S5NP6.LhpZC7TySHBppSKnYjs6z4uf64Zv/HW",
+  "image": "avatar-1646945489825.jpg"
  }
 ]

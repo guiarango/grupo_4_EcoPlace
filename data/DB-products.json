@@ -8,8 +8,7 @@
     "reviews": "REVIEW nam nulla integer pede justo lacinia eget tincidunt eget tempus",
     "price": 2773.07,
     "category": "Insumos",
-    "image": "arandanosProducto3.jpg",
-    "color": ["Yellow", "Blue"]
+    "image": "arandanosProducto3.jpg"
   },
   {
     "id": 2,
@@ -20,8 +19,7 @@
     "reviews": "in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam",
     "price": 1762.86,
     "category": "Café",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Fuscia"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 3,
@@ -32,8 +30,7 @@
     "reviews": "congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget",
     "price": 2790.37,
     "category": "Te",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "color": "Goldenrod"
+    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
   },
   {
     "id": 4,
@@ -44,8 +41,7 @@
     "reviews": "accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa",
     "price": 3508.73,
     "category": "Te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Blue"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 5,
@@ -56,8 +52,7 @@
     "reviews": "nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis",
     "price": 3509.42,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Green"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 6,
@@ -68,8 +63,7 @@
     "reviews": "sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod",
     "price": 2473.88,
     "category": "Café",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   },
   {
     "id": 7,
@@ -80,8 +74,7 @@
     "reviews": "vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean",
     "price": 3070.16,
     "category": "Café",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Violet"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 8,
@@ -92,8 +85,7 @@
     "reviews": "dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus",
     "price": 1359.78,
     "category": "Te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Purple"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 9,
@@ -104,8 +96,7 @@
     "reviews": "libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu",
     "price": 3380.78,
     "category": "Insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Crimson"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 10,
@@ -116,8 +107,7 @@
     "reviews": "ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede",
     "price": 1515.57,
     "category": "Te",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Violet"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 11,
@@ -128,8 +118,7 @@
     "reviews": "vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam",
     "price": 4082.11,
     "category": "Te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Aquamarine"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 12,
@@ -140,8 +129,7 @@
     "reviews": "elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas",
     "price": 3245.99,
     "category": "Insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "color": "Blue"
+    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
   },
   {
     "id": 13,
@@ -152,8 +140,7 @@
     "reviews": "tellus in sagittis dui vel nisl duis ac nibh fusce lacus",
     "price": 4346.79,
     "category": "Café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Violet"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 14,
@@ -164,8 +151,7 @@
     "reviews": "curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel",
     "price": 1792.97,
     "category": "Te",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "color": "Goldenrod"
+    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
   },
   {
     "id": 15,
@@ -176,8 +162,7 @@
     "reviews": "sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel",
     "price": 2517.21,
     "category": "Te",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "color": "Goldenrod"
+    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg"
   },
   {
     "id": 16,
@@ -188,8 +173,7 @@
     "reviews": "lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras",
     "price": 2925.06,
     "category": "Café",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 17,
@@ -200,8 +184,7 @@
     "reviews": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis",
     "price": 2547.58,
     "category": "Insumos",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "color": "Violet"
+    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
   },
   {
     "id": 18,
@@ -212,8 +195,7 @@
     "reviews": "justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
     "price": 4681.68,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Teal"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 19,
@@ -224,8 +206,7 @@
     "reviews": "eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at",
     "price": 950.97,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Indigo"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 20,
@@ -236,8 +217,7 @@
     "reviews": "molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam",
     "price": 2993.24,
     "category": "Insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Goldenrod"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 21,
@@ -248,8 +228,7 @@
     "reviews": "nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere",
     "price": 3780.54,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Orange"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 22,
@@ -260,8 +239,7 @@
     "reviews": "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet",
     "price": 2761.14,
     "category": "Café",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Violet"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   },
   {
     "id": 23,
@@ -272,8 +250,7 @@
     "reviews": "elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam",
     "price": 3309.94,
     "category": "Café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
   },
   {
     "id": 24,
@@ -284,8 +261,7 @@
     "reviews": "mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede",
     "price": 2833.89,
     "category": "Insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "color": "Maroon"
+    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
   },
   {
     "id": 25,
@@ -296,8 +272,7 @@
     "reviews": "in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet",
     "price": 2416.73,
     "category": "Café",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Maroon"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   },
   {
     "id": 26,
@@ -308,8 +283,7 @@
     "reviews": "condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet",
     "price": 2151.93,
     "category": "Insumos",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Pink"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 27,
@@ -320,8 +294,7 @@
     "reviews": "aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque",
     "price": 4863.1,
     "category": "Café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Violet"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 28,
@@ -332,8 +305,7 @@
     "reviews": "ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
     "price": 1362.92,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 29,
@@ -344,8 +316,7 @@
     "reviews": "ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla",
     "price": 4839.03,
     "category": "Insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "color": "Turquoise"
+    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
   },
   {
     "id": 30,
@@ -356,8 +327,7 @@
     "reviews": "consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo",
     "price": 1794.34,
     "category": "Insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Red"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 31,
@@ -368,8 +338,7 @@
     "reviews": "maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum",
     "price": 2891.48,
     "category": "Te",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "color": "Violet"
+    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg"
   },
   {
     "id": 32,
@@ -380,8 +349,7 @@
     "reviews": "ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
     "price": 3447.43,
     "category": "Te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Crimson"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 33,
@@ -392,8 +360,7 @@
     "reviews": "ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet",
     "price": 3949.94,
     "category": "Café",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Indigo"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 34,
@@ -404,8 +371,7 @@
     "reviews": "porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio",
     "price": 2719.81,
     "category": "Café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Blue"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 35,
@@ -416,8 +382,7 @@
     "reviews": "blandit non interdum in ante vestibulum ante ipsum primis in",
     "price": 2320.13,
     "category": "Te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Indigo"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 36,
@@ -428,8 +393,7 @@
     "reviews": "ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus",
     "price": 2728.26,
     "category": "Café",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Puce"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 37,
@@ -440,8 +404,7 @@
     "reviews": "nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a",
     "price": 2527.06,
     "category": "Insumos",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Puce"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   },
   {
     "id": 38,
@@ -452,8 +415,7 @@
     "reviews": "cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus",
     "price": 3552.57,
     "category": "Insumos",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg"
   },
   {
     "id": 39,
@@ -464,8 +426,7 @@
     "reviews": "quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst",
     "price": 1018.77,
     "category": "Te",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Purple"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   },
   {
     "id": 40,
@@ -476,8 +437,7 @@
     "reviews": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut",
     "price": 3819.12,
     "category": "Te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Maroon"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 41,
@@ -488,8 +448,7 @@
     "reviews": "luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio",
     "price": 4641.92,
     "category": "Te",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "color": "Orange"
+    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
   },
   {
     "id": 42,
@@ -500,8 +459,7 @@
     "reviews": "ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
     "price": 4517.79,
     "category": "Te",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "color": "Indigo"
+    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg"
   },
   {
     "id": 43,
@@ -512,8 +470,7 @@
     "reviews": "ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum",
     "price": 2207.82,
     "category": "Te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Mauv"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 44,
@@ -524,8 +481,7 @@
     "reviews": "tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien",
     "price": 3309.61,
     "category": "Insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "color": "Green"
+    "image": "PRODUCTS-golden-monkey.jpg"
   },
   {
     "id": 45,
@@ -536,8 +492,7 @@
     "reviews": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
     "price": 3301.92,
     "category": "Café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "color": "Goldenrod"
+    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
   },
   {
     "id": 46,
@@ -548,8 +503,7 @@
     "reviews": "elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis",
     "price": 1298.87,
     "category": "Café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "color": "Blue"
+    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
   },
   {
     "id": 47,
@@ -560,8 +514,7 @@
     "reviews": "aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut",
     "price": 3787.39,
     "category": "Café",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "color": "Khaki"
+    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
   },
   {
     "id": 48,
@@ -572,7 +525,6 @@
     "reviews": "tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra",
     "price": 4389.45,
     "category": "Insumos",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "color": "Crimson"
+    "image": "PRODUCTS-xanela-paraiso.jpg"
   }
 ]
