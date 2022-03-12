@@ -1,20 +1,35 @@
 module.exports = (sequelize, DataTypes) => {
-  const Product = sequelize.define(
-    "Product",
-    {
-      product_name: DataTypes.NUMBER,
-      product_description: DataTypes.STRING,
-      product_technical_description: DataTypes.STRING,
-      product_other_description: DataTypes.STRING,
-      category_id: DataTypes.INTEGER,
-      product_price: DataTypes.FLOAT,
-      product_image: DataTypes.STRING
-    },
-    {
+  
+    let alias = "Product";
+    let cols = {
+      product_name:{
+        type: DataTypes.STRING
+      },
+      product_description:{
+        type: DataTypes.STRING
+      },
+      product_technical_description:{
+        type: DataTypes.STRING
+      },
+      product_other_description:{
+        type: DataTypes.STRING
+      },
+      category_id:{
+        type: DataTypes.INTEGER
+      },
+      product_price:{
+        type: DataTypes.FLOAT
+      },
+      product_image:{
+        type: DataTypes.STRING  
+      }
+    }
+    let config = {
       tableName: "products",
       timestamps: false,
-    }
-  );
+    };
+
+  const Product = sequelize.define(alias, cols, config);
 
   return Product;
 };
