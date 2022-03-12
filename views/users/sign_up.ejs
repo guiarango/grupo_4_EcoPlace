@@ -15,10 +15,10 @@
           <section class="user-field">
             <input
               type="text"
-              name="Username"
+              name="user_name"
               id="user"
               placeholder="Ingresar usuario"
-              value="<%= locals.oldData?locals.oldData.Username:null %>"
+              value="<%= locals.oldData?locals.oldData.user_name:null %>"
             />
 
             <label for="user">Ingresar usuario</label>
@@ -26,30 +26,30 @@
 
           <div>
             <p class="text-error">
-              <% if (locals.errors && errors.Username) { %> <%=
-              errors.Username.msg%> <% } %>
+              <% if (locals.errors && errors.user_name) { %> <%=
+              errors.user_name.msg%> <% } %>
             </p>
           </div>
 
           <section class="email-field">
             <input
               type=""
-              name="email"
+              name="user_email"
               id="email"
               placeholder="Ingresar email"
-              value="<%= locals.oldData?locals.oldData.email:null %>"
+              value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
 
             <label for="email">Ingresar email</label>
           </section>
           <div class="text-error">
-            <% if (locals.errors && errors.email) { %> <%= errors.email.msg%> <%
-            } %>
+            <% if (locals.errors && errors.user_email) { %> <%=
+            errors.user_email.msg%> <% } %>
           </div>
           <section class="password-field">
             <input
               type="password"
-              name="password"
+              name="user_password"
               id="password"
               placeholder="Ingresar contraseña"
             />
@@ -57,8 +57,8 @@
             <label for="password">Ingresar contraseña</label>
           </section>
           <div class="text-error">
-            <% if (locals.errors && errors.password) { %> <%=
-            errors.password.msg%> <% } %>
+            <% if (locals.errors && errors.user_password) { %> <%=
+            errors.user_password.msg%> <% } %>
           </div>
 
           <section class="password-field">
@@ -77,11 +77,11 @@
           </div>
 
           <section class="avatarImage">
-            <input type="file" name="avatarImg" id="avatarImg" multiple />
+            <input type="file" name="user_image" id="avatarImg" multiple />
           </section>
           <div class="text-error">
-            <% if (locals.errors && errors.avatar) { %> <%= errors.avatar.msg%>
-            <% } %>
+            <% if (locals.errors && errors.user_image) { %> <%=
+            errors.user_image.msg%> <% } %>
           </div>
 
           <section class="button-submit">

@@ -13,7 +13,7 @@ router.get("/sign_up", guestMiddleware, usersController.signUp);
 
 router.post(
   "/sign_up",
-  uploadUserAvatar.single("avatarImg"),
+  uploadUserAvatar.single("user_image"),
   validateUserCreation,
   usersController.createUser
 );

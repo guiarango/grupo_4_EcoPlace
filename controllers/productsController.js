@@ -23,35 +23,25 @@ const productsController = {
   createProduct: async (req, res) => {
     let newProduct = req.body;
     newProduct.product_image = req.file.filename;
-    newProduct = await Product.create(newProduct);
-
+    // newProduct = await Product.create(newProduct);
+    await Product.create(newProduct);
     res.redirect("/products");
   },
 
   //Se despliega la edición del producto
-  displayEditProduct: (req, res) => {
-    const productData = Product.findByPk(req.params.id);
+  displayEditProduct: async (req, res) => {
+    const productData = await Product.findByPk(req.params.id);
     return res.render("products/products_edit", { productData });
   },
 
   //Se actualiza un producto ya existente
-  updateProductDetail: (req, res) => {
-    const products = Product.findAll();
-    const id = Number(req.params.id);
-    const productsArrayEdited = products.map((oneProduct) => {
-      if (oneProduct.id === id) {
-        return {
-          id: id,
-          ...req.body,
-          image: req.file ? req.file.filename : oneProduct.image,
-        };
-      }
-      return oneProduct;
-    });
-
-    fs.writeFileSync(
-      path.resolve(__dirname, "../data/DN-products.json"),
-      JSON.stringify(productsArrayEdited, null, " ")
+  updateProductDetail: async (req, res) => {
+    await Product.update(
+      {
+        ...req.body,
+        product_image: req.file ? req.file.filename : "default-img.jpg",
+      },
+      { where: { id: req.params.id } }
     );
 
     return res.redirect("/products");
@@ -66,8 +56,8 @@ const productsController = {
   },
 
   //Se borra el producto
-  deleteProduct: (req, res) => {
-    Product.deleteProduct(req.params.id);
+  deleteProduct: async (req, res) => {
+    await Product.destroy({ where: { id: req.params.id } });
 
     return res.redirect("/");
   },

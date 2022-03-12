@@ -19,11 +19,11 @@
           <section class="productName-field">
             <input
               type="text"
-              name="name"
+              name="product_name"
               id="productName"
               placeholder="Ingresar nombre producto"
               minlength="3"
-              value="<%=productData.name%>"
+              value="<%=productData.product_name%>"
             />
             <label for="productName">Ingresar nombre producto</label>
           </section>
@@ -41,10 +41,10 @@
           <section class="productPrice-field">
             <input
               type="text"
-              name="price"
+              name="product_price"
               id="productPrice"
               placeholder="Ingresar precio producto"
-              value="<%=productData.price%>"
+              value="<%=productData.product_price%>"
             />
             <label for="productPrice">Ingresar precio producto</label>
           </section>
@@ -52,11 +52,11 @@
           <section class="productCategory-field">
             <label for="productCategory"
               >Selecciona una categoría
-              <select name="category" id="productCategory">
-                <option value="organicos" <%=productData.category=="organicos"?"selected":""%>>Orgánicos</option>
-                <option value="flora y jardin" <%=productData.category=="flora y jardin"?"selected":""%>>Flora Y Jardín</option>
-                <option value="cuidado personal" <%=productData.category=="cuidado personal"?"selected":""%>>Cuidado Personal</option>
-                <option value="hogar" <%=productData.category=="hogar"?"selected":""%>>Hogar</option>
+              <select name="category_id" id="productCategory">
+                <option value="2" <%=productData.category_id==2?"selected":""%>>Orgánicos</option>
+                <option value="1" <%=productData.category_id==1?"selected":""%>>Flora Y Jardín</option>
+                <option value="3" <%=productData.category_id==3?"selected":""%>>Cuidado Personal</option>
+                <option value="4" <%=productData.category_id==4?"selected":""%>>Hogar</option>
               </select></label
             >
           </section>
@@ -66,7 +66,7 @@
             <input
               type="file"
               id="file"
-              name="image"
+              name="product_image"
               class="uploadImage-field"
             />
           </section>
@@ -74,10 +74,10 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="description"
+              name="product_description"
               id="productDescription"
               placeholder="Ingresar descripción producto"
-            ><%=productData.description%></textarea>
+            ><%=productData.product_description%></textarea>
             <label for="productDescription"
               >Ingresar descripción producto</label
             >
@@ -85,10 +85,10 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="technical_description"
+              name="product_technical_description"
               id="productTechnicalDescription"
               placeholder="Ingresar descripción técnica del producto"
-            ><%=productData.technical_description%></textarea>
+            ><%=productData.product_technical_description%></textarea>
             <label for="productTechnicalDescription"
               >Ingresar descripción técnica del producto</label
             >
@@ -97,10 +97,10 @@
           <section class="productDescription-field">
             <textarea
               type="text"
-              name="other_specifications"
+              name="product_other_description"
               id="productOthersDescription"
               placeholder="Ingresar otras descripciones del producto"
-            ><%=productData.other_specifications%></textarea>
+            ><%=productData.product_other_description%></textarea>
             <label for="productOthersDescription"
               >Ingresar otras descripciones del producto</label
             >

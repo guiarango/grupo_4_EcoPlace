@@ -5,8 +5,8 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
 //Se require el modelo de usuarios
-const User = require("../models/User");
-const { cookie } = require("express/lib/response");
+const { Usuarios } = require("../database/models");
+// const { cookie } = require("express/lib/response");
 
 const usersController = {
   signIn: (req, res) => {
@@ -28,7 +28,7 @@ const usersController = {
   },
 
   // Creacion del usuario por la ruta POST
-  createUser: (req, res) => {
+  createUser: async (req, res) => {
     const resultValidation = validationResult(req);
 
     //Valida si pasan errores de validacion en la creacion del usuario
@@ -40,8 +40,10 @@ const usersController = {
     } else {
       let newUser = req.body;
 
-      //Valida que el email no esté en uso
-      let userInDB = User.findByField("email", String(req.body.email));
+      // Valida que el email no esté en uso
+      let userInDB = await Usuarios.findOne({
+        where: { user_email: newUser.user_email },
+      });
 
       if (userInDB) {
         return res.render("users/sign_up", {
@@ -53,11 +55,12 @@ const usersController = {
       }
 
       //Valida que la password coincida con la confirmación de password
-      if (newUser.password == newUser.confirmSignUpPassword) {
+      if (newUser.user_password == newUser.confirmSignUpPassword) {
         delete newUser.confirmSignUpPassword;
-        newUser.image = req.file.filename;
-        newUser.password = bcrypt.hashSync(req.body.password, 10);
-        let userCreated = User.createUser(newUser);
+        newUser.user_image = req.file.filename;
+        newUser.user_password = bcrypt.hashSync(req.body.user_password, 10);
+        // Usuarios.create(newUser);
+        console.log(newUser.user_name);
 
         res.redirect("/");
       } else {
@@ -66,7 +69,7 @@ const usersController = {
             password: { msg: "*Las contraseñas no coinciden" },
             confirmSignUpPassword: { msg: "*Las contraseñas no coinciden" },
           },
-          oldData: req.body,
+          oldData: newUser,
         });
       }
     }
@@ -91,7 +94,7 @@ const usersController = {
         if (isOKPassword) {
           delete userToLogin.password;
           req.session.userLogged = userToLogin;
-         
+
           if (req.body.rememberUser) {
             res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
           }
