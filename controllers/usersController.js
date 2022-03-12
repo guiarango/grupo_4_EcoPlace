@@ -43,7 +43,7 @@ const usersController = {
       // Valida que el email no esté en uso
       let userInDB = await Usuarios.findOne({
         where: { user_email: newUser.user_email },
-      });
+      }).catch((error) => console.log(error));
 
       if (userInDB) {
         return res.render("users/sign_up", {
@@ -59,8 +59,7 @@ const usersController = {
         delete newUser.confirmSignUpPassword;
         newUser.user_image = req.file.filename;
         newUser.user_password = bcrypt.hashSync(req.body.user_password, 10);
-        // Usuarios.create(newUser);
-        console.log(newUser.user_name);
+        Usuarios.create(newUser);
 
         res.redirect("/");
       } else {
@@ -75,7 +74,7 @@ const usersController = {
     }
   },
 
-  loginProcess: (req, res) => {
+  loginProcess: async (req, res) => {
     const resultValidation = validationResult(req);
 
     //Valida si pasan errores de validacion en la creacion del usuario
@@ -85,18 +84,24 @@ const usersController = {
         oldData: req.body,
       });
     } else {
-      let userToLogin = User.findByField("email", req.body.email);
+      let userToLogin = await Usuarios.findOne({
+        where: { user_email: req.body.user_email },
+      }).catch((error) => console.log(error));
+
       if (userToLogin) {
         let isOKPassword = bcrypt.compareSync(
-          req.body.password,
-          userToLogin.password
+          req.body.user_password,
+          userToLogin.user_password
         );
+
         if (isOKPassword) {
-          delete userToLogin.password;
+          delete userToLogin.user_password;
           req.session.userLogged = userToLogin;
 
           if (req.body.rememberUser) {
-            res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 10 });
+            res.cookie("userEmail", req.body.user_email, {
+              maxAge: 1000 * 60 * 10,
+            });
           }
 
           res.redirect("/");
@@ -110,6 +115,8 @@ const usersController = {
             oldData: req.body,
           });
         }
+
+        console.log(req.body.user_password);
       }
     }
   },

@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 
 const validateUserLogin = [
-  body("email")
+  body("user_email")
     .notEmpty()
     .withMessage("*Rellena el campo del email")
     .bail()

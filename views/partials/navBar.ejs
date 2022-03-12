@@ -27,7 +27,7 @@
     <!-- Botones escritorio -->
     <ul class="nav-block">
       <% if (locals.userLogged) { %>
-      <li class="hide-login">Hola, <%= locals.userLogged.Username%></li>
+      <li class="hide-login">Hola, <%= locals.userLogged.user_name%></li>
       <li class="hide-login"><a href="/logOut">Log Out</a></li>
       <li class="hide-login"><a href="/products/create">Crear producto</a></li>
 

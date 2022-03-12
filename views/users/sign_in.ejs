@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
+  <%- include('../partials/head', {pageTitle: 'Login de usuario'}) %>
 
   <body>
     <header><%- include('../partials/navBar') %></header>
@@ -17,10 +17,10 @@
           <section class="user-field">
             <input
               type="text"
-              name="email"
+              name="user_email"
               id="user"
               placeholder="Ingresa el Email"
-              value="<%= locals.oldData?locals.oldData.email:null %>"
+              value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
             <label for="user">Ingresa el Email</label>
           </section>
@@ -28,7 +28,7 @@
           <section class="password-field">
             <input
               type="password"
-              name="password"
+              name="user_password"
               id="password"
               placeholder="Ingresa la Contraseña"
             />
@@ -40,8 +40,8 @@
           </section>
 
           <div class="text-error">
-            <% if (locals.errors && errors.email) { %> <%= errors.email.msg%> <%
-            } %>
+            <% if (locals.errors && errors.user_email) { %> <%=
+            errors.user_email.msg%> <% } %>
           </div>
 
           <section class="button-submit">
