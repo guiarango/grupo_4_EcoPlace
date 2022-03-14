@@ -27,5 +27,12 @@ module.exports = (sequelize, DataTypes) => {
 
   const Usuarios = sequelize.define(alias, cols, config);
 
+    // Usuarios.associate = function(models){
+    //   Usuarios.belongsTo(models.carts, {
+    //     as: "carrito",
+    //     foreignKey: "user_id"
+    //   });
+    // }
+
   return Usuarios;
 };
