@@ -22,18 +22,18 @@ module.exports = (sequelize, DataTypes) => {
 
   const Order = sequelize.define(alias, cols, config);
 
-  // Order.associate = function(models) {
-  //   Order.belongsTo(models.carts, {
-  //     as: "carrito",
-  //     foreignKey: "cart_id"
-  //   });
+  Order.associate = function(models) {
+    Order.belongsTo(models.Carts, {
+      as: "carrito",
+      foreignKey: "cart_id"
+    });
 
-  //   Order.belongsToMany(models.product, {
-  //     as: "productos",
-  //     foreignKey: "product_id",
-  //     otherKey: "product_price"
-  //   });
-  // }
+    Order.belongsToMany(models.Product, {
+      as: "productos",
+      through: "product",
+      foreignKey: "product_id"
+    });
+  }
 
   return Order;
 };

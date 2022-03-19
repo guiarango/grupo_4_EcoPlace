@@ -2,11 +2,6 @@ module.exports = (sequelize, DataTypes) => {
   let alias = "Usuarios";
 
   let cols = {
-    // id: {
-    //     type: DataTypes.INTEGER,
-    //     primaryKey: true,
-    //     autoIncrement: true
-    // },
     user_name: {
       type: DataTypes.STRING,
     },
@@ -27,12 +22,12 @@ module.exports = (sequelize, DataTypes) => {
 
   const Usuarios = sequelize.define(alias, cols, config);
 
-    // Usuarios.associate = function(models){
-    //   Usuarios.belongsTo(models.carts, {
-    //     as: "carrito",
-    //     foreignKey: "user_id"
-    //   });
-    // }
+    Usuarios.associate = function(models){
+      Usuarios.belongsTo(models.Carts, {
+        as: "carrito",
+        foreignKey: "user_id"
+      });
+    }
 
   return Usuarios;
 };

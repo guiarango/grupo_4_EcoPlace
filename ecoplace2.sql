@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-03-2022 a las 23:47:05
+-- Tiempo de generación: 17-03-2022 a las 03:07:07
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -18,38 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `eco_place`
+-- Base de datos: `ecoplace`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `cartproduct`
---
-
-CREATE TABLE `cartproduct` (
-  `id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `cart_id` int(11) NOT NULL,
-  `product_price` float DEFAULT NULL,
-  `product_quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `cartproduct`
---
-
-INSERT INTO `cartproduct` (`id`, `product_id`, `cart_id`, `product_price`, `product_quantity`) VALUES
-(1, 12, 7, 30.67, 5),
-(2, 15, 6, 927.65, 3),
-(3, 13, 1, 945.29, 7),
-(4, 13, 4, 93.88, 4),
-(5, 14, 3, 860.95, 0),
-(6, 17, 1, 933.26, 8),
-(7, 12, 7, 401.02, 3),
-(8, 13, 6, 305.75, 6),
-(9, 13, 3, 697.49, 0),
-(10, 12, 6, 450.46, 9);
 
 -- --------------------------------------------------------
 
@@ -100,6 +70,36 @@ INSERT INTO `categories` (`id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `order`
+--
+
+CREATE TABLE `order` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `cart_id` int(11) NOT NULL,
+  `product_price` float DEFAULT NULL,
+  `product_quantity` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `order`
+--
+
+INSERT INTO `order` (`id`, `product_id`, `cart_id`, `product_price`, `product_quantity`) VALUES
+(1, 12, 7, 30.67, 5),
+(2, 15, 6, 927.65, 3),
+(3, 13, 1, 945.29, 7),
+(4, 13, 4, 93.88, 4),
+(5, 14, 3, 860.95, 0),
+(6, 17, 1, 933.26, 8),
+(7, 12, 7, 401.02, 3),
+(8, 13, 6, 305.75, 6),
+(9, 13, 3, 697.49, 0),
+(10, 12, 6, 450.46, 9);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `products`
 --
 
@@ -129,7 +129,7 @@ INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_te
 (19, 'Crab - Imitation Flakes', 'Rice - Sushi', 'Vacuum Bags 12x16', 'Pie Shell - 5', 1, 657.32, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW'),
 (20, 'Chocolate Bar - Coffee Crisp', 'Bag - Regular Kraft 20 Lb', 'Beef - Striploin', 'Olives - Stuffed', 2, 188.08, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW'),
 (21, 'Cookies Almond Hazelnut', 'Pepsi - 600ml', 'Bagel - 12 Grain Preslice', 'Wine - Niagara Peninsula Vqa', 4, 178.38, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW'),
-(29, 'PAN', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647116069705.jpg');
+(29, 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647482730866.PNG');
 
 -- --------------------------------------------------------
 
@@ -172,14 +172,6 @@ INSERT INTO `users` (`id`, `user_name`, `user_email`, `user_password`, `user_ima
 --
 
 --
--- Indices de la tabla `cartproduct`
---
-ALTER TABLE `cartproduct`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `cart_id` (`cart_id`);
-
---
 -- Indices de la tabla `carts`
 --
 ALTER TABLE `carts`
@@ -191,6 +183,14 @@ ALTER TABLE `carts`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `order`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `cart_id` (`cart_id`);
 
 --
 -- Indices de la tabla `products`
@@ -212,12 +212,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `cartproduct`
---
-ALTER TABLE `cartproduct`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT de la tabla `carts`
 --
 ALTER TABLE `carts`
@@ -228,6 +222,12 @@ ALTER TABLE `carts`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `order`
+--
+ALTER TABLE `order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
@@ -246,17 +246,17 @@ ALTER TABLE `users`
 --
 
 --
--- Filtros para la tabla `cartproduct`
---
-ALTER TABLE `cartproduct`
-  ADD CONSTRAINT `cartproduct_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`),
-  ADD CONSTRAINT `cartproduct_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
-
---
 -- Filtros para la tabla `carts`
 --
 ALTER TABLE `carts`
   ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `order`
+--
+ALTER TABLE `order`
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`),
+  ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
 --
 -- Filtros para la tabla `products`
