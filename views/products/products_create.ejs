@@ -18,10 +18,17 @@
               name="product_name"
               id="productName"
               placeholder="Ingresar nombre producto"
-              minlength="3"
+              value="<%= locals.oldData?locals.oldData.product_name:null %>"
             />
             <label for="productName">Ingresar nombre producto</label>
           </section>
+          
+          <div>
+            <p class="text-error">
+              <% if (locals.errors && errors.product_name) { %> <%=
+              errors.product_name.msg%> <% } %>
+            </p>
+          </div>
 
           <!-- <section class="productColor-field">
             <input
@@ -38,7 +45,6 @@
               name="product_price"
               id="productPrice"
               placeholder="Ingresar precio producto"
-              required
             />
             <label for="productPrice">Ingresar precio producto</label>
           </section>
@@ -65,19 +71,33 @@
             />
           </section>
 
+          <div>
+            <p class="text-error">
+              <% if (locals.errors && errors.product_image) { %> <%=
+              errors.product_image.msg%> <% } %>
+            </p>
+          </div>
+
           <section class="productDescription-field">
             <textarea
               type="text"
               name="product_description"
               id="productDescription"
               placeholder="Ingresar descripción producto"
-            ></textarea>
+            ><%= locals.oldData?locals.oldData.product_description:null %></textarea>
             <label for="productDescription"
               >Ingresar descripción producto</label
             >
           </section>
 
-          <section class="productDescription-field">
+          <div>
+            <p class="text-error">
+              <% if (locals.errors && errors.product_description) { %> <%=
+              errors.product_description.msg%> <% } %>
+            </p>
+          </div>
+
+          <!-- <section class="productDescription-field">
             <textarea
               type="text"
               name="product_technical_description"
@@ -99,7 +119,7 @@
             <label for="productOthersDescription"
               >Ingresar otras descripciones del producto</label
             >
-          </section>
+          </section> -->
 
           <section class="section-buttons">
             <button type="submit">CARGAR</button>

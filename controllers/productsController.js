@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const { validationResult } = require("express-validator");
 
 const { Product } = require("../database/models");
 // const Product = require("../models/Product");
@@ -21,12 +22,20 @@ const productsController = {
 
   //Se crea el producto
   createProduct: async (req, res) => {
-    let newProduct = req.body;
+    const resultValidation = validationResult(req);
+
+    if(resultValidation.errors.length > 0){
+      res.render("products/products_create", {
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    } else {
+      let newProduct = req.body;
     newProduct.product_image = req.file.filename;
-    // newProduct = await Product.create(newProduct);
     await Product.create(newProduct);
     res.redirect("/products");
-  },
+    }
+    },
 
   //Se despliega la edición del producto
   displayEditProduct: async (req, res) => {
@@ -36,15 +45,23 @@ const productsController = {
 
   //Se actualiza un producto ya existente
   updateProductDetail: async (req, res) => {
-    await Product.update(
-      {
-        ...req.body,
-        product_image: req.file ? req.file.filename : "default-img.jpg",
-      },
-      { where: { id: req.params.id } }
-    );
-
-    return res.redirect("/products");
+    const resultValidation = validationResult(req);
+    if(resultValidation.errors.length > 0){
+      res.render("products/products_create", {
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    } else{
+      await Product.update(
+        {
+          ...req.body,
+          product_image: req.file ? req.file.filename : "default-img.jpg",
+        },
+        { where: { id: req.params.id } }
+      );
+  
+      return res.redirect("/products");
+    }
   },
 
   //Se despliega la lista completa de productos
