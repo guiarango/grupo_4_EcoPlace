@@ -3,19 +3,21 @@
 <h2>Comenzar a hacer</h2>
 
 <ul>
-  <li>Ir haciendo la entrega de a poco.</li>
+  <li>Volver a trabajar de acuerdo al tablero de trello y cumplir con los plazos</li>
+  <li>Darle más importancia a las dailies</li>
 </ul>
 
 <h2>Hacer más</h2>
 
 <ul>
-  <li>Trabajar juntos.</li>
+  <li>Juntarnos para trabajar</li>
+  <li>Preguntar más a los profesores</li>
 </ul>
 
 <h2>Continuar haciendo</h2>
 
 <ul>
-  <li>Cumplir con la entrega.</li>
+  <li>Seguir teniendo buen compañerismo y apoyarnos entre nosotros</li>
 </ul>
 
 <h2>Hacer menos</h2>
@@ -27,5 +29,5 @@
 <h2>Dejar de hacer</h2>
 
 <ul>
-  <li>Querer hacer mucho en poco tiempo.</li>
+  <li></li>
 </ul>
