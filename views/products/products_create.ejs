@@ -7,7 +7,7 @@
 
     <main>
       <section class="main-form">
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <form action="/products" method="POST" enctype="multipart/form-data" id="productForm">
           <div class="form-header">
             <img src="/img/logo-2.png" alt="logo 2" />
           </div>
@@ -30,15 +30,6 @@
             </p>
           </div>
 
-          <!-- <section class="productColor-field">
-            <input
-              type="text"
-              name="product_color"
-              id="productColor"
-              placeholder="Ingresar color producto"
-            />
-            <label for="productColor">Ingresar color producto</label>
-          </section> -->
           <section class="productPrice-field">
             <input
               type="text"
@@ -97,30 +88,6 @@
             </p>
           </div>
 
-          <!-- <section class="productDescription-field">
-            <textarea
-              type="text"
-              name="product_technical_description"
-              id="productTechnicalDescription"
-              placeholder="Ingresar descripción producto"
-            ></textarea>
-            <label for="productTechnicalDescription"
-              >Ingresar descripción técnica del producto</label
-            >
-          </section>
-
-          <section class="productDescription-field">
-            <textarea
-              type="text"
-              name="product_other_description"
-              id="productOthersDescription"
-              placeholder="Ingresar descripción producto"
-            ></textarea>
-            <label for="productOthersDescription"
-              >Ingresar otras descripciones del producto</label
-            >
-          </section> -->
-
           <section class="section-buttons">
             <button type="submit">CARGAR</button>
             <button type="reset">LIMPIAR</button>
@@ -130,5 +97,7 @@
     </main>
 
     <%- include('../partials/footer') %>
+    <%- include('../partials/loadScript', { scriptName: 'validationProduct.js'})  %>
+    
   </body>
 </html>

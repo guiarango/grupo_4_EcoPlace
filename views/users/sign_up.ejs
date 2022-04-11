@@ -7,7 +7,7 @@
 
     <main>
       <section class="main-form">
-        <form action="/sign_up" method="POST" enctype="multipart/form-data">
+        <form action="/sign_up" method="POST" enctype="multipart/form-data" class="signupForm">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
           </div>
@@ -29,6 +29,12 @@
               <% if (locals.errors && errors.user_name) { %> <%=
               errors.user_name.msg%> <% } %>
             </p>
+          </div>
+
+          <div class="front-validation-error">
+            <ul>
+
+            </ul>
           </div>
 
           <section class="email-field">
@@ -120,5 +126,6 @@
     </main>
 
     <%- include('../partials/footer') %>
+    <%- include('../partials/loadScript', { scriptName: 'validationSignUp.js'})  %>
   </body>
 </html>
