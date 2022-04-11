@@ -7,7 +7,7 @@
 
     <main>
       <section class="main-form">
-        <form action="/sign_in" method="POST">
+        <form action="/sign_in" method="POST" class="signInForm">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
             <!-- <i class="fas fa-leaf"></i>
@@ -22,6 +22,7 @@
               placeholder="Ingresa el Email"
               value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
+            <span></span>
             <label for="user">Ingresa el Email</label>
           </section>
 
@@ -32,6 +33,7 @@
               id="password"
               placeholder="Ingresa la Contraseña"
             />
+            <span></span>
             <label for="password">Ingresa la Contraseña</label>
           </section>
           <section class="section-rememberUser">
@@ -86,5 +88,6 @@
     </main>
 
     <%- include('../partials/footer') %>
+    <%- include('../partials/loadScript', { scriptName: 'validationSignIn.js'})  %>
   </body>
 </html>
