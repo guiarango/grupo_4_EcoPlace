@@ -7,6 +7,10 @@
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
+CREATE DATABASE IF NOT EXIST `ecoplace`;
+USE `ecoplace`;
+
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
