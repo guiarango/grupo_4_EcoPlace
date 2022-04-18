@@ -1,24 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
-<%- include('../partials/head', {pageTitle: 'Todos los productos'}) %>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
 
-<body>
+<%- include('../partials/head', {pageTitle: 'Todos los productos'}) %>
+<body class="allWrapper">
+
   <%- include('../partials/navBar') %>
 
-<div id="Container-profile">
-
-  <div id="info-profile">
-    <h2><%= locals.userLogged?locals.userLogged.user_name:null %></h2>
-    <h2><%= locals.userLogged?locals.userLogged.user_email:null %></h2>
-  </div>
-
-  <div id="avatarImage">
-    <img src="./uploads/users/<%= locals.userLogged?locals.userLogged.user_image:null %>">
-  </div>
-
+<div class="wrapperProfile">
+    <div class="left">
+      <img src="./uploads/users/<%= locals.userLogged?locals.userLogged.user_image:null %>"
+        alt="avatar">
+        <h2><%= locals.userLogged?locals.userLogged.user_name:null %></h2>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <h2><%= locals.userLogged?locals.userLogged.user_email:null %></h2>
+                 </div>
+            </div>
+        </div>
+      
+      <div class="info2">
+            <h3>More Information</h3>
+            <div class="info2_data">
+                 <div class="data">
+                    <h4>Date</h4>
+                    <p>1998/09/16</p>
+                 </div>
+                 <div class="data">
+                   <h4>Hobby</h4>
+                    <p>Drink Coffee</p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="social_media">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+    </div>
+    
 </div>
-
+<div class="positionFooter">
   <%- include('../partials/footer') %>
+</div>
 </body>
 
 </html>

@@ -91,7 +91,7 @@ const productsController = {
   deleteProduct: async (req, res) => {
     await Product.destroy({ where: { id: req.params.id } });
 
-    return res.redirect("/");
+    return res.redirect("/products");
   },
 };
 
