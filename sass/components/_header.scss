@@ -34,6 +34,18 @@
         position: relative;
   
       }
+      .headerQuote {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        width: 30%;
+        position: absolute;
+        transform: translateY(100%);
+        color: #ebf1e4;
+        font-size: 3.5em;
+        text-shadow: 0px 0px 10px #804000;;
+      
+      }
       .categories-hide {
         display: flex;
         flex-flow: row wrap;

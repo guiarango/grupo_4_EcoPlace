@@ -71,7 +71,22 @@ const productsController = {
       productsList: products,
     });
   },
+  
+  // Se despliega la lista por categorias
+  displayProductsCategories: async(req, res) => {
 
+    const productsCategories = await Product.findAll({
+       where: { category_id: req.params.id } });
+    const categories = ["Flora y Jardín","Orgánicos","Cuidado personal" ,"Hogar"]
+    const idCategories = req.params.id
+    res.render("products/products_categories", {
+      productsList: productsCategories,
+      user: req.session.userLogged,
+      categories: categories,
+      idCategories : idCategories
+    });
+  },
+  
   //Se borra el producto
   deleteProduct: async (req, res) => {
     await Product.destroy({ where: { id: req.params.id } });

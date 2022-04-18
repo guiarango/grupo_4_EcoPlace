@@ -7,6 +7,7 @@ const validateProductUpdate = require("../middlewares/validateProductUpdate");
 
 
 router.get("/products", productsController.displayProductsList);
+router.get("/products/categories/:id", productsController.displayProductsCategories);
 router.get("/products/create", productsController.displayCreateProduct);
 router.get("/products/:id", productsController.displayProductDetail);
 router.delete("/products/:id", productsController.deleteProduct);

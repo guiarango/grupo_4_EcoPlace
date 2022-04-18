@@ -43,6 +43,7 @@
 .nav-block {
   display: flex;
   flex-wrap: row nowrap;
+  font-size: 2.5em;
 }
 
 .title {
@@ -81,6 +82,7 @@
 
   .nav-block {
     justify-content: flex-end;
+    font-size: 1.5em;
   }
   .contenedor-logo {
     text-align: center;

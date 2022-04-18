@@ -1,6 +1,9 @@
 .page_title {
     text-align: center;
     font-size: 3rem;
+    color: $color-secondary;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .products-list-box {
@@ -9,7 +12,7 @@
     justify-content: space-around;
 
     .products-box {
-        width: 22%;
+        width: 95%;
         margin: 20px 0;
         padding: 20px;
         box-shadow: 0px 0px 10px $color-secondary;
@@ -39,4 +42,33 @@
     p {
         color: $color-secondary !important;
     }
+}
+
+@media (min-width: 380px) {
+    .products-list-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
+        .products-box {
+            width: 45%;
+        }
+    }
+    }
+
+
+
+
+
+
+@media (min-width: 576px) {
+.products-list-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .products-box {
+        width: 22%;
+    }
+}
 }

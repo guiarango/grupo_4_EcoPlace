@@ -37,6 +37,16 @@ html {
     flex-flow: column wrap;
     align-items: center;
     position: relative; }
+  .headerQuote {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 30%;
+    position: absolute;
+    transform: translateY(100%);
+    color: #ebf1e4;
+    font-size: 3.5em;
+    text-shadow: 0px 0px 10px #804000; }
   .categories-hide {
     display: flex;
     flex-flow: row wrap;
@@ -92,7 +102,8 @@ html {
 
 .nav-block {
   display: flex;
-  flex-wrap: row nowrap; }
+  flex-wrap: row nowrap;
+  font-size: 2.5em; }
 
 .title {
   color: #4bbf5a;
@@ -116,7 +127,8 @@ html {
   .nav-bar-box > * {
     width: 30%; }
   .nav-block {
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    font-size: 1.5em; }
   .contenedor-logo {
     text-align: center;
     font-size: 2.5rem; }
@@ -141,7 +153,8 @@ html {
   /*por ahora space around*/
   justify-content: space-around;
   padding: 40px 0;
-  color: #ebf1e4; }
+  color: #ebf1e4;
+  font-size: 2em; }
   .footer-style-main ul {
     list-style: none; }
 
@@ -241,6 +254,25 @@ html {
 .banner-icon {
   font-size: 2em;
   margin: 20px 40px; }
+
+.verMasButton {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: #39b54a;
+  color: #ebf1e4;
+  font-size: 1.5em;
+  border-radius: 5%;
+  padding: 0.5em;
+  width: 33%;
+  text-align: center;
+  box-shadow: 0px 0px 10px #804000;
+  transition: all, 0.5s; }
+
+.verMasButton:hover {
+  background-color: #804000;
+  box-shadow: 0px 0px 10px #ebf1e4; }
 
 @media (min-width: 576px) {
   .category-box {
@@ -923,14 +955,17 @@ main .deleteButton {
 
 .page_title {
   text-align: center;
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #804000;
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .products-list-box {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
   .products-list-box .products-box {
-    width: 22%;
+    width: 95%;
     margin: 20px 0;
     padding: 20px;
     box-shadow: 0px 0px 10px #804000; }
@@ -947,6 +982,22 @@ main .deleteButton {
 
 .product-data-box p {
   color: #804000 !important; }
+
+@media (min-width: 380px) {
+  .products-list-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .products-list-box .products-box {
+      width: 45%; } }
+
+@media (min-width: 576px) {
+  .products-list-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .products-list-box .products-box {
+      width: 22%; } }
 
 @media (min-width: 361px) {
   html {
