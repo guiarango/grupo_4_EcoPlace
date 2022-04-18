@@ -17,39 +17,21 @@
             /></a>
           </article>
           <div class="carrousel-products">
-            <i class="fas fa-chevron-left carrousel-product-button1"></i>
+            
             <%for( let i=0; i < 3; i++ ) { %>
             <article class="product-box">
-              <a href="/products/<%= productsList[i].id %>"
-                ><img
-                  src="/uploads/products/<%= productsList[i].image %>"
-                  alt="Imagen producto"
-              /></a>
+              <a href="/products/<%= organico[i].id %>">
+                <img
+                  src="/uploads/products/<%= organico[i].product_image %>"
+                  alt="Imagen producto"/>
+              </a>
               <div class="product-name-box">
-                <p class="price"><%= productsList[i].price %></p>
-                <h3 class="product-name"><%= productsList[i].name %></h3>
+                <p class="price"><%= organico[i].product_price %></p>
+                <h3 class="product-name"><%= organico[i].product_name %></h3>
               </div>
             </article>
             <% } %>
-            <!-- <article class="product-box">
-              <a href="/products/1"
-                ><img src="/img/organicoHummus.jpeg" alt="hummus"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$400</p>
-                <h3 class="product-name">Hummus</h3>
-              </div>
-            </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/organicoBombones.jpg" alt="bombones organicos"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$350</p>
-                <h3 class="product-name">Bombones orgánicos</h3>
-              </div>
-            </article> -->
-            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+            
           </div>
         </div>
 
@@ -61,35 +43,19 @@
             /></a>
           </article>
           <div class="carrousel-products">
-            <i class="fas fa-chevron-left carrousel-product-button1"></i>
+            
+            <%for( let i=0; i < 3; i++ ) { %>
             <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/jardinBalcon.JPG" alt="jardin de balcon"
+              <a href="/products/<%= floraYJardin[i].id %>"
+                ><img src="/uploads/products/<%= floraYJardin[i].product_image %>" alt="jardin de balcon"
               /></a>
               <div class="product-name-box">
-                <p class="price">$600</p>
-                <h3 class="product-name">Jardín de balcón</h3>
+                <p class="price"><%= floraYJardin[i].product_price %></p>
+                <h3 class="product-name"><%= floraYJardin[i].product_name %></h3>
               </div>
             </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/jardinKitchenGarden.JPG" alt="Jardín de cocina"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$700</p>
-                <h3 class="product-name">Jardín de cocina</h3>
-              </div>
-            </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/jardinpimenton.JPG" alt="pimentones"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$100</p>
-                <h3 class="product-name">Pimentones orgánicos</h3>
-              </div>
-            </article>
-            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+            <% } %>
+            
           </div>
         </div>
         <div class="category-main">
@@ -102,36 +68,19 @@
             /></a>
           </article>
           <div class="carrousel-products">
-            <i class="fas fa-chevron-left carrousel-product-button1"></i>
+            
+            <%for( let i=0; i < 3; i++ ) { %>
             <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/CuidadoJabon.jpg" alt="jabon ecologico"
+              <a href="/products/<%= cuidadoPersonal[i].id %>"
+                ><img src="/uploads/products/<%= cuidadoPersonal[i].product_image %>" alt="jabon ecologico"
               /></a>
               <div class="product-name-box">
-                <p class="price">150</p>
-                <h3 class="product-name">Jabón no contaminante</h3>
+                <p class="price"><%= cuidadoPersonal[i].product_price %></p>
+                <h3 class="product-name"><%= cuidadoPersonal[i].product_name %></h3>
               </div>
             </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/cuidadoCepillo.JPG" alt="cepillo ecologico"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$170</p>
-                <h3 class="product-name">Cepillo ecologico</h3>
-              </div>
-            </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/cuidadoSET.jpg" alt="set cuidado"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$1100</p>
-                <h3 class="product-name">SET cuidado personal</h3>
-              </div>
-            </article>
-
-            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+            <% } %>
+            
           </div>
         </div>
         <div class="category-main">
@@ -142,36 +91,19 @@
             /></a>
           </article>
           <div class="carrousel-products">
-            <i class="fas fa-chevron-left carrousel-product-button1"></i>
+            
+            <%for( let i=0; i < 3; i++ ) { %>
             <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/hogarSillon.jpeg" alt="Sillón ecologico"
+              <a href="/products/<%= hogar[i].id %>"
+                ><img src="/uploads/products/<%= hogar[i].product_image %>" alt="Sillón ecologico"
               /></a>
               <div class="product-name-box">
-                <p class="price">$1500</p>
-                <h3 class="product-name">Sillón ecológico</h3>
+                <p class="price"><%= hogar[i].product_price %></p>
+                <h3 class="product-name"><%= hogar[i].product_name %></h3>
               </div>
             </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/hogarCubiertos.jpg" alt="cubiertos eco"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$110</p>
-                <h3 class="product-name">Cubiertos eco-friendly</h3>
-              </div>
-            </article>
-            <article class="product-box">
-              <a href="/product_detail"
-                ><img src="/img/hogarLampara.jpg" alt="lampara eco"
-              /></a>
-              <div class="product-name-box">
-                <p class="price">$300</p>
-                <h3 class="product-name">Lámpara ecológica</h3>
-              </div>
-            </article>
-
-            <i class="fas fa-chevron-right carrousel-product-button2"></i>
+            <% } %>
+            
           </div>
         </div>
       </section>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head', {pageTitle: 'Todos los productos'}) %>
+
+<body>
+  <%- include('../partials/navBar') %>
+
+<div id="Container-profile">
+
+  <div id="info-profile">
+    <h2><%= locals.userLogged?locals.userLogged.user_name:null %></h2>
+    <h2><%= locals.userLogged?locals.userLogged.user_email:null %></h2>
+  </div>
+
+  <div id="avatarImage">
+    <img src="./uploads/users/<%= locals.userLogged?locals.userLogged.user_image:null %>">
+  </div>
+
+</div>
+
+  <%- include('../partials/footer') %>
+</body>
+
+</html>

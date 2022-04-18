@@ -76,7 +76,7 @@ window.addEventListener("load", function(){
             errorsCount++;
         }}
               let avatarSignUp = document.querySelector("#avatarImg")
-              const Ext = ["jpg", "jpeg", "png", "gif"];
+              const Ext = ["jpg", "jpeg", "PNG", "gif"];
 
               let ImgExtName = formFields[4].files
               let img = [...ImgExtName]

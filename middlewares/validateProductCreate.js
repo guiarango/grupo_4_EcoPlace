@@ -14,7 +14,7 @@ const validateProductCreate = [
     .notEmpty()
     .withMessage("*Rellena el campo de descripción del producto")
     .bail()
-    .isLength({ min: 20, max: 100 })
+    .isLength({ min: 20, max: 1000 })
     .withMessage(
       "El nombre de la descripción debe contener mínimo 20 caracteres y máximo 100 caracteres"
     ),

@@ -1,15 +1,33 @@
 const path = require("path");
 const fs = require("fs");
 
+const { Product } = require("../database/models");
+
 const productFilePath = path.resolve(__dirname, "../data/DB-products.json");
 const products = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const mainController = {
-  home: (req, res) => {
-    console.log(req.cookies.userEmail);
+  home: async(req, res) => {
+
+    const organicProducts = await Product.findAll({
+       where: { category_id: 2 } });
+
+    const hogarProducts = await Product.findAll({
+      where: { category_id: 4 } });
+
+    const floraYJardinProducts = await Product.findAll({
+      where: { category_id: 1 } });
+
+    const cuidadoPersonalProducts = await Product.findAll({
+      where: { category_id: 3 } });
+
     res.render("home", {
       productsList: products,
       user: req.session.userLogged,
+      organico: organicProducts,
+      hogar: hogarProducts,
+      floraYJardin: floraYJardinProducts,
+      cuidadoPersonal: cuidadoPersonalProducts
     });
   },
 

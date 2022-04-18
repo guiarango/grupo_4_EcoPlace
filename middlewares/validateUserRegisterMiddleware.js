@@ -35,7 +35,7 @@ const validateUserCreation = [
   body("user_image").custom((value, { req }) => {
     let file = req.file;
 
-    let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
+    let acceptedExtensions = [".jpg", ".PNG", ".jpeg", ".gif"];
     if (!file) {
       throw new Error("*Se debe subir una imagen");
     } else {

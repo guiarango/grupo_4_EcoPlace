@@ -6,9 +6,15 @@ const { validationResult } = require("express-validator");
 
 //Se require el modelo de usuarios
 const { Usuarios } = require("../database/models");
+const { userInfo } = require("os");
 // const { cookie } = require("express/lib/response");
 
 const usersController = {
+
+  displayProfile: (req, res) => {
+    res.render("users/profile");
+  },
+
   signIn: (req, res) => {
     res.render("users/sign_in");
   },
@@ -48,7 +54,7 @@ const usersController = {
       if (userInDB) {
         return res.render("users/sign_up", {
           errors: {
-            email: { msg: "*Este email ya está en uso" },
+            user_email: { msg: "*Este email ya está en uso" },
           },
           oldData: req.body,
         });
