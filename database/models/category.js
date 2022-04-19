@@ -5,9 +5,6 @@ module.exports = (sequelize, DataTypes) => {
         category_name:{
             type: DataTypes.STRING
         },
-        user_id:{
-            type: DataTypes.INTEGER
-        }
     };
     let config = {
         tableName: "categories",

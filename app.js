@@ -1,3 +1,4 @@
+
 //Se importan las líbrerías a utilizar
 const express = require("express");
 const app = express();
@@ -9,6 +10,7 @@ const cookies = require("cookie-parser");
 const homeRoute = require("./routes/main");
 const usersRoute = require("./routes/users");
 const productsRoute = require("./routes/products");
+const apiRoutes = require("./routes/api");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(
@@ -44,3 +46,5 @@ app.use(homeRoute);
 app.use(productsRoute);
 
 app.use(usersRoute);
+
+app.use("/api",apiRoutes);
