@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-04-2022 a las 02:39:47
+-- Tiempo de generación: 19-04-2022 a las 21:58:15
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -54,18 +54,20 @@ INSERT INTO `carts` (`id`, `cart_name`, `user_id`) VALUES
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `category_name` varchar(30) NOT NULL
+  `category_name` varchar(30) NOT NULL,
+  `createdAt` date DEFAULT NULL,
+  `updatedAt` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `categories` (`id`, `category_name`) VALUES
-(1, 'floraYJardin'),
-(2, 'organicos'),
-(3, 'cuidadoPersonal'),
-(4, 'hogar');
+INSERT INTO `categories` (`id`, `category_name`, `createdAt`, `updatedAt`) VALUES
+(1, 'floraYJardin', NULL, NULL),
+(2, 'organicos', NULL, NULL),
+(3, 'cuidadoPersonal', NULL, NULL),
+(4, 'hogar', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -102,16 +104,16 @@ CREATE TABLE `products` (
   `category_id` int(11) NOT NULL,
   `product_price` float NOT NULL,
   `product_image` varchar(120) NOT NULL,
-  `deleted_at` date DEFAULT NULL,
   `created_at` date DEFAULT NULL,
-  `updated_at` date DEFAULT NULL
+  `updated_at` date DEFAULT NULL,
+  `deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`, `deleted_at`, `created_at`, `updated_at`) VALUES
+INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647902435506.jpg', NULL, NULL, NULL),
 (33, 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 3, 123.5, 'product_image_productimg_1647903323075.jpg', NULL, NULL, NULL),
 (34, 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 3, 56.91, 'product_image_productimg_1647903489305.jpg', NULL, NULL, NULL),
@@ -247,7 +249,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
