@@ -3,13 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-03-2022 a las 00:13:54
+-- Tiempo de generación: 19-04-2022 a las 02:39:47
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
-
-CREATE DATABASE IF NOT EXIST `ecoplace`;
-USE `ecoplace`;
-
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -105,30 +101,33 @@ CREATE TABLE `products` (
   `product_other_description` varchar(120) DEFAULT NULL,
   `category_id` int(11) NOT NULL,
   `product_price` float NOT NULL,
-  `product_image` varchar(120) NOT NULL
+  `product_image` varchar(120) NOT NULL,
+  `deleted_at` date DEFAULT NULL,
+  `created_at` date DEFAULT NULL,
+  `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`) VALUES
-(1, 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647902435506.jpg'),
-(33, 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 3, 123.5, 'product_image_productimg_1647903323075.jpg'),
-(34, 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 3, 56.91, 'product_image_productimg_1647903489305.jpg'),
-(35, 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 3, 13.52, 'product_image_productimg_1647903584581.jpg'),
-(36, 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 4, 15.99, 'product_image_productimg_1647903656759.jpg'),
-(37, 'BOLSAS DE SUPERMERCADO ECOLOGI', 'BOLSAS DE SUPERMERCADO ECOLOGI', 'BOLSAS DE SUPERMERCADO ECOLOGICAS', 'BOLSAS DE SUPERMERCADO ECOLOGICAS', 4, 6.45, 'product_image_productimg_1647903685432.jpg'),
-(38, 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 4, 3.78, 'product_image_productimg_1647903719821.jpg'),
-(39, 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 4, 83.1, 'product_image_productimg_1647903753425.jpg'),
-(40, 'NARANJAS', 'NARANJAS', 'NARANJAS', 'NARANJAS', 2, 3.59, 'product_image_productimg_1647903777950.jpg'),
-(41, 'TOMATES', 'TOMATES', 'TOMATES', 'TOMATES', 2, 5.5, 'product_image_productimg_1647903802018.jpg'),
-(42, 'QUINUA', 'QUINUA', 'QUINUA', 'QUINUA', 2, 4.75, 'product_image_productimg_1647903821894.jpg'),
-(43, 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 1, 33.67, 'product_image_productimg_1647903846330.jpg'),
-(44, 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 1, 55.4, 'product_image_productimg_1647903875489.jpg'),
-(45, 'REGADERA', 'REGADERA', 'REGADERA', 'REGADERA', 1, 37.4, 'product_image_productimg_1647903914218.jpg'),
-(46, 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 2, 8.7, 'product_image_productimg_1647903995207.jpg'),
-(47, 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 4, 17.3, 'product_image_productimg_1647904250096.webp');
+INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647902435506.jpg', NULL, NULL, NULL),
+(33, 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 3, 123.5, 'product_image_productimg_1647903323075.jpg', NULL, NULL, NULL),
+(34, 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 3, 56.91, 'product_image_productimg_1647903489305.jpg', NULL, NULL, NULL),
+(35, 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 'CEPILLO DE CABELLO ECOLOGICO', 3, 13.52, 'product_image_productimg_1647903584581.jpg', NULL, NULL, NULL),
+(36, 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 'PITILLOS ECOLOGICOS', 4, 15.99, 'product_image_productimg_1647903656759.jpg', NULL, NULL, NULL),
+(37, 'BOLSAS DE SUPERMERCADO ECOLOGI', 'BOLSAS DE SUPERMERCADO ECOLOGI', 'BOLSAS DE SUPERMERCADO ECOLOGICAS', 'BOLSAS DE SUPERMERCADO ECOLOGICAS', 4, 6.45, 'product_image_productimg_1647903685432.jpg', NULL, NULL, NULL),
+(38, 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 'BOLSAS DE BASURA REUTILIZABLES', 4, 3.78, 'product_image_productimg_1647903719821.jpg', NULL, NULL, NULL),
+(39, 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 'HAMACA ECOLOGICA', 4, 83.1, 'product_image_productimg_1647903753425.jpg', NULL, NULL, NULL),
+(40, 'NARANJAS', 'NARANJAS', 'NARANJAS', 'NARANJAS', 2, 3.59, 'product_image_productimg_1647903777950.jpg', NULL, NULL, NULL),
+(41, 'TOMATES', 'TOMATES', 'TOMATES', 'TOMATES', 2, 5.5, 'product_image_productimg_1647903802018.jpg', NULL, NULL, NULL),
+(42, 'QUINUA', 'QUINUA', 'QUINUA', 'QUINUA', 2, 4.75, 'product_image_productimg_1647903821894.jpg', NULL, NULL, NULL),
+(43, 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 1, 33.67, 'product_image_productimg_1647903846330.jpg', NULL, NULL, NULL),
+(44, 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 1, 55.4, 'product_image_productimg_1647903875489.jpg', NULL, NULL, NULL),
+(45, 'REGADERA', 'REGADERA', 'REGADERA', 'REGADERA', 1, 37.4, 'product_image_productimg_1647903914218.jpg', NULL, NULL, NULL),
+(46, 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 2, 8.7, 'product_image_productimg_1647903995207.jpg', NULL, NULL, NULL),
+(47, 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 4, 17.3, 'product_image_productimg_1647904250096.webp', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -248,7 +247,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
