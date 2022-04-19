@@ -1,63 +1,84 @@
 window.addEventListener('load', function(){
 
-let errors = {};
+    let errors = {};
 
-let productForm = document.getElementById('productForm');
-let productName = document.getElementById('productName');
-let productPrice = document.getElementById('productPrice');
-let productDescription = document.getElementById('productDescription');
-let productImage = document.getElementById('file');
+    const productForm = document.getElementById('productForm');
 
-let validateProductName = function(){
-    let massage = '';
+const productName = document.getElementById('productName');
+const productPrice = document.getElementById('productPrice');
+const productImage = document.getElementById('file');
+const productDescription = document.getElementById('productDescription');
 
-if(validator.isEmpty(productName.value, { ignore_whitespace:true })) {
-    massage = 'Debés completar el campo nombre';
-} else if(!validator.isLength(productName.value, { min: 5 })){
-    massage = 'El campo nombre debe tener al menos 5 caracteres';
-}
+const validateProductName = (event) => {
+    let errorText = '';
 
-handleError(productName, massage);
-};
-
-let validateProductPrice = function(){
-    let message = '';
-
-if(validator.isEmpty(productPrice.value, { ignore_whitespace:true })) {
-    massage = "Debés completar el campo de precio";
-} else if(!validator.isNumeric(productPrice.value)){
-    massage = 'Solo se permiten números';
-}
-
-    handleError(productPrice, massage);
-};
-
-let validateProductDescription = function() {
-    let massage = '';
-
-if(validator.isEmpty(productDescription.value, { ignore_whitespace:true })) {
-    massage = 'Debes completar el campo descripción';
-} else if(!validator.isLength(productDescription.value, { min:20 })) {
-    massage = 'El campo descripción debe tener al menos 20 caracteres';
-}
-
-handleError(productDescription, massage);
-};
-
-let validateProductImage = function () {
-    
-    const Ext = ["jpg", "jpeg", "png", "gif"];
-    
-    let massage = '';
-    
-    let ext = productImage.value.split(".")[1];
-    
-    if(!Ext.includes(ext)) {
-        massage = "Imagen de formato inválido";
+    const field = event.target;
+    if(field.value.trim() == ""){
+        errorText = 'Debés completar el campo nombre';
+    } else if(field.value.trim() > 5) {
+        errorText = 'El campo nombre debe tener al menos 5 caracteres';
     }
 
-    handleError(productImage, massage);
+    handleError(productName, errorText);
 };
+
+const validateProductPrice = (event) => {
+    let errorText = '';
+
+    const field = event.target;
+    if(field.value.trim() == ""){
+        errorText = 'Debés completar el campo precio.';
+    } else if(!field.value.isNumeric(productPrice.value)) {
+        errorText = 'Solo se permiten números.';
+    }
+
+    handleError(productPrice, errorText);
+};
+
+let validateProductDescription = function(event) {
+    let errorText = '';
+    
+    const field = event.target;
+    if (field.value.trim() == '') {
+        errorText = 'Debes completar el campo descripción';
+    } else if(field.value.trim() > 20) {
+        errorText = 'El campo descripción debe tener al menos 20 caracteres';
+    }
+
+    handleError(productDescription, errorText);
+};
+
+let validateProductImage = function() {
+    let errorText = '';
+
+    let validFormat = true;
+    if(productImage.value) {
+        let ext = productImage.value.split('.')[1];
+        switch (ext) {
+        case 'jpg':
+            validFormat = true;
+            break;
+        case 'jpeg':
+            validFormat = true;
+            break;
+        case 'png':
+            validFormat = true;
+            break;
+        case 'gif':
+            validFormat = true;
+            break;
+        default:
+            validFormat = false;
+            break;
+        }
+    }
+    if (!validFormat) {
+        errorText = 'La imagén debe tener uno de los siguientes formatos (JPG, JPEG, PNG, GIF).';
+    }
+
+    handleError(productImage, errorText);
+};
+
 
 let handleError = function (element, textError) {
     let textErrorElement = element.nextElementSibling;
@@ -73,22 +94,123 @@ let handleError = function (element, textError) {
     }
     
     textErrorElement.innerText = textError;
-  }
+}
 
-  productName.addEventListener('blur', validateProductName);
-  productPrice.addEventListener('blur', validateProductPrice);
-  productDescription.addEventListener('blur', validateProductDescription);
-  productImage.addEventListener('blur', validateProductImage);
 
-  productForm.addEventListener('submit', function (e) {
-      validateProductName();
-      validateProductPrice();
-      validateProductDescription();
-      validateProductImage();
 
-    if(Object.keys(errors).length) {
-        e.preventDefault();
+productName.addEventListener('blur', validateProductName);
+productPrice.addEventListener('blur', validateProductPrice);
+productDescription.addEventListener('blur', validateProductDescription);
+productImage.addEventListener('blur', validateProductImage);
+
+
+productForm.addEventListener('submit', function (event) {
+    validateProductName();
+    validateProductPrice();
+    validateProductDescription();
+    validateProductImage();
+    
+    if (Object.keys(errors).length) {
+        event.preventDefault();
     }
-  });
-
 })
+})
+
+// let validateProductName = function() {
+//     let errorText = '';
+    
+//     if (validator.isEmpty(productName.value, { ignore_whitespace:true })) {
+//       errorText = 'Debés completar el campo nombre';
+//     } else if(!validator.isLength(productName.value, { min: 5 } )) {
+//       errorText = 'El campo nombre debe tener al menos 5 caracteres';
+//     }
+
+//     handleError(productName, errorText);
+//   };
+
+//   let validateProductPrice= function() {
+//     let errorText = '';
+    
+//     if (validator.isEmpty(productPrice.value, { ignore_whitespace:true })) {
+//       errorText = 'Debés completar el campo precio';
+//     } else if(!validator.isNumeric(productPrice.value)) {
+//       errorText = 'Solo se permiten números';
+//     }
+
+//     handleError(productPrice, errorText);
+//   };
+
+//   let validateProductDescription = function() {
+//     let errorText = '';
+    
+//     if (validator.isEmpty(productDescription.value, { ignore_whitespace:true })) {
+//       errorText = 'Debes completar el campo descripción';
+//     } else if(!validator.isLength(productDescription.value, { min: 20 } )) {
+//       errorText = 'El campo descripción debe tener al menos 20 caracteres';
+//     }
+
+//     handleError(productDescription, errorText);
+//   };
+
+//   let validateProductImage = function() {
+//     let errorText = '';
+//     let validFormat = true;
+//     if(productImage.value) {
+//       let ext = productImage.value.split('.')[1];
+//       switch (ext) {
+//         case 'jpg':
+//           validFormat = true;
+//           break;
+//         case 'jpeg':
+//           validFormat = true;
+//           break;
+//         case 'png':
+//           validFormat = true;
+//           break;
+//         case 'gif':
+//           validFormat = true;
+//           break;
+//         default:
+//           validFormat = false;
+//           break;
+//       }
+//     }
+//     if (!validFormat) {
+//       errorText = 'La imagén debe tener uno de los siguientes formatos (JPG, JPEG, PNG, GIF).';
+//     }
+
+//     handleError(productImage, errorText);
+//   };
+
+//   let handleError = function (element, textError) {
+//     let textErrorElement = element.nextElementSibling;
+
+//     if (textError) {
+//         element.classList.add('input-danger');
+//         textErrorElement.classList.add('text-danger');
+//         errors[element.name] = textError;
+//     } else {
+//         element.classList.remove('input-danger');
+//         textErrorElement.classList.remove('text-danger');
+//         delete errors[element.name];
+//     }
+    
+//     textErrorElement.innerText = textError;
+//   }
+
+//   productName.addEventListener('blur', validateProductName);
+//   productDescription.addEventListener('blur', validateProductDescription);
+//   productImage.addEventListener('blur', validateProductImage);
+//   productPrice.addEventListener('blur', validateProductPrice);
+
+
+//   productForm.addEventListener('submit', function (event) {
+
+//     validateProductName();
+//     validateProductPrice();
+//     validateProductDescription();
+//     validateProductImage();
+//     if (Object.keys(errors).length) {
+//         event.preventDefault();
+//     }
+// });

@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head', {pageTitle: 'Edicion del producto'}) %>
-
   <body>
     <header><%- include('../partials/navBar') %></header>
-
     <main>
       <section class="main-form">
         <form
           action="/products/<%=productData.id%>?_method=PUT"
           method="POST"
-          enctype="multipart/form-data"
+          enctype="multipart/form-data" class="validateForm"
         >
           <div class="form-header">
             <img src="/img/logo-2.png" alt="logo 2" />
           </div>
-
           <section class="productName-field">
             <input
               type="text"
@@ -24,16 +21,15 @@
               placeholder="Ingresar nombre producto"
               value="<%= locals.productData?locals.productData.product_name:null %>"
             />
+            <span></span>
             <label for="productName">Ingresar nombre producto</label>
           </section>
-
           <div>
             <p class="text-error">
               <% if (locals.errors && errors.product_name) { %> <%=
               errors.product_name.msg%> <% } %>
             </p>
           </div>
-
           <!-- <section class="productColor-field">
             <input
               type="text"
@@ -52,9 +48,9 @@
               placeholder="Ingresar precio producto"
               value="<%= locals.productData?locals.productData.product_price:null %>"
             />
+            <span></span>
             <label for="productPrice">Ingresar precio producto</label>
           </section>
-
           <section class="productCategory-field">
             <label for="productCategory"
               >Selecciona una categoría
@@ -66,7 +62,6 @@
               </select></label
             >
           </section>
-
           <section class="uploadImage-field">
             <label for="file">Cargar imagen</label>
             <input
@@ -75,15 +70,14 @@
               name="product_image"
               class="uploadImage-field"
             />
+            <span></span>
           </section>
-
           <div>
             <p class="text-error">
               <% if (locals.errors && errors.product_image) { %> <%=
               errors.product_image.msg%> <% } %>
             </p>
           </div>
-
           <section class="productDescription-field">
             <textarea
               type="text"
@@ -94,15 +88,14 @@
             <label for="productDescription"
               >Ingresar descripción producto</label
             >
+            <span></span>
           </section>
-
           <div>
             <p class="text-error">
               <% if (locals.errors && errors.product_description) { %> <%=
               errors.product_description.msg%> <% } %>
             </p>
           </div>
-
           <!-- <section class="productDescription-field">
             <textarea
               type="text"
@@ -114,7 +107,6 @@
               >Ingresar descripción técnica del producto</label
             >
           </section>
-
           <section class="productDescription-field">
             <textarea
               type="text"
@@ -126,7 +118,6 @@
               >Ingresar otras descripciones del producto</label
             >
           </section> -->
-
           <section class="section-buttons">
             <button type="submit">ACTUALIZAR</button>
             <button type="reset">LIMPIAR</button>
@@ -134,7 +125,6 @@
         </form>
       </section>
     </main>
-
     <%- include('../partials/footer') %>
     <%- include('../partials/loadScript', { scriptName: 'validationProductEdit.js'})  %>
   </body>
