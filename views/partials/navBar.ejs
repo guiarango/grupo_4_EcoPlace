@@ -27,18 +27,19 @@
     <!-- Botones escritorio -->
     <ul class="nav-block">
       <% if (locals.userLogged) { %>
-      <li class="hide-login">Hola, <%= locals.userLogged.user_name%></li>
+      <!-- <li class="hide-login">Hola, <%= locals.userLogged.user_name%></li> -->
       <li class="hide-profile"><a href="/profile">Perfil</a></li>
       <li class="hide-login"><a href="/logOut">Log Out</a></li>
       <li class="hide-login"><a href="/products/create">Crear producto</a></li>
+      <li>
+        <a href="/shopping_cart"><i class="fas fa-shopping-basket"></i></a>
+      </li>
 
       <% } else {%>
 
       <li class="hide-login"><a href="/sign_in">Iniciar Sesión</a></li>
       <li class="hide-login"><a href="/sign_up">Registrarse</a></li>
-      <li>
-        <a href="/shopping_cart"><i class="fas fa-shopping-basket"></i></a>
-      </li>
+    
 
       <% } %>
     </ul>

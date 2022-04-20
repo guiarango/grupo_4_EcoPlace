@@ -1103,6 +1103,21 @@ main .deleteButton {
   top: 100vh;
   width: 100%; }
 
+@media (max-width: 1200px) {
+  .wrapperProfile {
+    width: 70%;
+    height: 40%; } }
+
+@media (max-width: 768px) {
+  .wrapperProfile {
+    width: 70%;
+    height: 40%; } }
+
+@media (max-width: 567px) {
+  .wrapperProfile {
+    width: 70%;
+    height: 40%; } }
+
 @media (min-width: 361px) {
   html {
     font-size: 10px; }

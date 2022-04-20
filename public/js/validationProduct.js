@@ -96,13 +96,10 @@ let handleError = function (element, textError) {
     textErrorElement.innerText = textError;
 }
 
-
-
 productName.addEventListener('blur', validateProductName);
 productPrice.addEventListener('blur', validateProductPrice);
 productDescription.addEventListener('blur', validateProductDescription);
 productImage.addEventListener('blur', validateProductImage);
-
 
 productForm.addEventListener('submit', function (event) {
     validateProductName();
