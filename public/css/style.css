@@ -1011,10 +1011,7 @@ main .deleteButton {
   font-family: 'Josefin Sans', sans-serif; }
 
 .wrapperProfile {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 50px auto 55px auto;
   width: 700px;
   height: 500px;
   display: flex;
@@ -1045,12 +1042,10 @@ main .deleteButton {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
 
-.wrapperProfile .right .info,
-.wrapperProfile .right .info2 {
+.wrapperProfile .right .info {
   margin-bottom: 25%; }
 
-.wrapperProfile .right .info h3,
-.wrapperProfile .right .info2 h3 {
+.wrapperProfile .right .info h3 {
   margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 1px solid #e0e0e0;
@@ -1058,22 +1053,18 @@ main .deleteButton {
   text-transform: uppercase;
   letter-spacing: 5px; }
 
-.wrapperProfile .right .info_data,
-.wrapperProfile .right .info2_data {
+.wrapperProfile .right .info_data {
   display: flex;
   justify-content: space-between; }
 
-.wrapperProfile .right .info_data .data,
-.wrapperProfile .right .info2_data .data {
+.wrapperProfile .right .info_data .data {
   width: 45%; }
 
-.wrapperProfile .right .info_data .data h4,
-.wrapperProfile .right .info2_data .data h4 {
+.wrapperProfile .right .info_data .data h4 {
   color: #353c4e;
   margin-bottom: 5px; }
 
-.wrapperProfile .right .info_data .data p,
-.wrapperProfile .right .info2_data .data p {
+.wrapperProfile .right .info_data .data p {
   font-size: 13px;
   margin-bottom: 10px;
   color: #919aa3; }
@@ -1099,7 +1090,6 @@ main .deleteButton {
   list-style: none; }
 
 .positionFooter {
-  position: absolute;
   top: 100vh;
   width: 100%; }
 
