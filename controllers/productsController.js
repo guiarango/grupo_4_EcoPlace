@@ -92,7 +92,7 @@ const productsController = {
     await Product.destroy({ where: { id: req.params.id } });
 
     return res.redirect("/products");
-  },
+  }
 };
 
 module.exports = productsController;

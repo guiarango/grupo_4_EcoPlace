@@ -981,6 +981,9 @@ main .deleteButton {
         width: 100%;
         padding: 5px; }
 
+.imgSize {
+  width: 50%; }
+
 .product-data-box p {
   color: #804000 !important; }
 
