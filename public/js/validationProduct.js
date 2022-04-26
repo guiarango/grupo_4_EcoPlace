@@ -15,7 +15,7 @@ const validateProductName = (event) => {
     const field = event.target;
     if(field.value.trim() == ""){
         errorText = 'Debés completar el campo nombre';
-    } else if(field.value.trim() > 5) {
+    } else if(field.value.trim().length < 5) {
         errorText = 'El campo nombre debe tener al menos 5 caracteres';
     }
 
@@ -28,7 +28,7 @@ const validateProductPrice = (event) => {
     const field = event.target;
     if(field.value.trim() == ""){
         errorText = 'Debés completar el campo precio.';
-    } else if(!field.value.isNumeric(productPrice.value)) {
+    } else if(isNaN(field.value.trim() == "")) {
         errorText = 'Solo se permiten números.';
     }
 
@@ -41,19 +41,20 @@ let validateProductDescription = function(event) {
     const field = event.target;
     if (field.value.trim() == '') {
         errorText = 'Debes completar el campo descripción';
-    } else if(field.value.trim() > 20) {
+    } else if(field.value.trim().length < 20) {
         errorText = 'El campo descripción debe tener al menos 20 caracteres';
     }
 
     handleError(productDescription, errorText);
 };
 
-let validateProductImage = function() {
+let validateProductImage = function(event) {
     let errorText = '';
 
     let validFormat = true;
-    if(productImage.value) {
-        let ext = productImage.value.split('.')[1];
+    const field = event.target
+    if(field.value) {
+        let ext = field.value.split('.')[1];
         switch (ext) {
         case 'jpg':
             validFormat = true;

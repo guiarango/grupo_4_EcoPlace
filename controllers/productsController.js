@@ -24,11 +24,13 @@ const productsController = {
   createProduct: async (req, res) => {
     const resultValidation = validationResult(req);
 
+    
     if(resultValidation.errors.length > 0){
       res.render("products/products_create", {
         errors: resultValidation.mapped(),
-        oldData: req.body
-      });
+        oldData: req.body,
+      }); 
+      console.log(req.body)
     } else {
       let newProduct = req.body;
     newProduct.product_image = req.file.filename;
@@ -47,9 +49,10 @@ const productsController = {
   updateProductDetail: async (req, res) => {
     const resultValidation = validationResult(req);
     if(resultValidation.errors.length > 0){
-      res.render("products/products_create", {
+      productData={id:req.params.id,...req.body}
+      res.render("products/products_edit", {
         errors: resultValidation.mapped(),
-        oldData: req.body
+        productData,
       });
     } else{
       await Product.update(

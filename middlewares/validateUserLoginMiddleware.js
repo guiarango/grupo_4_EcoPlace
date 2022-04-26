@@ -7,6 +7,9 @@ const validateUserLogin = [
     .bail()
     .isEmail()
     .withMessage("Debes escribir un formato de correo válido"),
+    body("user_password")
+    .notEmpty()
+    .withMessage("*Rellena el campo de contraseña")
 ];
 
 module.exports = validateUserLogin;

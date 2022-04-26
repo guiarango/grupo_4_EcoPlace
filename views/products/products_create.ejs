@@ -41,6 +41,12 @@
             <span></span>
             <!-- <label for="productPrice">Ingresar precio producto</label> -->
           </section>
+          <div>
+            <p class="text-error">
+              <% if (locals.errors && errors.product_price) { %> <%=
+              errors.product_price.msg%> <% } %>
+            </p>
+          </div>
 
           <section class="productCategory-field">
             <label for="productCategory"
@@ -64,7 +70,6 @@
             />
             <span></span>
           </section>
-
           <div>
             <p class="text-error">
               <% if (locals.errors && errors.product_image) { %> <%=
@@ -73,14 +78,13 @@
           </div>
 
           <section class="productDescription-field">
-            <textarea
+            <input
               type="text"
               name="product_description"
               id="productDescription"
-              placeholder="Ingresar descripción producto"
-            >
+              placeholder="Ingresar descripción producto">
             <%= locals.oldData?locals.oldData.product_description:null %>
-          </textarea>
+          </input>
           <span></span>
             <!-- <label for="productDescription"
               >Ingresar descripción producto</label
@@ -89,8 +93,9 @@
 
           <div>
             <p class="text-error">
-              <% if (locals.errors && errors.product_description) { %> <%=
-              errors.product_description.msg%> <% } %>
+              <% if (locals.errors && errors.product_description) { %>
+                <%=errors.product_description.msg%>
+               <% } %>
             </p>
           </div>
 

@@ -1,46 +1,63 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
+  let errors = {};
 
+  const signInForm = document.querySelector(".signInForm");
 
+  const signInEmail = document.getElementById("userEmail");
+  const signInPassword = document.getElementById("userPassword");
 
-    let signInForm = document.querySelector("form.signInForm")
+  const validateSignInEmail = (event) => {
+    let errorText = "";
 
-    signInForm.addEventListener("submit", function(event) {
+    const field = event.target;
+    const mailValidator = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (field.value.trim() == "") {
+      errorText = "Debés completar el campo email.";
+    } else if (!field.value.match(mailValidator)) {
+      errorText = "Debés completar el campo email con caracteres correctos.";
+    }
 
-        let errorsCount = 0;
-        
-        const formFields = [...signInForm.elements];
-        formFields.pop();
-        
-        formFields.forEach(oneField => {
-            const spanTagError = oneField.nextElementSibling;
-            if (oneField.value.trim() === "") {
-                spanTagError.classList.add("text-error");
-                spanTagError.innerText = "El campo es obligatorio";
-                errorsCount++;
-            } 
-            else {
-                spanTagError.classList.remove("text-error");
-                spanTagError.innerText = "";
-            }
-        })
+    handleError(signInEmail, errorText);
+  };
 
-        const emailSignIn = document.querySelector("#user")
-        if (emailSignIn.value.trim() != ""){
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if(emailSignIn.value.match(mailformat)) {
-            emailSignIn.nextElementSibling.classList.remove("text-error")
-                emailSignIn.nextElementSibling.innerText = "";
-        } else {
-            emailSignIn.nextElementSibling.classList.add("text-error")
-            emailSignIn.nextElementSibling.innerText = "El email no es válido";
-            errorsCount++;
-        }}
-           
-            if (errorsCount > 0) {
-                console.log(errorsCount)
-                event.preventDefault();
-            }
+  const validateSignInPassword = (event) => {
+    let errorText = "";
 
+    const field = event.target;
+    if (field.value.trim() == "") {
+      errorText = "Debés completar el campo password.";
+    } else if (field.value.trim().length < 8) {
+      errorText = "Debe contar con al menos 8 caracteres.";
+    }
 
-    })
-})
+    handleError(signInPassword, errorText);
+  };
+
+  let handleError = function (element, textError) {
+    let textErrorElement = element.nextElementSibling;
+
+    if (textError) {
+      element.classList.add("input-danger");
+      textErrorElement.classList.add("text-danger");
+      errors[element.name] = textError;
+    } else {
+      element.classList.remove("input-danger");
+      textErrorElement.classList.remove("text-danger");
+      delete errors[element.name];
+    }
+
+    textErrorElement.innerText = textError;
+  };
+
+  signInEmail.addEventListener("blur", validateSignInEmail);
+  signInPassword.addEventListener("blur", validateSignInPassword);
+
+  signInForm.addEventListener("submit", function (event) {
+    validateSignInEmail();
+    validateSignInPassword();
+
+    if (Object.keys(errors).length) {
+      event.preventDefault();
+    }
+  });
+});

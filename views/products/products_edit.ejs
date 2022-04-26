@@ -22,7 +22,6 @@
               value="<%= locals.productData?locals.productData.product_name:null %>"
             />
             <span></span>
-            <label for="productName">Ingresar nombre producto</label>
           </section>
           <div>
             <p class="text-error">
@@ -30,27 +29,22 @@
               errors.product_name.msg%> <% } %>
             </p>
           </div>
-          <!-- <section class="productColor-field">
-            <input
-              type="text"
-              name="color"
-              id="productColor"
-              placeholder="Ingresar color producto"
-              value="<%=productData.color%>"
-            />
-            <label for="productColor">Ingresar color producto</label>
-          </section> -->
+
           <section class="productPrice-field">
             <input
               type="text"
               name="product_price"
               id="productPrice"
               placeholder="Ingresar precio producto"
-              value="<%= locals.productData?locals.productData.product_price:null %>"
-            />
+              value="<%= locals.productData?locals.productData.product_price:null %>"/>
             <span></span>
-            <label for="productPrice">Ingresar precio producto</label>
           </section>
+          <p class="text-error">
+            <% if (locals.errors && errors.product_price) { %> <%=
+            errors.product_price.msg%> <% } %>
+          </p>
+        </div>
+
           <section class="productCategory-field">
             <label for="productCategory"
               >Selecciona una categoría
@@ -62,6 +56,7 @@
               </select></label
             >
           </section>
+
           <section class="uploadImage-field">
             <label for="file">Cargar imagen</label>
             <input
@@ -78,16 +73,16 @@
               errors.product_image.msg%> <% } %>
             </p>
           </div>
+
           <section class="productDescription-field">
-            <textarea
+            <input
               type="text"
               name="product_description"
               id="productDescription"
               placeholder="Ingresar descripción producto"
-            ><%= locals.productData?locals.productData.product_description:null %></textarea>
-            <label for="productDescription"
-              >Ingresar descripción producto</label
-            >
+              value="<%= locals.productData?locals.productData.product_description:null %>">
+            </input>
+
             <span></span>
           </section>
           <div>
@@ -96,31 +91,9 @@
               errors.product_description.msg%> <% } %>
             </p>
           </div>
-          <!-- <section class="productDescription-field">
-            <textarea
-              type="text"
-              name="product_technical_description"
-              id="productTechnicalDescription"
-              placeholder="Ingresar descripción técnica del producto"
-            ><%=productData.product_technical_description%></textarea>
-            <label for="productTechnicalDescription"
-              >Ingresar descripción técnica del producto</label
-            >
-          </section>
-          <section class="productDescription-field">
-            <textarea
-              type="text"
-              name="product_other_description"
-              id="productOthersDescription"
-              placeholder="Ingresar otras descripciones del producto"
-            ><%=productData.product_other_description%></textarea>
-            <label for="productOthersDescription"
-              >Ingresar otras descripciones del producto</label
-            >
-          </section> -->
+          
           <section class="section-buttons">
             <button type="submit">ACTUALIZAR</button>
-            <button type="reset">LIMPIAR</button>
           </section>
         </form>
       </section>

@@ -66,8 +66,10 @@ const usersController = {
         newUser.user_image = req.file.filename;
         newUser.user_password = bcrypt.hashSync(req.body.user_password, 10);
         Usuarios.create(newUser);
+        delete newUser.user_password;
+        req.session.userLogged = newUser;
 
-        res.redirect("/");
+        res.redirect("/profile");
       } else {
         res.render("users/sign_up", {
           errors: {
@@ -108,6 +110,9 @@ const usersController = {
             res.cookie("userEmail", req.body.user_email, {
               maxAge: 1000 * 60 * 10,
             });
+          } else {
+
+            res.locals.userLogged = req.session.userLogged;
           }
 
           res.redirect("/");

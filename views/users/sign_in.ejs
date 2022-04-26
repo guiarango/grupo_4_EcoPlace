@@ -18,33 +18,38 @@
             <input
               type="text"
               name="user_email"
-              id="user"
+              id="userEmail"
               placeholder="Ingresa el Email"
               value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
             <span></span>
-            <label for="user">Ingresa el Email</label>
+            <div class="text-error">
+              <% if (locals.errors && errors.user_email) { %> <%=
+              errors.user_email.msg%>
+               <% } %>
+            </div>
           </section>
 
           <section class="password-field">
             <input
               type="password"
               name="user_password"
-              id="password"
+              id="userPassword"
               placeholder="Ingresa la Contraseña"
             />
             <span></span>
-            <label for="password">Ingresa la Contraseña</label>
+            <div class="text-error">
+              <% if (locals.errors && errors.user_email) { %> <%=
+              errors.user_password.msg%>
+               <% } %>
+            </div>
           </section>
           <section class="section-rememberUser">
-            <input name="rememberUser" type="checkbox" />
+            <input name="rememberUser" type="checkbox" id="userPassword" />
             <label>Recordar mi usuario</label>
           </section>
 
-          <div class="text-error">
-            <% if (locals.errors && errors.user_email) { %> <%=
-            errors.user_email.msg%> <% } %>
-          </div>
+
 
           <section class="button-submit">
             <button type="submit">INGRESAR</button>

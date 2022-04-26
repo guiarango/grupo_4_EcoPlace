@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-04-2022 a las 21:58:15
+-- Tiempo de generación: 27-04-2022 a las 01:16:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -54,20 +54,18 @@ INSERT INTO `carts` (`id`, `cart_name`, `user_id`) VALUES
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `category_name` varchar(30) NOT NULL,
-  `createdAt` date DEFAULT NULL,
-  `updatedAt` date DEFAULT NULL
+  `category_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `categories` (`id`, `category_name`, `createdAt`, `updatedAt`) VALUES
-(1, 'floraYJardin', NULL, NULL),
-(2, 'organicos', NULL, NULL),
-(3, 'cuidadoPersonal', NULL, NULL),
-(4, 'hogar', NULL, NULL);
+INSERT INTO `categories` (`id`, `category_name`) VALUES
+(1, 'floraYJardin'),
+(2, 'organicos'),
+(3, 'cuidadoPersonal'),
+(4, 'hogar');
 
 -- --------------------------------------------------------
 
@@ -104,16 +102,16 @@ CREATE TABLE `products` (
   `category_id` int(11) NOT NULL,
   `product_price` float NOT NULL,
   `product_image` varchar(120) NOT NULL,
+  `deleted_at` date DEFAULT NULL,
   `created_at` date DEFAULT NULL,
-  `updated_at` date DEFAULT NULL,
-  `deleted_at` date DEFAULT NULL
+  `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_technical_description`, `product_other_description`, `category_id`, `product_price`, `product_image`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 'PAN INTEGRAL', 2, 22.89, 'product_image_productimg_1647902435506.jpg', NULL, NULL, NULL),
 (33, 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 'SHAMPOO ECOLOGICO', 3, 123.5, 'product_image_productimg_1647903323075.jpg', NULL, NULL, NULL),
 (34, 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 'JABON LIQUIDO ECOLOGICO', 3, 56.91, 'product_image_productimg_1647903489305.jpg', NULL, NULL, NULL),
@@ -129,7 +127,8 @@ INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_te
 (44, 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 1, 55.4, 'product_image_productimg_1647903875489.jpg', NULL, NULL, NULL),
 (45, 'REGADERA', 'REGADERA', 'REGADERA', 'REGADERA', 1, 37.4, 'product_image_productimg_1647903914218.jpg', NULL, NULL, NULL),
 (46, 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 2, 8.7, 'product_image_productimg_1647903995207.jpg', NULL, NULL, NULL),
-(47, 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 4, 17.3, 'product_image_productimg_1647904250096.webp', NULL, NULL, NULL);
+(47, 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 4, 17.3, 'product_image_productimg_1647904250096.webp', NULL, NULL, NULL),
+(58, 'cepillo de dientes', '                           Cep', NULL, NULL, 3, 123, 'product_image_productimg_1650500818934.jpg', NULL, '2022-04-21', '2022-04-21');
 
 -- --------------------------------------------------------
 
@@ -181,7 +180,9 @@ INSERT INTO `users` (`id`, `user_name`, `user_email`, `user_password`, `user_ima
 (27, 'badConejo', 'malobunny@gmail.com', '$2a$10$l8G7K0MeUY1N4ajtGHtVDuBsXC77Wnl/loihtjKBAUdqXIrY9QMsu', 'avatar-1647768066944.jpg', '2022-03-20 09:21:07', '2022-03-20 09:21:07'),
 (28, 'scarletteher', 'scarlette@gmail.com', '$2a$10$i3pkCPHABSFB/nXft6m3/OYaPKIwiibHirizTYxt58SFavHQYZ39O', 'avatar-1647768104106.jpg', '2022-03-20 09:21:44', '2022-03-20 09:21:44'),
 (29, 'jassonpai', 'jasson22@gmail.com', '$2a$10$8MYWTrGYeZRq8Xg7/5h.pOjE7wt2xXH3S7mVlw.iplf4VWNZnL5qG', 'avatar-1647768124480.jpg', '2022-03-20 09:22:04', '2022-03-20 09:22:04'),
-(30, 'Franciahilton', 'parishilton@gmail.com', '$2a$10$dtGfIXA3dc7iN2OI8A8WheFuRBk13Ar3mUtZLy378YVmr7RbuyZBS', 'avatar-1647768159816.jpg', '2022-03-20 09:22:39', '2022-03-20 09:22:39');
+(30, 'Franciahilton', 'parishilton@gmail.com', '$2a$10$dtGfIXA3dc7iN2OI8A8WheFuRBk13Ar3mUtZLy378YVmr7RbuyZBS', 'avatar-1647768159816.jpg', '2022-03-20 09:22:39', '2022-03-20 09:22:39'),
+(46, 'guille123', 'guille123@gmail.com', '$2a$10$TC.SAIlVrnhKGeDpNoHn3ekWg2ndSseDTFFBe8sUV6zKOuUjWYMrS', 'avatar-1650945629241.jpg', '2022-04-26 04:00:29', '2022-04-26 04:00:29'),
+(47, 'guille123', 'guille1234@gmail.com', '$2a$10$XAgbGJ5KpObf1O2RXnIZJOAlZbKEGvC9i5/cNeWNH1pu.0vQBeApa', 'avatar-1650945838692.jpg', '2022-04-26 04:03:58', '2022-04-26 04:03:58');
 
 --
 -- Índices para tablas volcadas
@@ -249,13 +250,13 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- Restricciones para tablas volcadas

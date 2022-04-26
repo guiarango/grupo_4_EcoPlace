@@ -7,7 +7,7 @@
 
     <main>
       <section class="main-form">
-        <form action="/sign_up" method="POST" enctype="multipart/form-data" class="signupForm">
+        <form action="/sign_up" method="POST" enctype="multipart/form-data" class="signUpForm">
           <div class="form-header">
             <img src="img/logo-2.png" alt="logo 2" />
           </div>
@@ -16,13 +16,12 @@
             <input
               type="text"
               name="user_name"
-              id="user"
+              id="userName"
               placeholder="Ingresar usuario"
               value="<%= locals.oldData?locals.oldData.user_name:null %>"
             />
-            <span></span>
-            <label for="user">Ingresar usuario</label>
           </section>
+          <span></span>
 
           <div>
             <p class="text-error">
@@ -30,59 +29,58 @@
               errors.user_name.msg%> <% } %>
             </p>
           </div>
-          <span></span>
-
 
           <section class="email-field">
             <input
               type=""
               name="user_email"
-              id="email"
+              id="userEmail"
               placeholder="Ingresar email"
               value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
-            <span></span>
-            <label for="email">Ingresar email</label>
           </section>
+          <span></span>
+          
           <div class="text-error">
             <% if (locals.errors && errors.user_email) { %> <%=
             errors.user_email.msg%> <% } %>
           </div>
-          <span></span>
+
           <section class="password-field">
             <input
               type="password"
               name="user_password"
-              id="password"
+              id="userPassword"
               placeholder="Ingresar contraseña"
             />
-            <span></span>
-            <label for="password">Ingresar contraseña</label>
           </section>
+          <span></span>
+
           <div class="text-error">
             <% if (locals.errors && errors.user_password) { %> <%=
             errors.user_password.msg%> <% } %>
           </div>
-          <span></span>
+
           <section class="password-field">
             <input
               type="password"
               name="confirmSignUpPassword"
-              id="confirm-password"
+              id="userPassword"
               placeholder="Confirmar contraseña"
             />
-            <span></span>
-            <label for="password">Confirmar contraseña</label>
           </section>
+          <span></span>
+
           <div class="text-error">
             <% if (locals.errors && errors.confirmSignUpPassword) { %> <%=
             errors.confirmSignUpPassword.msg%> <% } %>
           </div>
-          <span></span>
+
           <section class="avatarImage">
-            <input type="file" name="user_image" id="avatarImg" multiple />
-            <span></span>
+            <input type="file" name="user_image" id="userImage" multiple />
           </section>
+          <span></span>
+          
           <div class="text-error">
             <% if (locals.errors && errors.user_image) { %> <%=
             errors.user_image.msg%> <% } %>

@@ -8,7 +8,6 @@ const products = JSON.parse(fs.readFileSync(productFilePath, "utf-8"));
 
 const mainController = {
   home: async(req, res) => {
-
     const organicProducts = await Product.findAll({
        where: { category_id: 2 } });
 

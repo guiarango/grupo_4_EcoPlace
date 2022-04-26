@@ -6,14 +6,14 @@ const usersController = require("../controllers/usersController");
 const uploadUserAvatar = require("../middlewares/multerUsersCreationMiddleware");
 const validateUserCreation = require("../middlewares/validateUserRegisterMiddleware");
 const validateUserLogin = require("../middlewares/validateUserLoginMiddleware");
-const userLoggedMiddleware = require("../middlewares/userLoggedMiddleware");
+// const userLoggedMiddleware = require("../middlewares/userLoggedMiddleware");
 const guestMiddleware = require("../middlewares/guestMiddleware");
 
 router.get("/sign_in", loggedInMiddleware, usersController.signIn);
 
 router.get("/sign_up", loggedInMiddleware, usersController.signUp);
 
-router.get("/profile", guestMiddleware, userLoggedMiddleware, usersController.displayProfile);
+router.get("/profile", guestMiddleware, /*userLoggedMiddleware,*/ usersController.displayProfile);
 
 router.post(
   "/sign_up",
