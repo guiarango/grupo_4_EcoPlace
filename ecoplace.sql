@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ecoplace`
 --
-
+CREATE DATABASE IF NOT EXISTS `ecoplace` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `ecoplace`;
 -- --------------------------------------------------------
 
 --

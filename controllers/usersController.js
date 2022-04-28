@@ -10,7 +10,6 @@ const { userInfo } = require("os");
 // const { cookie } = require("express/lib/response");
 
 const usersController = {
-
   displayProfile: (req, res) => {
     res.render("users/profile");
   },
@@ -111,7 +110,6 @@ const usersController = {
               maxAge: 1000 * 60 * 10,
             });
           } else {
-
             res.locals.userLogged = req.session.userLogged;
           }
 
@@ -119,7 +117,7 @@ const usersController = {
         } else {
           res.render("users/sign_in", {
             errors: {
-              email: {
+              user_email: {
                 msg: "*Favor validar las credenciales",
               },
             },
@@ -128,6 +126,15 @@ const usersController = {
         }
 
         console.log(req.body.user_password);
+      } else {
+        res.render("users/sign_in", {
+          errors: {
+            user_email: {
+              msg: "*Favor validar las credenciales",
+            },
+          },
+          oldData: req.body,
+        });
       }
     }
   },

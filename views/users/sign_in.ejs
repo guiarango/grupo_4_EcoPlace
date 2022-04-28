@@ -25,8 +25,7 @@
             <span></span>
             <div class="text-error">
               <% if (locals.errors && errors.user_email) { %> <%=
-              errors.user_email.msg%>
-               <% } %>
+              errors.user_email.msg%> <% } %>
             </div>
           </section>
 
@@ -39,17 +38,14 @@
             />
             <span></span>
             <div class="text-error">
-              <% if (locals.errors && errors.user_email) { %> <%=
-              errors.user_password.msg%>
-               <% } %>
+              <% if (locals.errors && errors.user_password) { %> <%=
+              errors.user_password.msg%> <% } %>
             </div>
           </section>
           <section class="section-rememberUser">
             <input name="rememberUser" type="checkbox" id="userPassword" />
             <label>Recordar mi usuario</label>
           </section>
-
-
 
           <section class="button-submit">
             <button type="submit">INGRESAR</button>
@@ -92,7 +88,7 @@
       </section>
     </main>
 
-    <%- include('../partials/footer') %>
-    <%- include('../partials/loadScript', { scriptName: 'validationSignIn.js'})  %>
+    <%- include('../partials/footer') %> <%- include('../partials/loadScript', {
+    scriptName: 'validationSignIn.js'}) %>
   </body>
 </html>
