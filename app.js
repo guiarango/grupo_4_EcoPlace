@@ -10,7 +10,8 @@ const cookies = require("cookie-parser");
 const homeRoute = require("./routes/main");
 const usersRoute = require("./routes/users");
 const productsRoute = require("./routes/products");
-const apiRoutes = require("./routes/api");
+const apiRoutesProducts = require("./routes/api/apiProducts");
+const apiRoutesUsers = require("./routes/api/apiUsers");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 app.use(
@@ -35,7 +36,7 @@ const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
 
 // Se carga el servidor en el localhost:3000
-app.listen(3000, () => console.log("Servidor corriendo en puerto 3000"));
+app.listen(3001, () => console.log("Servidor corriendo en puerto 3001"));
 
 // Motor de plantillas
 app.set("view engine", "ejs");
@@ -47,4 +48,5 @@ app.use(productsRoute);
 
 app.use(usersRoute);
 
-app.use("/api",apiRoutes);
+app.use("/api",apiRoutesProducts);
+app.use("/api",apiRoutesUsers);

@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   let errors = {};
-
+  console.log('prueba');
   const signUpForm = document.querySelector(".signUpForm");
 
   const signUpName = document.getElementById("userName");
@@ -40,13 +40,26 @@ window.addEventListener("load", function () {
     let errorText = "";
 
     const field = event.target;
-    if (field.value.trim() == "") {
+    if (field.value == "") {
       errorText = "Debés completar el campo password.";
-    } else if (field.value.trim().length < 8) {
+    } else if (field.value.length < 8) {
       errorText = "Debe contar con al menos 8 caracteres.";
     }
 
     handleError(signUpPassword, errorText);
+  };
+
+  const validateSignUpConfirmPassword = (event) => {
+    let errorText = "";
+
+    const field = event.target;
+    if (field.value == "") {
+      errorText = "Debés completar el campo confirmar password.";
+    } else if (field.value !== signUpPassword.value) {
+      errorText = "Las passwords deben coincidir.";
+    }
+
+    handleError(signUpConfirmPassword, errorText);
   };
 
   let validateSignUpImage = (event) => {
@@ -82,30 +95,32 @@ window.addEventListener("load", function () {
 };
 
   let handleError = function (element, textError) {
-    let textErrorElement = element.nextElementSiblUpg;
+    let textErrorElement = element.nextElementSibling;
 
     if (textError) {
-      element.classList.add("Upput-danger");
+      element.classList.add("input-danger");
       textErrorElement.classList.add("text-danger");
       errors[element.name] = textError;
     } else {
-      element.classList.remove("Upput-danger");
+      element.classList.remove("input-danger");
       textErrorElement.classList.remove("text-danger");
       delete errors[element.name];
     }
 
-    textErrorElement.UpnerText = textError;
+    textErrorElement.innerText = textError;
   };
 
   signUpName.addEventListener("blur", validateSignUpName);
   signUpEmail.addEventListener("blur", validateSignUpEmail);
   signUpPassword.addEventListener("blur", validateSignUpPassword);
+  signUpConfirmPassword.addEventListener("blur", validateSignUpConfirmPassword);
   signUpImage.addEventListener("blur", validateSignUpImage);
 
   signUpForm.addEventListener("submit", function (event) {
     validateSignUpName();
     validateSignUpEmail();
     validateSignUpPassword();
+    validateSignUpConfirmPassword();
     validateSignUpImage();
 
     if (Object.keys(errors).length) {

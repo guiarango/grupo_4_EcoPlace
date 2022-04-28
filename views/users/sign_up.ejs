@@ -20,8 +20,8 @@
               placeholder="Ingresar usuario"
               value="<%= locals.oldData?locals.oldData.user_name:null %>"
             />
+            <span></span>
           </section>
-          <span></span>
 
           <div>
             <p class="text-error">
@@ -38,8 +38,8 @@
               placeholder="Ingresar email"
               value="<%= locals.oldData?locals.oldData.user_email:null %>"
             />
+            <span></span>
           </section>
-          <span></span>
           
           <div class="text-error">
             <% if (locals.errors && errors.user_email) { %> <%=
@@ -53,8 +53,8 @@
               id="userPassword"
               placeholder="Ingresar contraseña"
             />
+            <span></span>
           </section>
-          <span></span>
 
           <div class="text-error">
             <% if (locals.errors && errors.user_password) { %> <%=
@@ -65,11 +65,11 @@
             <input
               type="password"
               name="confirmSignUpPassword"
-              id="userPassword"
+              id="userConfirmPassword"
               placeholder="Confirmar contraseña"
             />
+            <span></span>
           </section>
-          <span></span>
 
           <div class="text-error">
             <% if (locals.errors && errors.confirmSignUpPassword) { %> <%=
@@ -78,8 +78,8 @@
 
           <section class="avatarImage">
             <input type="file" name="user_image" id="userImage" multiple />
+            <span></span>
           </section>
-          <span></span>
           
           <div class="text-error">
             <% if (locals.errors && errors.user_image) { %> <%=

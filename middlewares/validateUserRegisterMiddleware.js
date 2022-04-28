@@ -1,6 +1,5 @@
 const { body } = require("express-validator");
 const path = require("path");
-
 const validateUserCreation = [
   body("user_name")
     .notEmpty()
@@ -20,7 +19,7 @@ const validateUserCreation = [
     .notEmpty()
     .withMessage("*Rellena el campo de contraseña")
     .bail()
-    .isLength({ min: 4, max: 20 })
+    .isLength({ min: 8, max: 20 })
     .withMessage(
       "La contraseña debe contener mínimo 4 caracteres y máximo 20 caracteres"
     ),
@@ -28,13 +27,12 @@ const validateUserCreation = [
     .notEmpty()
     .withMessage("*Rellena el campo de la contraseña nuevamente")
     .bail()
-    .isLength({ min: 4, max: 20 })
+    .isLength({ min: 8, max: 20 })
     .withMessage(
       "La contraseña debe contener mínimo 4 caracteres y máximo 20 caracteres"
     ),
   body("user_image").custom((value, { req }) => {
     let file = req.file;
-
     let acceptedExtensions = [".jpg", ".PNG", ".jpeg", ".gif"];
     if (!file) {
       throw new Error("*Se debe subir una imagen");
@@ -46,9 +44,7 @@ const validateUserCreation = [
         );
       }
     }
-
     return true;
   }),
 ];
-
 module.exports = validateUserCreation;

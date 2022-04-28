@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     };
     let config = {
         tableName: "categories",
-        timestamp: false 
+        underscored: true,
+        timestamps: true,
     }
 
     const Categories = sequelize.define(alias, cols, config);

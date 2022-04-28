@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-04-2022 a las 01:16:08
+-- Tiempo de generación: 29-04-2022 a las 00:00:12
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -54,18 +54,20 @@ INSERT INTO `carts` (`id`, `cart_name`, `user_id`) VALUES
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `category_name` varchar(30) NOT NULL
+  `category_name` varchar(30) NOT NULL,
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `categories` (`id`, `category_name`) VALUES
-(1, 'floraYJardin'),
-(2, 'organicos'),
-(3, 'cuidadoPersonal'),
-(4, 'hogar');
+INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
+(1, 'floraYJardin', NULL, NULL),
+(2, 'organicos', NULL, NULL),
+(3, 'cuidadoPersonal', NULL, NULL),
+(4, 'hogar', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -126,9 +128,7 @@ INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_te
 (43, 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 'FERTILIZANTE', 1, 33.67, 'product_image_productimg_1647903846330.jpg', NULL, NULL, NULL),
 (44, 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 'MASETAS ECOLOGICAS', 1, 55.4, 'product_image_productimg_1647903875489.jpg', NULL, NULL, NULL),
 (45, 'REGADERA', 'REGADERA', 'REGADERA', 'REGADERA', 1, 37.4, 'product_image_productimg_1647903914218.jpg', NULL, NULL, NULL),
-(46, 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 2, 8.7, 'product_image_productimg_1647903995207.jpg', NULL, NULL, NULL),
-(47, 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 'CUBIERTOS ECO FRENDLY', 4, 17.3, 'product_image_productimg_1647904250096.webp', NULL, NULL, NULL),
-(58, 'cepillo de dientes', '                           Cep', NULL, NULL, 3, 123, 'product_image_productimg_1650500818934.jpg', NULL, '2022-04-21', '2022-04-21');
+(46, 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 'PIMIENTO ROJO', 2, 8.7, 'product_image_productimg_1647903995207.jpg', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -250,7 +250,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
